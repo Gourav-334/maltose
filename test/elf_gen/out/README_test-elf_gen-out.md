@@ -1,4 +1,4 @@
-# README ($test/$)
+# README ($test/elf_gen/out/$)
 
 
 ## **0. Directory Information**
