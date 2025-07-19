@@ -1,4 +1,4 @@
-# UNIX
+# UNIX PHILOSOPHY
 
 
 ## **0. Areas Of Focus**

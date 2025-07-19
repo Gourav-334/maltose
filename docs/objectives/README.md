@@ -1,4 +1,4 @@
-# README ($docs/objv/$)
+# README (`docs/objectives/`)
 
 
 ## **0. Directory Information**
@@ -8,6 +8,6 @@ This directory contains all the information about objectives formed for implemen
 
 ## **1. File Descriptions**
 
-- `v1_feat.md` - Features to be embededed in first release version.
+- `v1_features.md` - Features to be embededed in first release version.
 
 ---

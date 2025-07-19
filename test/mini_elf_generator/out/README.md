@@ -1,4 +1,4 @@
-# README ($test/$)
+# README (`test/mini_elf_generator/out/`)
 
 
 ## **0. Directory Information**

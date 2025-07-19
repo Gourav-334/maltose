@@ -1,3 +1,6 @@
 [submodule "docs/sdlc"]
 	path = docs/sdlc
 	url = https://github.com/Gourav-334/Qualine-SDLC.git
+[submodule "docs/lifecycle"]
+	path = docs/lifecycle
+	url = https://github.com/Gourav-334/Qualine-SDLC.git

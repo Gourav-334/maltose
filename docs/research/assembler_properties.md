@@ -1,4 +1,4 @@
-# ASSEMBLER
+# ASSEMBLER PROPERTIES
 
 
 ## **1. Properties Of An Assembler**

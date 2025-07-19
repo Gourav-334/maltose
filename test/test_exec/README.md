@@ -1,4 +1,4 @@
-# README ($test/test_exec$)
+# README (`test/test_exec/`)
 
 
 ## **0. Introduction**
