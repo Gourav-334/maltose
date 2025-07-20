@@ -8,6 +8,6 @@ This directory contains all the information about objectives formed for implemen
 
 ## **1. File Descriptions**
 
-- `v1_features.md` - Features to be embededed in first release version.
+- `dec_as1_features.md` - Features to be embededed in the initial version of assembler.
 
 ---

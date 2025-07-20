@@ -8,7 +8,7 @@
 
 Greetings readers! I am **Gourav**, and started ***DEC*** (formly **Maltose**) as an open-source project with aim of creating an assembler having intuitive syntax for assembly programmers, now with plan to scale it as complete **source-to-memory** toolchain. Current focus is limited to **x86 processors**. I know it is not going to be made immediately or easily, which resonates with most of the quality engineering pieces. I have tried to keep the documents as descriptive & clear as possible. Still for any doubt, you can reach me out through the links given in the **7th** section.
 
-All directories on this repositary have their own `README` file in `README ({path-to-dir}).md` format. This primarily explains the role of files & directories in that particular directory, which can help readers navigate easily through their desired focus area. While for parent/root directory, the information of its files & directories are mentioned in next section (**section 2**).
+All directories on this repositary have their own `README.md` file. This primarily explains the role of files & directories in that particular directory, which can help readers navigate easily through their desired focus area. While for parent/root directory, the information of its files & directories are mentioned in next section (**section 2**).
 
 
 ## 2. Features
