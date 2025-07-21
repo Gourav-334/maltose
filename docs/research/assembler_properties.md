@@ -1,7 +1,7 @@
 # ASSEMBLER PROPERTIES
 
 
-## **1. Properties Of An Assembler**
+## 1. Properties Of An Assembler
 
 1. Assembly to machine code translation
 2. One-to-one mapping with machine codes (mostly)
@@ -14,7 +14,7 @@
 9. Support for conditional macros
 
 
-## **2. Mistaken Properties Of Assembler**
+## 2. Mistaken Properties Of Assembler
 
 - Linker is used for linking multiple object files & resolving memory addresses, not assembler.
 - Debugger is responsible for inspecting codes for debugging purpose, not assembler.
@@ -25,7 +25,7 @@
 - Assemblers work at a very low-level where memory has to be managed manually, meaning **"no garbage collection"**.
 
 
-## **3. Not Properties Of Assemblers**
+## 3. Not Properties Of Assemblers
 
 1. Executing machine code (processor does)
 2. Direct use of **Graphical User Interface**
