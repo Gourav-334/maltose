@@ -30,7 +30,7 @@ This file is briefly structured information on the case study performed on one o
 |1|Source reader|Reads whole source code character-by-character.|
 |2|Lexer/scanner|Breaks input into tokens like opcodes, labels, registers, directives, constants, etc.|
 |3|Macro expander|Expands expansions like `.macro`, `.irp`, `.rept`, etc.|
-|4|Preprocessor|Handles conditional macros like `ifdef`, `.else`, etc.|
+|4|Preprocessor|Handles conditional macros like `.ifdef`, `.else`, etc.|
 
 - After these components have performed their roles, the output is preprocessed code.
 
@@ -90,7 +90,7 @@ This file is briefly structured information on the case study performed on one o
 ## 3. Component Interaction Flow (Linear)
 
 
-$$ \fbox{Source Code} $$
+$$ \fbox{Source Assembly Code} $$
 $$ \downarrow $$
 $$ \fbox{Preprocessor + Macro Expander} $$
 $$ \downarrow $$
