@@ -5,9 +5,9 @@
 ## 0. Introduction
 
 
-- **DEC AS** introduces a set of unique features not commonly found in traditional assemblers.
+- **DEC AS** introduces a some unique features not commonly found in traditional assemblers.
 - These features address usability concerns (especially for beginners) as well as architectural flexibility and long-term maintainability.
-- All unique features are mentioned starting from point **0** onwards.
+- All features are mentioned starting from point **0** onwards.
 
 
 
@@ -60,7 +60,15 @@ rax += 4
 
 
 
-## 3. Independence
+## 3. User Friendly Errors & Warnings
+
+
+- Many traditional assemblers provide very cryptic error messages.
+- This problem is planned to be addressed in **DEC AS** with programmer's control over level of description.
+
+
+
+## 4. Independence
 
 
 - Independence from existing tools used in a compiler/ interpreter /assembler based project is achievable through ***bootstrapping***.

@@ -12,7 +12,7 @@ This file is briefly structured information on the case study performed on one o
 ## 1. GAS (GNU Assembler) Overview
 
 
-- **GAS** is part of the `binutils`, and converts source files (`s`/`S`) into object files (`.o`) for formats like **ELF**, **COFF**, **a.out**, etc.
+- **GAS** is part of the `binutils`, and converts source files (`.s`/`.S`) into object files (`.o`) for formats like **ELF**, **COFF**, **a.out**, etc.
 - It is multi-architectural & the backend assembler for **GCC** (GNU Compiler Collection) .
 
 
