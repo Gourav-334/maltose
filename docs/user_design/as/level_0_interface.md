@@ -104,6 +104,7 @@ dec-as <src_file> <dest_file> -<flag1> -<flag2> ... -<flagn>
 #### 2.2.2 ASSEMBLING FLAGS:
 - `deb` - Add debugging information
 - `dev` - Display developer info
+- `log` - Log all scanning process
 - `obj` - Convert to object (`.o`) file
 - `opt` - Optimize code
 - `war` - Disable warnings
