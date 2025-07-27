@@ -16,21 +16,22 @@ This file explains how the directory is planned to be structured as. These struc
 
 ```
 block_parser/
-    elf_block_errors.c
-    elf_block_fsm.c
-    elf_block_warnings.c
+    elf_block_parser/
+        elf_block_errors.c
+        elf_block_fsm.c
+        elf_block_warnings.c
 data_structs/
     queue/
-        clear.c
-        count.c
+        queue_clear.c
+        queue_count.c
         dequeue.c
         enqueue.c
-        peek.c
+        queue_peek.c
         queue_struct.c
     stack/
-        clear.c
-        count.c
-        peek.c
+        stack_clear.c
+        stack_count.c
+        stack_peek.c
         pop.c
         push.c
         stack_struct.c
@@ -66,6 +67,7 @@ info_storage/
         x86_vector_state.c
         x86_warnings.c
     common_obj_storage.c
+    instruction_dissects.c
 obj_generators/
     elf_obj_generator.c
 opcode_selector/
@@ -93,6 +95,7 @@ semantic_parser/
         x86_semantic_warnings.c
 utilities/
 main.c
+test.c
 ```
 
 
