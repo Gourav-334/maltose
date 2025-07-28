@@ -9,13 +9,15 @@ This directory lists the categories & sub-categories of overall **AS** syntax. F
 
 
 
-## 2. Stepped Syntax Plan
+## 2. Requirements Of AS-1
 
-1. Gather all the varying instructions & operands
-2. Categorize them
-3. Fill each category with unvisited syntaxes
-4. Write all base-level possibilites for each instruction
-5. Write all the rules & restrictions for each instruction
+1. Sections
+2. Scope-based variables
+3. GPR usage
+4. FPU usage
+5. Control over integer stack
+6. Control over floating-point stack
+7. Labels & loops
 
 
 

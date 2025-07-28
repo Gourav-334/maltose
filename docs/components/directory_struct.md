@@ -15,84 +15,98 @@ This file explains how the directory is planned to be structured as. These struc
 ### 2.1 <u>Directory structure</u>:
 
 ```
-block_parser/
-    elf_block_parser/
-        elf_block_errors.c
-        elf_block_fsm.c
-        elf_block_warnings.c
+cmd_interpreter/
+    cmd_errors.c
+    cmd_parser.c
+    cmd_warnings.c
+    file_finder.c
+    flag_fsm.c
+    flag_suggestor.c
+    flag_status.c
 data_structs/
     queue/
-        queue_clear.c
-        queue_count.c
+        clear.c
+        count.c
         dequeue.c
         enqueue.c
-        queue_peek.c
-        queue_struct.c
+        peek.c
+        struct_def.c
     stack/
-        stack_clear.c
-        stack_count.c
-        stack_peek.c
+        clear.c
+        count.c
+        peek.c
         pop.c
         push.c
-        stack_struct.c
+        struct_def.c
 hazard_detector/
-    x86_hazard_detector/
-        x86_deadlock_detector.c
-        x86_syscall_hazard.c
-        x86_thread_safety.c
+    x86_hazards/
+        deadlock_detector.c
+        syscall_hazard.c
+        thread_safety.c
 info_detector/
     arch_detector.c
     mod_detector.c
 info_storage/
-    elf_info_storage/
-        bss_storage.c
-        elf_misc_info.c
-        elf_offset_data.c
-        debug_info_storage.c
-        dynsym_storage.c
-        elfh_storage.c
-        sht_storage.c
-        symtab_storage.c
-        text_storage.c
-    x86_info_storage/
-        x86_errors.c
-        x86_flag_state.c
-        x86_float_stack_state.c
-        x86_fpu_state.c
-        x86_gpr_state.c
-        x86_int_stack_state.c
-        x86_section_state.c
-        x86_sse_state.c
-        x86_symbol_set.c
-        x86_vector_state.c
-        x86_warnings.c
+    elf_info/
+        bss.c
+        debug.c
+        dynsym.c
+        elfh.c
+        misc_info.c
+        offset_data.c
+        sht.c
+        symtab.c
+        text.c
+    x86_info/
+        errors.c
+        flag_state.c
+        float_stack_state.c
+        fpu_state.c
+        gpr_state.c
+        int_stack_state.c
+        section_state.c
+        sse_state.c
+        symbol_set.c
+        vector_state.c
+        warnings.c
     common_obj_storage.c
     instruction_dissects.c
+instruction_refiner/
+    x86_instruction_refiner/
+        code_expander.c
+        code_simplifier.c
 obj_generators/
     elf_obj_generator.c
 opcode_selector/
     x86_opcode_selector.c
+lexer/
+    elf_lexer/
+        data_sec/
+            data_errors.c
+            data_fsm.c
+            data_warnings.c
+        bss_sec/
+            bss_errors.c
+            bss_fsm.c
+            bss_warnings.c
 logger/
-    x86_logger/
-        x86_time_detector.c
-        x86_time_writer.c
-logic_parser/
-    x86_logic_parser/
-        x86_logic_errors.c
-        x86_logic_fsm.c
-        x86_logic_warnings.c
-    tokenizer.c
+    log/
+        as_log/
+            728638761281.log
+        cmd_log/
+            437811389314.log
+    logger.c
+    time_detector.c
 mem_safety/
     dangling_ptr_detector.c
     mem_leak_detector.c
     warning_generator.c
-semantic_parser/
-    x86_semantic_parser/
-        x86_code_expander.c
-        x86_code_simplifier.c
-        x86_semantic_fsm.c
-        x86_semantic_errors.c
-        x86_semantic_warnings.c
+parser/
+    x86_parser/
+        elf_parser/
+            semantic_errors.c
+            semantic_warnings.c
+            text_sect_fsm.c
 utilities/
 main.c
 test.c
