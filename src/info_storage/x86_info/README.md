@@ -8,6 +8,6 @@ This directory stores source files that control virtual hardware state informati
 
 ## 2. Directory Structure
 
-
+- `flag_state.c` Source file that stores flag status for x86 processor in particular.
 
 ---

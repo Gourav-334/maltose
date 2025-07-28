@@ -8,6 +8,6 @@ This directory stores source files that control virtual hardware state informati
 
 ## 2. Directory Structure
 
-- `x86_info_storage/` - Stores source files for virtual hardware state specific to **x86** processor.
+- `x86_info/` - Stores source files for virtual hardware state specific to **x86** processor.
 
 ---

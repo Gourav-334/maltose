@@ -8,6 +8,6 @@ This directory stores headers for source files that control virtual hardware sta
 
 ## 2. Directory Structure
 
-
+- `flag_state.h` - Header for source file storing information about flag status.
 
 ---
