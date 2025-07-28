@@ -1,13 +1,15 @@
 # UPCOMING TASKS
 
-### Virtual hardware state initialization:
+### Command interpreter:
 
-- x86 flag state
-- x86 FPU state
-- x86 GPR state
-- x86 section state
-- x86 SSE state
-- x86 vector state
-- ELF block parser
+- Make `obj/` directory
+- Make `exec/` make directory
+- flag_status.c
+- cmd_errors.c
+- cmd_warnings.c
+- cmd_parser.c
+- file_finder.c
+- flag_fsm.c
+- flag_suggestor.c
 
 ---

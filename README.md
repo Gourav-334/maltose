@@ -30,7 +30,9 @@ All directories on this repositary have their own `README.md` file. This primari
 
 - `assets/` - Contains images, media & readable materials.
 - `docs/` - Contains all the documentation.
+- `include/` Contains all header files for their corresponding source files in `src/`.
 - `misc/` - Contains miscellaneous files which aren't very important.
+- `src/` - Contains all source code.
 - `test/` - Contains each pilot run & unit test directory.
 - `linux_push` - Quick push from **Linux** to `main` branch without descriptive comment.
 - `win_push` - Quick push from **Windows** to `main` branch without descriptive comment.
