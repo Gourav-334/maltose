@@ -9,5 +9,6 @@ This directory contains all the information about objectives formed for implemen
 ## **1. File Descriptions**
 
 - `as1_features.md` - Features to be embededed in the initial version of assembler.
+- `target_categories.md` - Explains about the primary target categories of AS.
 
 ---
