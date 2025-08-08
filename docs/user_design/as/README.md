@@ -3,12 +3,13 @@
 
 ## 0. Directory Information
 
-This directory contains all studies made on user design along with case studies on traditional & popular assemblers.
+This directory contains all information for user design of the assembler.
 
 
 ## 1. File Descriptions
 
-- `as_syntax.md` - Discusses the design of AS's syntax along with its comparison to AT&T.
+- `x86_as_syntax.md` - Discusses the design of AS's x86 syntax along with its comparison to AT&T.
+- `bootstraps.md` - Lists features to be added in AS's x86 version.
 - `cmd_to_as.md` - Command-line commands to the assembler for stuffs like assembling.
 - `logs.md` - Design of how logs would be stored (for added flag).
 

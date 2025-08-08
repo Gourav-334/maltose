@@ -42,12 +42,35 @@ rax += 4
 
 - This syntax can be naturally understood by a beginner & expert alike.
 - Here, opcodes are embed in arithmetic symbols.
-- The assembler here is smart to understand the combination of opcode, destination & source to know which opcode to pick.
+
+
+
+## 2. Smart Mechanism
+
+
+- The assembler here is smart to understand the combination of opcode, destination, source or any token to know which opcode should be pick.
+- For example, observe the instructions given below.
+
+```asm
+push 5      ; Pushes '5' as an integer to arithmetic stack
+push 5.0    ; Pushes '5.0' as float to x87 FPU stack
+```
+
+- There is no need for multiple complex opcodes to be remembered. Assembler knows your intention.
 - Operationally, it retains the functionality same as that of a traditional assembler, while benefitting programmers simultaneously.
 
 
 
-## 2. Parsing Phases
+## 3. Mode Detector
+
+
+- This assembler detects the mode used by the user be it real, protected or long.
+- It reduces the burden of creating a real-mode (**16-bit**) assembler to bootstrap whole assembler in a dogmatic manner.
+- Algorithm for saving computation power will be implemented, not to check each token after detection.
+
+
+
+## 4. Parsing Phases
 
 
 - Usually, assemblers have **two** parsing phases.
@@ -60,7 +83,7 @@ rax += 4
 
 
 
-## 3. User Friendly Errors & Warnings
+## 5. User Friendly Errors & Warnings
 
 
 - Many traditional assemblers provide very cryptic error messages.
@@ -68,7 +91,7 @@ rax += 4
 
 
 
-## 4. Independence
+## 6. Independence
 
 
 - Independence from existing tools used in a compiler/ interpreter /assembler based project is achievable through ***bootstrapping***.

@@ -1,11 +1,11 @@
-# AS's SYNTAX (x86)
+# LEVEL-0 BOOTSTRAP (x86)
 
 
 
 ## 1. Description
 
 
-This file is dedicated to listing how the AS's x86 syntax relates to its corresponding AT&T x86 syntax. From section **2** onwards, different elements of assembly syntax are discussed.
+This file is dedicated to listing how the AS's x86 syntax relates to its corresponding AT&T x86 syntax, particularly for bootstrap level-0. From section **2** onwards, different elements of assembly syntax are discussed.
 
 
 
@@ -464,6 +464,9 @@ push -<byte>(%<gpr>)    # Push by referred address
 pop                     # Simple popping
 pop %<gpr>              # Pop to register
 
+pushf                   # Save E/RFLAG to stack
+popf                    # Load top stack element to E/RFLAG
+
 fld %st(<n>)            # Re-push x87 stack's Nth element
 flds <float>            # Push float to x87 stack
 fldl <long>             # Push long to x87 stack
@@ -518,23 +521,96 @@ pop <double>         ; Pop 0th element to <double>
 
 
 
-## 17. System Call
+## 17. Status Flags
+
+
+### <u>AT&T</u>:
+```gas
+pushf            # Push EFLAG/RFLAG to stack
+popf             # Retrieve EFLAG/RFLAG
+lahf             # Load lower 8-bits of FLAGS to AH
+sahf             # Store AH to lower 8-bits of FLAGS
+
+cli              # Disable/clear interrupt flag
+sti              # Enable/set interrupt flag
+
+fstsw %ax        # Copy FP flag to AX
+fnstsw           # Same as above but non-waiting
+fstsw <label>    # Copy FP flag to memory
+```
+
+- `<label>` is a label whose memory address we refer to here.
+
+
+### <u>AS</u>:
+```asm
+push flags             ; Push EFLAG/RFLAG to stack
+pop flags              ; Retrieve EFLAG/RFLAG
+ah = flags             ; Load lower 8-bits of FLAGS to AH
+flags = ah             ; Store AH to lower 8-bits of FLAGS
+
+enable(interrupts)     ; Disable/clear interrupt flag
+disable(interrupts)    ; Enable/set interrupt flag
+
+ax = fpflag(w)         ; Copy FP flag to AX
+ax = fpflag(n)         ; Same as above but non-waiting
+<label> = fpflag       ; Copy FP flag to memory
+```
+
+
+
+## 18. Hardware Communication
 
 
 ### <u>AT&T</u>:
 
 ```gas
-int $0x80    # Method 1
-syscall      # Method 2
+in<prefix> $<port>, %<gpr>      # Input from port
+in<prefix> %<gpr1>, %<grp2>     # Input from address in GPR1
+
+out<prefix> %<gpr>, $<port>     # Output to port
+out<prefix> %<gpr2>, $<gpr1>    # Output to address in GPR1
 ```
+
+- `<prefix>` is prefix added after opcodes in GAS.
+- It could be `b`, `w`, `l`, `q`, etc.
+- `<port>` is address of the hardware port.
+- `<gpr>` is a general purpose register of **16-bits** with port's address.
+- `<gpr1>` & `<gpr2>` two different general purpose register of **16-bits**.
 
 
 ### <u>AS</u>:
 
 ```asm
-interrupt(0x80)    ; Only method
+<gpr> = input(<port>)      ; Input from port
+<gpr2> = input(<gpr1>)     ; Input from address in GPR1
+
+<gpr> = output(<port>)     ; Output to port
+<gpr2> = output(<gpr1>)    ; Output to address in GPR1
 ```
 
-- No change for already being simple enough.
+
+
+## 19. Interrupt Related
+
+
+### <u>AT&T</u>:
+
+```gas
+hlt
+int <int>    # On real/protected-mode
+syscall      # On long-mode
+```
+
+- `<int>` is the interrupt value.
+
+
+### <u>AS</u>:
+
+```asm
+halt
+interrupt(<int>)    ; On real/protected-mode
+syscall             ; On long-mode
+```
 
 ---
