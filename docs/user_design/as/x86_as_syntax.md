@@ -94,9 +94,12 @@ reserve <label>[<bytes>]    ; In bss section
 ### <u>AT&T</u>:
 
 ```gas
+.code<bits>
 .<scope> label
 ```
 
+- `<bits>` tells for how many bits the assembler is running.
+- It could be `16`, `32` or `64`.
 - `<scope>` defines scope for a label.
 - Scope includes `global`, `extern`, `local`, `weak`, `hidden`, `protected`, etc.
 
@@ -104,8 +107,12 @@ reserve <label>[<bytes>]    ; In bss section
 ### <u>AS</u>:
 
 ```asm
+mode <mode>
 <scope> label
 ```
+
+- `<mode>` is the name of mode.
+- It could be `real`, `protected` or `long`.
 
 
 
@@ -172,6 +179,7 @@ align <power>                 ; Align memory
 ```
 
 - `<mne>` is a mnemonic for any kind of movement opcode.
+- It could be `mov`, etc.
 - `<const>` is a source constant value.
 - `<src>` is a register.
 - `<dest>` is a register which is same as or different from register `<src>`.
@@ -329,6 +337,9 @@ cmp $<const>, %<gpr>       # Value-to-register comparison
 cmp %<gpr1>, %<gpr2>       # Register-to-register comparison
 xchg %<gpr1>, %<gpr2>      # Swap values of GPR1 & GPR2
 
+nop                        # No operation (do nothing)
+xlat                       # Look a byte in table using AL as its index
+
 fxchg %st(<n>)             # Swap ST(0) & ST(n)
 fsqrt                      # Replaces ST(0) with its sqrt
 fabs                       # Replaces ST(0) with its abs value
@@ -362,6 +373,9 @@ fcomip %st(<n>), %st(0)    # Compares, pops & sets CPU flags
 <gpr1> ?= <gpr2>              ; Register-to-register comparison
 <gpr1> <-> <gpr2>             ; Swap values of GPR1 & GPR2
 
+none                          ; No operation (do nothing)
+al = <tbl>[al]                ; Look a byte in table using AL as its index
+
 st(<n>) <-> st(0)             ; Swap ST(0) & ST(n)
 sqrt st(0)                    ; Replaces ST(0) with its sqrt
 |st(0)|                       ; Replaces ST(0) with its abs value
@@ -372,6 +386,8 @@ st(0) ?= st(n).(pop)          ; Compare <value> with ST(n) & pop ST(n)
 st(0) ?= st(n).(flag)         ; Compare & set CPU flag
 st(0) ?= st(n).(pop, flag)    ; Combination of previous two lines
 ```
+
+- `<tbl>` name of the table.
 
 
 
@@ -521,7 +537,7 @@ pop <double>         ; Pop 0th element to <double>
 
 
 
-## 17. Status Flags
+## 17. Flags
 
 
 ### <u>AT&T</u>:
@@ -570,6 +586,10 @@ in<prefix> %<gpr1>, %<grp2>     # Input from address in GPR1
 
 out<prefix> %<gpr>, $<port>     # Output to port
 out<prefix> %<gpr2>, $<gpr1>    # Output to address in GPR1
+
+lgdt <gdt>                      # Load <gdt> to GDT register
+lidt <idt>                      # Load <idt> to IDT register
+ljmp $<code>                    # Change mode
 ```
 
 - `<prefix>` is prefix added after opcodes in GAS.
@@ -577,6 +597,7 @@ out<prefix> %<gpr2>, $<gpr1>    # Output to address in GPR1
 - `<port>` is address of the hardware port.
 - `<gpr>` is a general purpose register of **16-bits** with port's address.
 - `<gpr1>` & `<gpr2>` two different general purpose register of **16-bits**.
+- `<code>` is hex code for a particular mode.
 
 
 ### <u>AS</u>:
@@ -587,7 +608,13 @@ out<prefix> %<gpr2>, $<gpr1>    # Output to address in GPR1
 
 <gpr> = output(<port>)     ; Output to port
 <gpr2> = output(<gpr1>)    ; Output to address in GPR1
+
+gdt = @<gdt>               ; Load <gdt> to GDT register
+idt = @<ldt>               ; Load <idt> to IDT register
+mode <mode>                ; Change mode
 ```
+
+- `<mode>` is name or code of the mode.
 
 
 
@@ -611,6 +638,148 @@ syscall      # On long-mode
 halt
 interrupt(<int>)    ; On real/protected-mode
 syscall             ; On long-mode
+```
+
+
+
+## 20. SSE Movements
+
+
+### <u>AT&T</u>:
+
+```gas
+movaps %<reg1>, %<reg2>    # Move single-precision aligned
+movups %<reg1>, %<reg2>    # Move single-precision unaligned
+movapd %<reg1>, %<reg2>    # Move double-precision aligned
+movupd %<reg1>, %<reg2>    # Move double-precision unaligned
+movdqa %<reg1>, %<reg2>    # Move double quadword aligned
+movdqu %<reg1>, %<reg2>    # Move double quadword unaligned
+
+movss <mem>, %<reg>        # Memory to single-precision XMM
+movss %<reg>, <mem>        # Single-precision XMM to memory
+movsd <mem>, %<reg>        # Memory to single-precision XMM
+movsd %<reg>, <mem>        # Single-precision XMM to memory
+```
+
+- `<reg1>` & `<reg2>` are XMM registers.
+- `<reg>` is any XMM register.
+- `<mem>` is either a label or memory address.
+
+
+### <u>AS</u>:
+
+```asm
+<reg2> = <reg1>(float, aligned)       ; Move single-precision aligned
+<reg2> = <reg1>(float, unaligned)     ; Move single-precision unaligned
+<reg2> = <reg1>(double, aligned)      ; Move double-precision aligned
+<reg2> = <reg1>(double, unaligned)    ; Move double-precision unaligned
+<reg2> = <reg1>(quad, aligned)        ; Move double quadword aligned
+<reg2> = <reg1>(quad, unaligned)      ; Move double quadword unaligned
+
+<reg> = <mem>(float)                  ; Memory to single-precision XMM
+<mem> = <reg>(float)                  ; Single-precision XMM to memory
+<reg> = <mem>(double)                 ; Memory to single-precision XMM
+<mem> = <reg>(double)                 ; Single-precision XMM to memory
+```
+
+
+
+## 21. SSE Arithemtic Operations
+
+
+### <u>AT&T</u>:
+
+```gas
+<op><type><len> %<reg1>, %<reg2>
+```
+
+- `<op>` is the operation made.
+- It could be `add`, `sub`, `mult`, `div`, etc.
+- `<type>` is the type of data.
+- It could be `p` (packed), `s` (scalar), etc.
+- `<len>` is the length to move.
+- It could be `s` (single-precision), `d` (double-precision), etc.
+- `<reg1>` & `<reg2>` are the XMM registers.
+
+
+### <u>AS</u>:
+
+```asm
+<reg2> <op_set>= <reg1>(<len>, <type>)
+```
+
+- `<op_set>` is the opcode set.
+- It could be `+`, `-`, `*`, `/`, etc.
+
+
+
+## 22. SSE Comparison
+
+
+### <u>AT&T</u>:
+
+```gas
+cmpps $<pred>, %<reg1>, %<reg2>    # Packed comparison
+comis<len> %<reg1>, %<reg2>        # Compare (ordered)
+ucomis<len> %<reg1>, %<reg2>       # Compare (unordered)
+```
+
+- `<pred>` is the predicament.
+- `<reg1>` & `<reg2>` are the XMM registers.
+- `<len>` is the length of data to compare.
+- It could be `s` (single-precision), `d` (double-precision), etc.
+
+
+### <u>AS</u>:
+
+```asm
+<reg2> ?= <reg1>(<pred>)             ; Packed comparison
+<reg2> ?= <reg1>(<len>, packed)      ; Compare (ordered)
+<reg2> ?= <reg1>(<len>, unpacked)    ; Compare (unordered)
+```
+
+
+
+## 23. SSE Logical Operations
+
+
+### <u>AT&T</u>:
+
+```gas
+p<op> %<reg1>, %<reg2>
+```
+
+- `<op>` is the operation made.
+- It could be `and`, `or`, `xor`, `andn`, etc.
+- `<reg1>` & `<reg2>` are two different XMM registers.
+
+
+### <u>AS</u>:
+
+```asm
+<reg2> <op_set>= <reg1>
+```
+
+
+
+## 24. SSE Special Operations
+
+
+### <u>AT&T</u>:
+
+```gas
+shufp<len> $<pred>, %<reg1>, %<reg2>    # Shuffles as per <pred>
+```
+
+- `<pred>` is the byte whose binary representation affects shuffling.
+- `<len>` is the length of data to shuffle among.
+- It could be `s`, `d`, etc.
+
+
+### <u>AS</u>:
+
+```asm
+<reg2> s= <reg1>(<len>, <pred>)    ; Shuffles as per <pred>
 ```
 
 ---
