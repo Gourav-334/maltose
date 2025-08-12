@@ -94,8 +94,8 @@ reserve <label>[<bytes>]    ; In bss section
 ### <u>AT&T</u>:
 
 ```gas
-.code<bits>
-.<scope> label
+.code<bits>       # Real/protected/long mode
+.<scope> label    # The scope of the program
 ```
 
 - `<bits>` tells for how many bits the assembler is running.
@@ -107,8 +107,8 @@ reserve <label>[<bytes>]    ; In bss section
 ### <u>AS</u>:
 
 ```asm
-mode <mode>
-<scope> label
+mode <mode>      ; Real/protected/long mode
+<scope> label    ; The scope of the program
 ```
 
 - `<mode>` is the name of mode.
@@ -232,11 +232,11 @@ f<op>d <double>            # Add <double> to ST(0)
 <dest> <op_set>= <const>    ; Constant-to-register operation
 <dest> <op_set>= <src>      ; Register-to-register operation
 
-st(0) <op>= st(n)           ; Add ST(n) to ST(0)
-st(0) <op>= popped st(n)       ; Add ST(n) to ST(0) & pop ST(n)
-st(0) <op>= <float>         ; Add <float> to ST(0)
-st(0) <op>= <long>          ; Add <long> to ST(0)
-st(0) <op>= <double>        ; Add <double> to ST(0)
+st(0) <op_set>= st(n)           ; Add ST(n) to ST(0)
+st(0) <op_set>= popped st(n)    ; Add ST(n) to ST(0) & pop ST(n)
+st(0) <op_set>= <float>         ; Add <float> to ST(0)
+st(0) <op_set>= <long>          ; Add <long> to ST(0)
+st(0) <op_set>= <double>        ; Add <double> to ST(0)
 ```
 
 - `<op_set>` is the symbol for a particular *opcode set*.
@@ -377,13 +377,13 @@ none                          ; No operation (do nothing)
 al = <tbl>[al]                ; Look a byte in table using AL as its index
 
 st(<n>) <-> st(0)             ; Swap ST(0) & ST(n)
-sqrt st(0)                    ; Replaces ST(0) with its sqrt
-|st(0)|                       ; Replaces ST(0) with its abs value
+st(0) = st(0).sqrt            ; Replaces ST(0) with its square root
+st(0) = |st(0)|               ; Replaces ST(0) with its abs value
 
 st(0) ?= st(n)                ; Compare ST(0) with ST(n)
-st(0) ?= <value>              ;
-st(0) ?= st(n).(pop)          ; Compare <value> with ST(n) & pop ST(n)
-st(0) ?= st(n).(flag)         ; Compare & set CPU flag
+st(0) ?= <value>              ; Compare ST(0) with <value>
+st(0) ?= st(n).pop            ; Compare <value> with ST(n) & pop ST(n)
+st(0) ?= st(n).flag           ; Compare & set CPU flag
 st(0) ?= st(n).(pop, flag)    ; Combination of previous two lines
 ```
 
@@ -399,7 +399,7 @@ st(0) ?= st(n).(pop, flag)    ; Combination of previous two lines
 ```gas
 call <label>    # Call sub-routine
 ret             # Simply return
-ret $<n>        # Pop 'n' elements
+ret $<n>        # Return & pop 'n' elements
 ```
 
 - `<label>` represents a label which we are trying to call or return from here.
@@ -411,7 +411,7 @@ ret $<n>        # Pop 'n' elements
 ```asm
 call <label>()    ; Call sub-routine
 return            ; Return
-return <n>        ; Return 'n' elements
+return <n>        ; Return & pop 'n' elements
 ```
 
 
@@ -533,7 +533,7 @@ pop <long>           ; Pop 0th element to <long>
 pop <double>         ; Pop 0th element to <double>
 ```
 
-- The smart assembler system recognizes what kind of push is performed through the value, reducing errors.
+- The smart assembler system recognizes what kind of **push** is performed through the value, reducing errors.
 
 
 
@@ -605,13 +605,12 @@ ljmp $<code>                    # Change mode
 ```asm
 <gpr> = input(<port>)      ; Input from port
 <gpr2> = input(<gpr1>)     ; Input from address in GPR1
-
 <gpr> = output(<port>)     ; Output to port
 <gpr2> = output(<gpr1>)    ; Output to address in GPR1
 
-gdt = @<gdt>               ; Load <gdt> to GDT register
-idt = @<ldt>               ; Load <idt> to IDT register
-mode <mode>                ; Change mode
+gdt = @<gdt>    ; Load <gdt> to GDT register
+idt = @<ldt>    ; Load <idt> to IDT register
+mode <mode>     ; Change mode
 ```
 
 - `<mode>` is name or code of the mode.
@@ -625,8 +624,8 @@ mode <mode>                ; Change mode
 
 ```gas
 hlt
-int <int>    # On real/protected-mode
-syscall      # On long-mode
+int <int>    # Preferrably on real/protected-mode
+syscall      # Only for long-mode
 ```
 
 - `<int>` is the interrupt value.
