@@ -1,8 +1,13 @@
-# README (`docs/component_dist/`)
+# README (`docs/components/`)
 
 
-- `directory_structs.md` - Mentions directory organization plan.
-- `general_flow.drawio` - Shows a macro representation of how components interact with each other.
-- `macro_work.md` - Mentions how assembler is working on a macro-level.
+## 1. Description
+
+This directory contains all the sub-directories of each DEC tool, with their components interconnection planning in those respective directories.
+
+
+## 2. File System
+
+- `as/` - Contains documentation for components of the assembler.
 
 ---
