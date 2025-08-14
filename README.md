@@ -28,7 +28,7 @@ All directories on this repositary have their own `README.md` file. This primari
 
 ## 4. Directory Structure
 
-- `assets/` - Contains images, media & readable materials.
+- `assets/` - Contains images, media & readable materials embedded to root directory's MD documents.
 - `docs/` - Contains all the documentation.
 - `include/` Contains all header files for their corresponding source files in `src/`.
 - `misc/` - Contains miscellaneous files which aren't very important.
