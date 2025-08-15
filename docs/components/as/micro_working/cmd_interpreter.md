@@ -1,4 +1,4 @@
-# README (`docs/components/as/micro_working/`)
+# COMMAND INTERPRETER
 
 
 
@@ -27,14 +27,18 @@ This file explains working of the **command interpreter** at a micro-level, with
 
 <img src="./assets/cmd_interpreter.png" alt="Command Interpreter" style="width:500px; height:auto;" />
 
+>**<u>NOTE</u>:**
+> - Only ambiguity that stops the process is error, not warning.
+> - Then the control is passed to filestream loader, not the lexer.
 
 
-## 4. Involved Components
+
+## 4. Involved Sub-Components
 
 
 - Finite state machine
-- Error log
-- Warning log
+- Command error log
+- Command warning log
 - Request flag statuses
 
 ---
