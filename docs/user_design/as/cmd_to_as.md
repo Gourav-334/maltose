@@ -27,7 +27,7 @@ dec-as <src_file> <dest_file> -<flag1> -<flag2> ... -<flagn>
 - `deb` - Add debugging information
 - `dev` - Display developer info
 - `log` - Log all scanning process
-- `mod=x` - Runs `x` (`16`, `32` or `64`) bit assembly procedure.
+- `mod=x` - Runs in `x` mode (`host` or `metal`).
 - `obj` - Convert to object (`.o`) file
 - `opt` - Optimize code
 - `war` - Disable warnings

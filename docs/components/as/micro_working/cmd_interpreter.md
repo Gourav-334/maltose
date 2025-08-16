@@ -36,7 +36,7 @@ This file explains working of the **command interpreter** at a micro-level, with
 ## 4. Involved Sub-Components
 
 
-- Finite state machine
+- Command FSM
 - Command error log
 - Command warning log
 - Request flag statuses
