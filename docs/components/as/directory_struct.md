@@ -29,11 +29,12 @@ cmd_interpreter/
     fsm.c
     warn_log.c
 data_structs/
-    queue/
+    linked_list/
+        insert.c
         dequeue.c
-        enqueue.c
         length.c
         peek.c
+        pop.c
         struct.c
 lexer/
     x86/
