@@ -22,7 +22,7 @@ dec-as <src_file> <dest_file> -<flag1> -<flag2> ... -<flagn>
 ```
 
 
-### 2.1 <u>Flags to assembler</u>:
+### 2.2 <u>Flags to assembler</u>:
 
 - `deb` - Add debugging information
 - `dev` - Display developer info
@@ -32,7 +32,7 @@ dec-as <src_file> <dest_file> -<flag1> -<flag2> ... -<flagn>
 - `war` - Enable warnings
 
 
-### 2.1 <u>Proving syntax stability</u>:
+### 2.3 <u>Proving syntax stability</u>:
 
 - We can represent command-line `dec-as` commands using **context-free grammar**.
 - The following table shows terminal symbols & what they represent.
@@ -51,7 +51,7 @@ $$ S\;\rightarrow\;abcA $$
 $$ A\;\rightarrow\;dA\;|\;d\;|\;\epsilon $$
 
 
-### 2.1 <u>Example</u>:
+### 2.4 <u>Example</u>:
 
 - Assume we need to assemble a file `test.asm` into object file `test.o`.
 - We want to add debugging information (`deb`) & display developer information (`dev`).

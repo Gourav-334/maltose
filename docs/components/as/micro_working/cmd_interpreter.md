@@ -13,7 +13,7 @@ This file explains working of the **command interpreter** at a micro-level, with
 
 
 1. Command interpreter takes in the user command in form of arguments.
-2. These arguments are used as tokens themselves & parsed with FSM.
+2. These arguments are used as tokens themselves & validated as per their ordering.
 3. Warnings or errors might appear, which are trapped by ambiguity handler.
 4. These ambiguities are shown with their IDs for troubleshooting.
 5. If no error is faced, the flow continues further.
@@ -36,7 +36,7 @@ This file explains working of the **command interpreter** at a micro-level, with
 ## 4. Involved Sub-Components
 
 
-- Command FSM
+- Command validator
 - Command error log
 - Command warning log
 - Request flag statuses

@@ -8,6 +8,7 @@ Whole `docs/` directory is dedicated to documentation. This directory contains c
 
 ## 2. File Structure
 
+- `algo/` - Documents algorithms or procedures used for writing nano components, such as functions for a micro component.
 - `components/` - State 5th for **Qualine-SDLC**, dealing with component distribution architecture.
 - `lifecycle/` - **Qualine-SDLC** software development lifecycle, followed in making of **DEC**.
 - `objectives/` - Contains objectives for each release/ version/ patch (***Qualine*** stage 1).
