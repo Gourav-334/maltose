@@ -54,6 +54,12 @@ parser/
         sec_store.c
         warn_log.c
 utils/
+    file_sys/
+        path_valid.c
+    str_ops/
+	push_alloc.c
+    str_verif/
+        ill_char_scan.c
     log_writer.c
 file_reader.c
 main.c
