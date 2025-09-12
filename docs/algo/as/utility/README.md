@@ -9,5 +9,6 @@ This directory contains all the utilities that could be used in improving progra
 ## 2. File Descriptions
 
 - `file_sys/` - Contains all the utilities related to file system.
+- `str_varif/` - Contains all the utilities that can be used to verify strings for any metric.
 
 ---
