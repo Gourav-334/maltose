@@ -1,6 +1,11 @@
-/* Including the corresponding header file. */
+/* Including required headers. */
 
-#include "../../../include/utility/ill_char_scan.h"
+#include "../../../include/utils/str_verif/ill_char_scan.h"
+#include "../../../include/utils/str_ops/push_alloc.h"
+
+#include <stdio.h>			// Required for using libc's optimized functions.
+#include <string.h>			// Required to use certain functions related to stings.
+#include <stdlib.h>			// Required to allocate memory for trash string.
 
 
 
@@ -19,7 +24,6 @@ bool scan_ill_chars(char *str, long int len, char *ill_chars, char *mode)
 
 	long int total_ill_chars = 0;
 	char *trash = NULL;
-	long int trash_len = 1;
 
 
 
@@ -28,11 +32,6 @@ bool scan_ill_chars(char *str, long int len, char *ill_chars, char *mode)
 	enum Mode{DEV, USER, DEBUG} M;
 
 
-
-	/* Keeping a default byte in 'trash'. */
-
-	trash = malloc(1*sizeof(char));
-	trash[trash_len-1] = '\0';
 
 
 
@@ -49,6 +48,8 @@ bool scan_ill_chars(char *str, long int len, char *ill_chars, char *mode)
 
 
 
+
+
 	/* Illegal characters scanning loop. */
 
 	for (long int i=0; i<len; i++)
@@ -57,7 +58,7 @@ bool scan_ill_chars(char *str, long int len, char *ill_chars, char *mode)
 		{
 			/* If character matching is not illegal with current character. */
 
-			if (str[i]!=ill_chars[j])
+			if ((*(str+i))!=(*(ill_chars+j)))
 			{
 				if (M==DEV) {continue;}
 				else if (M==USER) {continue;}
@@ -65,8 +66,8 @@ bool scan_ill_chars(char *str, long int len, char *ill_chars, char *mode)
 				{
 					/* Writing transparent details about indices, characters, and match result. */
 
-					printf("OK :: str[%ld]=%c : ill_chars[%ld]=%c :: Not illegal match.\n",
-						i, str[i], j, ill_chars[j]);
+					printf("OK :: Not illegal match :: str[%ld]=%c : ill_chars[%ld]=%c\n",
+						i, *(str+i), j, *(ill_chars+j));
 				}
 			}
 
@@ -74,7 +75,7 @@ bool scan_ill_chars(char *str, long int len, char *ill_chars, char *mode)
 
 			/* If character matching is found illegal. */
 
-			else if (str[i]==ill_chars[j])
+			else if ((*(str+i))==(*(ill_chars+j)))
 			{
 				total_ill_chars++;
 
@@ -82,20 +83,10 @@ bool scan_ill_chars(char *str, long int len, char *ill_chars, char *mode)
 				if (M==DEV) {return true;}
 				else if (M==USER)
 				{
-					/* Allocating an extra byte to add new illegar char. */
+					/* Pushing the illegal character to the string. */
 
-					trash = realloc(trash, (size_t)(trash_len+1));
-					trash_len++;
+					push_alloc(&trash, *(ill_chars+j), "dev");
 
-					
-					/* Detecting reallocation error (if any). */
-
-					if (trash==NULL) {perror("ERROR"); return false;}
-					else
-					{
-						trash[trash_len-2] = str[i];
-						trash[trash_len-1] = '\0';
-					}
 
 
 					/* Not further scanning same character, moving to next. */
@@ -106,12 +97,14 @@ bool scan_ill_chars(char *str, long int len, char *ill_chars, char *mode)
 				{
 					/* Writing transparent deatils about indices, characters, and match result. */
 
-					printf("ERROR :: str[%ld]=%c : ill_chars[%ld]=%c :: Illegal match!\n",
-						i, str[i], j, ill_chars[j]);
+					printf("ERROR :: Illegal match :: str[%ld]=%c : ill_chars[%ld]=%c\n",
+						i, *(str+i), j, *(ill_chars+j));
 				}
 			}
 		}
 	}
+
+
 
 
 
@@ -145,7 +138,7 @@ bool scan_ill_chars(char *str, long int len, char *ill_chars, char *mode)
 		}
 		else if (total_ill_chars>0)
 		{
-			printf("ERROR: Total %d illegal characters found in string \"%s\"!",
+			printf("ERROR: Total %ld illegal characters found in string \"%s\"!\n",
 				total_ill_chars, str);
 		}
 	}
