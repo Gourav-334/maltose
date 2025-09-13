@@ -6,9 +6,14 @@
 
 
 
+
+
+
+
+
 /* Scans for illegal characters in a given string. */
 
-bool scan_ill_chars(char *str, long int len, char *mode, char *ill_chars)
+bool scan_ill_chars(char *str, long int len, char *ill_chars, char *mode)
 {
 	/* Variable declarations/definitions. */
 
@@ -38,7 +43,7 @@ bool scan_ill_chars(char *str, long int len, char *mode, char *ill_chars)
 	else if (!strcmp(mode,"debug")) {M = DEBUG;}
 	else
 	{
-		printf("ERROR: Mode named \"%s\" doesn't exist!", mode);
+		printf("ERROR: Mode named \"%s\" doesn't exist!\n", mode);
 		return false;
 	}
 

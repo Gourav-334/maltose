@@ -15,7 +15,7 @@ This file records the step-by-step implementation of the illegal character scann
 ### 2.1 <u>Function</u>:
 
 ```c
-bool scan_ill_chars(char *str, long int len, char *mode, char *ill_chars);
+bool scan_ill_chars(char *str, long int len, char *ill_chars, char *mode);
 ```
 
 - `str` is the string that programmer is passing for scanning.
