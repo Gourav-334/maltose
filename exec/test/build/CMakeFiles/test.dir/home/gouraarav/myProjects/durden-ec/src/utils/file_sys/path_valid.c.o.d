@@ -1,8 +1,10 @@
-CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/test.c.o: \
- /home/gouraarav/myProjects/durden-ec/src/test.c \
+CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c.o: \
+ /home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c \
  /usr/include/stdc-predef.h \
- /home/gouraarav/myProjects/durden-ec/src/../include/utils/file_sys/path_valid.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h /usr/include/stdio.h \
+ /home/gouraarav/myProjects/durden-ec/src/utils/file_sys/../../../include/utils/file_sys/path_valid.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
+ /home/gouraarav/myProjects/durden-ec/src/utils/file_sys/../../../include/utils/str_ops/push_alloc.h \
+ /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \

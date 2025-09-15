@@ -153,6 +153,30 @@ home/gouraarav/myProjects/durden-ec/src/test.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/test.c.s
 .PHONY : home/gouraarav/myProjects/durden-ec/src/test.c.s
 
+home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.o: home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c.o
+
+home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.i: home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c.i
+
+home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.s: home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c.s
+
 home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.o: home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.o
 .PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.o
 
@@ -177,30 +201,6 @@ home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.s
 .PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.s
 
-home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.o: home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.o
-.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.o
-
-# target to build an object file
-home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.o
-.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.o
-
-home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.i: home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.i
-.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.i
-
-# target to preprocess a source file
-home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.i
-.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.i
-
-home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.s: home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.s
-.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.s
-
-# target to generate assembly for a file
-home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.s
-.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -213,12 +213,12 @@ help:
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.o"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.i"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.s"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.o"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.i"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.s"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.o"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.i"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.s"
 .PHONY : help
 
 

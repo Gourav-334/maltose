@@ -112,8 +112,8 @@ void push_alloc(char **str, char c, char *mode)
 		else if (M==USER) {}
 		else if (M==DEBUG)
 		{
-			printf("STAT :: String is not empty :: str:\"%s\" :: str_len:%ld\n",
-				*str, str_len);
+			printf("STAT :: String is not empty :: str=\"%s\" :: str_len=%ld :: &str=%p\n",
+				*str, str_len, *str);
 		}
 	}
 
@@ -123,7 +123,7 @@ void push_alloc(char **str, char c, char *mode)
 
 	/* Allocating compulsory byte & pushing the character. */
 
-	*str = realloc(*str, (size_t)(str_len+1));
+	*str = realloc(*str, (size_t)(str_len+1)); //////////////////////////////// TROUBLE POINT ///////////////
 
 
 

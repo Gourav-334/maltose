@@ -6,5 +6,5 @@ set(CMAKE_C_STANDARD_REQUIRED True)
 add_executable(test
 	../../src/test.c
 	../../src/utils/str_ops/push_alloc.c
-	../../src/utils/str_verif/ill_char_scan.c
+	../../src/utils/file_sys/path_valid.c
 )

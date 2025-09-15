@@ -39,8 +39,8 @@ void push_alloc(char *str, char c, char *mode);
 
 ### 2.3 <u>Time Complexity</u>:
 
-- **Best case -** $O(1)$ due to return at first encounter itself (if found at 0th index).
-- **Average case -** $O(n.m)$ for matching each character of target string with illegal character set.
-- **Worst case -** $O(n.m)$ Same reason as for the **average case**.
+- **Best case -** $O(1)$ if the string is empty & thus `strlen()` isn't used.
+- **Average case -** $O(n)$ for most cases where a character is added to existing string.
+- **Worst case -** $O(n)$ Same reason as for the **average case**.
 
 ---

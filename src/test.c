@@ -1,6 +1,6 @@
 /* Adding header(s) for unit testing. */
 
-#include "../include/utils/str_verif/ill_char_scan.h"
+#include "../include/utils/file_sys/path_valid.h"
 
 #include <stdio.h>
 #include <string.h>
@@ -9,9 +9,9 @@
 
 int main()
 {
-	char *str = "8h3d$9042F#biub78&G";
+	char *path = NULL;
 	
-	scan_ill_chars(str, strlen(str), "!@#$%^&*()", "user");
+	path_valid("build/", true, "debug");
 
 
 	return 0;

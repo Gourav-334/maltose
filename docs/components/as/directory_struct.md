@@ -24,9 +24,9 @@ bin_generator/
         specs_store.c
         file_writer.c
 cmd_interpreter/
+    cmd_validator.c
     err_log.c
     flag_status.c
-    fsm.c
     warn_log.c
 data_structs/
     linked_list/
