@@ -25,9 +25,7 @@ bin_generator/
         file_writer.c
 cmd_interpreter/
     cmd_validator.c
-    err_log.c
-    flag_status.c
-    warn_log.c
+    flag_status.c (DONE)
 data_structs/
     linked_list/
         insert.c
@@ -55,15 +53,15 @@ parser/
         warn_log.c
 utils/
     file_sys/
-        path_valid.c
+        path_valid.c (DONE)
     str_ops/
-	push_alloc.c
+	   push_alloc.c (DONE)
     str_verif/
-        ill_char_scan.c
+        ill_char_scan.c (DONE)
     log_writer.c
 file_reader.c
 main.c
-test.c
+test.c (DONE)
 ```
 
 >**<u>NOTE</u>:**

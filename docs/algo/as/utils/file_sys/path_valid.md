@@ -32,7 +32,7 @@ test/primary/main.o
 ```
 
 
-### 2.3 <u>Algorithm</u>:
+### 2.3 <u>Steps</u>:
 
 1. Check if right mode is passed in argument.
 2. Check if the passed path doesn't include file's name, thus `/`.
@@ -48,8 +48,8 @@ test/primary/main.o
 
 ### 2.4 <u>Time Complexity</u>:
 
-- **Best case -** $O(1)$ due to return at first encounter itself (if found at 0th index).
-- **Average case -** $O(n.m)$ for matching each character of target string with illegal character set.
-- **Worst case -** $O(n.m)$ Same reason as for the **average case**.
+- **Best case -** $O(1)$ for having fixed & limited number of operations.
+- **Average case -** $O(1)$ Same reason as for the **best case**.
+- **Worst case -** $O(1)$ Same reason as for the **best case**.
 
 ---

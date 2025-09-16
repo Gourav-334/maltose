@@ -8,6 +8,7 @@ This directory contains documentation for algorithmic implementation of the **co
 
 ## 2. File Descriptions
 
-- `cmd_validator.md` - Describes the algorithms used in validating a user passed command to assembler.
+- `cmd_valid.md` - Describes the implementation of validating a user passed command to assembler.
+- `flag_status.md` - Describes the storage flag statuses passed by user to the assembler binary.
 
 ---

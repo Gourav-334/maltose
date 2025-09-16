@@ -29,7 +29,7 @@ dec-as <src_file> <dest_file> -<flag1> -<flag2> ... -<flagn>
 - `log` - Log all scanning process
 - `mod=x` - Runs in `x` mode (`host` or `metal`).
 - `opt` - Optimize code
-- `war` - Enable warnings
+- `nwr` - Disable warnings
 
 
 ### 2.3 <u>Proving syntax stability</u>:

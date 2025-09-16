@@ -137,7 +137,7 @@ bool path_valid(char *path, bool exist, char *mode)
 			{
 				printf("WARN: File already exists as \"%s\".\n", path);
 			}
-			else if (M==USER)
+			else if (M==DEBUG)
 			{
 				printf("WARN :: Path \"%s\" already exists.\n", path);
 			}
@@ -163,7 +163,7 @@ bool path_valid(char *path, bool exist, char *mode)
 				{
 					printf("ERROR: Non-existing directory \"%s\" (without filename)!\n", path);
 				}
-				else if (M==USER)
+				else if (M==DEBUG)
 				{
 					printf("ERROR :: Write operation as \"%s\" failed!\n", path);
 				}
@@ -178,7 +178,7 @@ bool path_valid(char *path, bool exist, char *mode)
 				{
 					printf("OK: File can exist as \"%s\".\n", path);
 				}
-				else if (M==USER)
+				else if (M==DEBUG)
 				{
 					printf("OK :: File \"%s\" can exist in future.\n", path);
 				}
@@ -200,11 +200,11 @@ bool path_valid(char *path, bool exist, char *mode)
 					if (M==DEV) {}
 					else if (M==USER)
 					{
-						printf("ERROR: Failed to remove test file \"%s\"!\n", path);
+						printf("OK: Test file \"%s\" removed successfully.\n", path);
 					}
 					else if (M==DEBUG)
 					{
-						printf("ERROR :: Remove operation on \"%s\" failed!\n", path);
+						printf("OK :: Test file \"%s\" removed successfully.\n", path);
 					}
 				}
 
