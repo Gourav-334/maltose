@@ -28,7 +28,6 @@ dec-as <src_file> <dest_file> -<flag1> -<flag2> ... -<flagn>
 - `dev` - Display developer info
 - `log` - Log all scanning process
 - `mod=x` - Runs in `x` mode (`host` or `metal`).
-- `opt` - Optimize code
 - `nwr` - Disable warnings
 
 

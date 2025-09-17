@@ -1,26 +1,52 @@
 /* Adding header(s) for unit testing. */
 
-#include "../include/cmd_interpreter/flag_status.h"
+#include "../include/cmd_interpreter/cmd_fsm_main.h"
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 
 
 int main()
 {
-	flag_mod.subtype = malloc(6);
-	strcpy(flag_mod.subtype, "host\0");
-	strcpy(flag_mod.subtype, "metal\0");
-	flag_mod.status = true;
+	cmd_fsm_main("rand", 0, "debug"); printf("\n");
+	cmd_fsm_main("deb", 0, "debug"); printf("\n");
+	cmd_fsm_main("randdeb", 0, "debug"); printf("\n");
+	cmd_fsm_main("debrand", 0, "debug"); printf("\n");
+	cmd_fsm_main("randdebrand", 0, "debug"); printf("\n");
+	cmd_fsm_main("debranddeb", 0, "debug"); printf("\n");
+	cmd_fsm_main("debranddev", 0, "debug"); printf("\n"); printf("\n");
 
-	printf("deb.subtype=%s, deb.status=%b\n", flag_deb.subtype, flag_deb.status);
-	printf("dev.subtype=%s, dev.status=%b\n", flag_dev.subtype, flag_dev.status);
-	printf("log.subtype=%s, log.status=%b\n", flag_log.subtype, flag_log.status);
-	printf("mod.subtype=%s, mod.status=%b\n", flag_mod.subtype, flag_mod.status);
-	printf("opt.subtype=%s, opt.status=%b\n", flag_opt.subtype, flag_opt.status);
-	printf("nwr.subtype=%s, nwr.status=%b\n", flag_nwr.subtype, flag_nwr.status);
+	cmd_fsm_main("rand", 0, "debug"); printf("\n");
+	cmd_fsm_main("dev", 0, "debug"); printf("\n");
+	cmd_fsm_main("randdev", 0, "debug"); printf("\n");
+	cmd_fsm_main("devrand", 0, "debug"); printf("\n");
+	cmd_fsm_main("randdevrand", 0, "debug"); printf("\n");
+	cmd_fsm_main("devranddev", 0, "debug"); printf("\n");
+	cmd_fsm_main("devrandlog", 0, "debug"); printf("\n"); printf("\n");
+
+	cmd_fsm_main("rand", 0, "debug"); printf("\n");
+	cmd_fsm_main("log", 0, "debug"); printf("\n");
+	cmd_fsm_main("randlog", 0, "debug"); printf("\n");
+	cmd_fsm_main("logrand", 0, "debug"); printf("\n");
+	cmd_fsm_main("randlogrand", 0, "debug"); printf("\n");
+	cmd_fsm_main("lograndlog", 0, "debug"); printf("\n");
+	cmd_fsm_main("lograndmod", 0, "debug"); printf("\n"); printf("\n");
+
+	cmd_fsm_main("rand", 0, "debug"); printf("\n");
+	cmd_fsm_main("mod", 0, "debug"); printf("\n");
+	cmd_fsm_main("randmod", 0, "debug"); printf("\n");
+	cmd_fsm_main("modrand", 0, "debug"); printf("\n");
+	cmd_fsm_main("randmodrand", 0, "debug"); printf("\n");
+	cmd_fsm_main("modrandmod", 0, "debug"); printf("\n");
+	cmd_fsm_main("modrandnwr", 0, "debug"); printf("\n"); printf("\n");
+
+	cmd_fsm_main("rand", 0, "debug"); printf("\n");
+	cmd_fsm_main("nwr", 0, "debug"); printf("\n");
+	cmd_fsm_main("randnwr", 0, "debug"); printf("\n");
+	cmd_fsm_main("nwrrand", 0, "debug"); printf("\n");
+	cmd_fsm_main("randnwrrand", 0, "debug"); printf("\n");
+	cmd_fsm_main("nwrrandnwr", 0, "debug"); printf("\n");
+	cmd_fsm_main("nwrranddeb", 0, "debug"); printf("\n"); printf("\n");
 
 
 	return 0;

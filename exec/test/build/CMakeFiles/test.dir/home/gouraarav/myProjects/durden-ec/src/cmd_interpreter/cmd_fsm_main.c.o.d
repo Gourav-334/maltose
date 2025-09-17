@@ -1,8 +1,10 @@
-CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/flag_status.c.o: \
- /home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/flag_status.c \
+CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c.o: \
+ /home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c \
  /usr/include/stdc-predef.h \
- /home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/../../include/cmd_interpreter/flag_status.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h /usr/include/stdio.h \
+ /home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/../../include/cmd_interpreter/cmd_fsm_main.h \
+ /home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/../../include/cmd_interpreter/cmd_fsm/cmd_fsm0.h \
+ /home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/../../include/cmd_interpreter/cmd_fsm/cmd_fsm1.h \
+ /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -25,4 +27,7 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/flag
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h
+ /usr/include/x86_64-linux-gnu/bits/floatn-common.h /usr/include/string.h \
+ /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+ /usr/include/strings.h

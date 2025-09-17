@@ -19,5 +19,4 @@ struct Flag flag_deb = {.subtype=NULL, .status=false};
 struct Flag flag_dev = {.subtype=NULL, .status=false};
 struct Flag flag_log = {.subtype=NULL, .status=false};
 struct Flag flag_mod = {.subtype=NULL, .status=false};
-struct Flag flag_opt = {.subtype=NULL, .status=false};
 struct Flag flag_nwr = {.subtype=NULL, .status=false};
