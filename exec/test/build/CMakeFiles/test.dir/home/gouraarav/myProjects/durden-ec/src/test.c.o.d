@@ -1,8 +1,8 @@
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/test.c.o: \
  /home/gouraarav/myProjects/durden-ec/src/test.c \
  /usr/include/stdc-predef.h \
- /home/gouraarav/myProjects/durden-ec/src/../include/cmd_interpreter/cmd_fsm_main.h \
- /usr/include/stdio.h \
+ /home/gouraarav/myProjects/durden-ec/src/../include/cmd_interpreter/fsm_state_handler.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \

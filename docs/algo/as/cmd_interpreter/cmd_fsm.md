@@ -1,4 +1,4 @@
-# Command Finite State Machine
+# COMMAND FINITE STATE MACHINE
 
 
 
@@ -41,16 +41,7 @@ void cmd_fsmN(char *str, unsigned short int start, signed short int *state);
 - `state` - Initial state of the machine.
 
 
-### 2.4 <u>Details</u>:
-
-- All parts of FSM are assembled at central FSM assembly point.
-- Central assembler runs on endless loop & switch-cases within which tell which part of FSM to jump in.
-- Initially, machine starts with 0th index of string & state `0`.
-- The central FSM handler uses formula `state/10` to get the case for next iteration.
-- Central FSM stores the global details like state.
-
-
-### 2.5 <u>Steps (Central FSM)</u>:
+### 2.4 <u>Steps (Central FSM)</u>:
 
 1. Check if the mode passed is valid or not, proceed if valid or halt otherwise.
 2. Until the string hasn't been read completely, or no mistake is found, keep reading each char.
@@ -59,9 +50,19 @@ void cmd_fsmN(char *str, unsigned short int start, signed short int *state);
 5. Also displays message/diagnosis for unknown state.
 
 
-### 2.6 <u>Steps (Part of FSM)</u>:
+### 2.5 <u>Steps (Part of FSM)</u>:
 
 1. Check if the mode passed is valid or not, proceed if valid or halt otherwise.
 2. Change state as per the read symbol (char).
+
+
+
+## 3. Details
+
+- All parts of FSM are assembled at central FSM assembly point.
+- Central assembler runs on endless loop & switch-cases within which tell which part of FSM to jump in.
+- Initially, machine starts with 0th index of string & state `0`.
+- The central FSM handler uses formula `state/10` to get the case for next iteration.
+- Central FSM stores the global details like state.
 
 ---

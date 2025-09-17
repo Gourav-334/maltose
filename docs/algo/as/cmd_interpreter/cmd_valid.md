@@ -41,22 +41,24 @@ This file records the step-by-step algorithms in implementation of nano componen
 ### 4.1 <u>Function</u>:
 
 ```c
-bool cmd_validator(char *cmd[], char *mode);
+bool cmd_validator(int argc, char **argv, char *mode);
 ```
 
 
 ### 4.2 <u>Steps</u>:
 
-1. Check if the number of arguments cross the maximum limit.
-2. If not, check if the source path is valid or not (2nd argument).
-3. If not, still continue further to know more errors.
-4. Check if the destination file actually exists (3rd argument).
+1. For just one argument, tell user to pass the source & destination.
+2. For two, tell to pass destination.
+3. And then check if limit is over maximum.
+4. If not, check if the source path is valid or not (2nd argument).
 5. If not, still continue further to know more errors.
-6. For remaining arguments, make sure they start with `-`.
+6. Check if the destination file actually exists (3rd argument).
 7. If not, still continue further to know more errors.
-8. Then match them to the registered flags to check if they are valid.
-9. If matching & not duplicate (check both separately), mark the flags to be into action.
-10. If not & more flags are further, still continue further to know more errors.
+8. For remaining arguments, make sure they start with `-`.
+9. If not, still continue further to know more errors.
+10. Then match them to the registered flags to check if they are valid.
+11. If matching & not duplicate (check both separately), mark the flags to be into action.
+12. If not & more flags are further, still continue further to know more errors.
 
 
 ### 4.3 <u>Time Complexity</u>:

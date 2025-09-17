@@ -3,6 +3,7 @@
 #include "../../include/cmd_interpreter/cmd_fsm_main.h"
 #include "../../include/cmd_interpreter/cmd_fsm/cmd_fsm0.h"
 #include "../../include/cmd_interpreter/cmd_fsm/cmd_fsm1.h"
+#include "../../include/cmd_interpreter/fsm_state_handler.h"
 
 #include <stdio.h>			// Required for providing feedback to mode.
 #include <string.h>			// Required to measure string length.
@@ -90,4 +91,18 @@ void cmd_fsm_main(char *str, unsigned short int start, char *mode)
 		printf("STAT :: Final state :: start=%d : str_len=%ld : state=%hd\n",
 			start, str_len, state);
 	}
+
+
+
+
+
+	/* Calling state handler to provide feedback. */
+
+	handle_fsm_state(&state, str, "user");
+
+
+
+	/* Reverting the state back to initial. */
+
+	*state = 0;
 }

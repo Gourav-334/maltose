@@ -129,77 +129,29 @@ test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
 
-home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.o: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.c.o
-.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.o
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.o: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.o
 
 # target to build an object file
-home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.c.o
-.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.c.o
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.c.o
 
-home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.i: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.c.i
-.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.i
-
-# target to preprocess a source file
-home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.c.i
-.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.c.i
-
-home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.s: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.c.s
-.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.s
-
-# target to generate assembly for a file
-home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.c.s
-.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.c.s
-
-home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.o: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.c.o
-.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.o
-
-# target to build an object file
-home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.c.o
-.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.c.o
-
-home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.i: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.c.i
-.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.i
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.i: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.i
 
 # target to preprocess a source file
-home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.c.i
-.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.c.i
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.c.i
 
-home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.s: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.c.s
-.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.s
-
-# target to generate assembly for a file
-home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.c.s
-.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.c.s
-
-home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.o: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c.o
-.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.o
-
-# target to build an object file
-home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c.o
-.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c.o
-
-home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.i: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c.i
-.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.i
-
-# target to preprocess a source file
-home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c.i
-.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c.i
-
-home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.s: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c.s
-.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.s
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.s: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.s
 
 # target to generate assembly for a file
-home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c.s
-.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c.s
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.c.s
 
 home/gouraarav/myProjects/durden-ec/src/test.o: home/gouraarav/myProjects/durden-ec/src/test.c.o
 .PHONY : home/gouraarav/myProjects/durden-ec/src/test.o
@@ -234,15 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.o"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.i"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.s"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.o"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.i"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.s"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.o"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.i"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.s"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.o"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.i"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.s"
