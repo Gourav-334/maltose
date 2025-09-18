@@ -7,6 +7,14 @@
 
 
 
+/* Including required functions. */
+
+#include <stdbool.h>		// For returning boolean values.
+
+
+
+
+
 
 
 
@@ -14,7 +22,7 @@
 
 /* Declaring functions. */
 
-void cmd_fsm_main(char *str, unsigned short int start, char *mode);
+bool cmd_fsm_main(char *str, unsigned short int start, char *mode);
 
 
 

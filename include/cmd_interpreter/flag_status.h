@@ -40,6 +40,7 @@ extern struct Flag flag_log;
 extern struct Flag flag_mod;
 extern struct Flag flag_opt;
 extern struct Flag flag_nwr;
+extern struct Flag flag_help;
 
 
 

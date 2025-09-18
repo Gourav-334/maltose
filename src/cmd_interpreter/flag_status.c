@@ -20,3 +20,4 @@ struct Flag flag_dev = {.subtype=NULL, .status=false};
 struct Flag flag_log = {.subtype=NULL, .status=false};
 struct Flag flag_mod = {.subtype=NULL, .status=false};
 struct Flag flag_nwr = {.subtype=NULL, .status=false};
+struct Flag flag_help = {.subtype=NULL, .status=false};

@@ -41,5 +41,32 @@ void cmd_fsm1(char *str, unsigned short int start, signed short int *state)
 			*state = -6;
 
 			break;
+
+
+		case 14:
+			if (*(str+start)=='e' || *(str+start)=='E') {*state = 15;}
+			else {*state = -7;}
+
+			break;
+
+
+		case 15:
+			if (*(str+start)=='l' || *(str+start)=='L') {*state = 16;}
+			else {*state = -7;}
+
+			break;
+
+
+		case 16:
+			if (*(str+start)=='p' || *(str+start)=='P') {*state = 17;}
+			else {*state = -7;}
+
+			break;
+
+
+		case 17:
+			*state = -7;
+
+			break;
 	}
 }

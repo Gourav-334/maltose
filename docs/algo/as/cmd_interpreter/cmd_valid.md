@@ -41,7 +41,7 @@ This file records the step-by-step algorithms in implementation of nano componen
 ### 4.1 <u>Function</u>:
 
 ```c
-bool cmd_validator(int argc, char **argv, char *mode);
+bool cmd_validator(int argc, char *argv[], char *mode);
 ```
 
 

@@ -104,7 +104,7 @@ bool path_valid(char *path, bool exist, char *mode)
 			}
 			else if (M=DEBUG)
 			{
-				printf("OK :: Read operation successful on \"%s\"!\n", path);
+				printf("OK :: Read operation successful on \"%s\".\n", path);
 			}
 
 

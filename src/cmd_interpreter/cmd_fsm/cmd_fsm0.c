@@ -22,6 +22,7 @@ void cmd_fsm0(char *str, unsigned short int start, signed short int *state)
 			else if (*(str+start)=='l' || *(str+start)=='L') {*state = 5;}
 			else if (*(str+start)=='m' || *(str+start)=='M') {*state = 8;}
 			else if (*(str+start)=='n' || *(str+start)=='N') {*state = 11;}
+			else if (*(str+start)=='h' || *(str+start)=='H') {*state = 14;}
 			else {*state = -1;}
 
 			break;

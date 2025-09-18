@@ -119,7 +119,7 @@ bool scan_ill_chars(char *str, long int len, char *ill_chars, char *mode)
 	{
 		if (total_ill_chars==0)
 		{
-			printf("OK: No illegal character usage found.\n");
+			printf("OK: No illegal character usage found in \"%s\".\n", str);
 			return false;
 		}
 		else if (total_ill_chars>0)
@@ -133,7 +133,7 @@ bool scan_ill_chars(char *str, long int len, char *ill_chars, char *mode)
 	{
 		if (total_ill_chars==0)
 		{
-			printf("OK: No illegal character usage found.\n");
+			printf("OK: No illegal character usage found in \"%s\".\n", str);
 			return false;
 		}
 		else if (total_ill_chars>0)

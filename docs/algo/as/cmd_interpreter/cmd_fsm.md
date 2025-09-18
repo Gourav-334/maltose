@@ -16,11 +16,13 @@ This file documents implementation details of each part of **FSM** (**finite sta
 
 ![State Diagram](./assets/cmd_fsm1.png)
 
+![State Diagram 2](./assets/cmd_fsm2.png)
+
 
 ### 2.2 <u>Central Function</u>:
 
 ```c
-void cmd_fsm_main(char *str, unsigned short int start, char *mode);
+bool cmd_fsm_main(char *str, unsigned short int start, char *mode);
 ```
 
 - `N` - A whole number representing a part of FSM, each part containing 10 states.

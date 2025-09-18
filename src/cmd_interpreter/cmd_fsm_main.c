@@ -19,7 +19,7 @@
 
 /* Central Finite State Machine handler. */
 
-void cmd_fsm_main(char *str, unsigned short int start, char *mode)
+bool cmd_fsm_main(char *str, unsigned short int start, char *mode)
 {
 	/* Variable declarations/definitions. */
 
@@ -46,7 +46,7 @@ void cmd_fsm_main(char *str, unsigned short int start, char *mode)
 	else
 	{
 		printf("ERROR: Mode named \"%s\" doesn't exist!\n", mode);
-		return;
+		return false;
 	}
 
 
@@ -98,11 +98,5 @@ void cmd_fsm_main(char *str, unsigned short int start, char *mode)
 
 	/* Calling state handler to provide feedback. */
 
-	handle_fsm_state(&state, str, "user");
-
-
-
-	/* Reverting the state back to initial. */
-
-	*state = 0;
+	return handle_fsm_state(&state, str, "user");
 }

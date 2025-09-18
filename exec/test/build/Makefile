@@ -129,6 +129,126 @@ test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
 
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.o: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.c.o
+
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.i: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.c.i
+
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.s: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.c.s
+
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.o: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.c.o
+
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.i: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.c.i
+
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.s: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.c.s
+
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.o: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c.o
+
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.i: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c.i
+
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.s: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.c.s
+
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_valid.o: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_valid.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_valid.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_valid.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_valid.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_valid.c.o
+
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_valid.i: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_valid.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_valid.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_valid.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_valid.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_valid.c.i
+
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_valid.s: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_valid.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_valid.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_valid.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_valid.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_valid.c.s
+
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/flag_status.o: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/flag_status.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/flag_status.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/flag_status.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/flag_status.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/flag_status.c.o
+
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/flag_status.i: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/flag_status.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/flag_status.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/flag_status.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/flag_status.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/flag_status.c.i
+
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/flag_status.s: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/flag_status.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/flag_status.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/flag_status.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/flag_status.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/flag_status.c.s
+
 home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.o: home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.c.o
 .PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.o
 
@@ -152,6 +272,30 @@ home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.s: hom
 home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.c.s
 .PHONY : home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.c.s
+
+home/gouraarav/myProjects/durden-ec/src/manuals/cmd_help.o: home/gouraarav/myProjects/durden-ec/src/manuals/cmd_help.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/manuals/cmd_help.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/manuals/cmd_help.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/manuals/cmd_help.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/manuals/cmd_help.c.o
+
+home/gouraarav/myProjects/durden-ec/src/manuals/cmd_help.i: home/gouraarav/myProjects/durden-ec/src/manuals/cmd_help.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/manuals/cmd_help.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/manuals/cmd_help.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/manuals/cmd_help.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/manuals/cmd_help.c.i
+
+home/gouraarav/myProjects/durden-ec/src/manuals/cmd_help.s: home/gouraarav/myProjects/durden-ec/src/manuals/cmd_help.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/manuals/cmd_help.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/manuals/cmd_help.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/manuals/cmd_help.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/manuals/cmd_help.c.s
 
 home/gouraarav/myProjects/durden-ec/src/test.o: home/gouraarav/myProjects/durden-ec/src/test.c.o
 .PHONY : home/gouraarav/myProjects/durden-ec/src/test.o
@@ -177,6 +321,78 @@ home/gouraarav/myProjects/durden-ec/src/test.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/test.c.s
 .PHONY : home/gouraarav/myProjects/durden-ec/src/test.c.s
 
+home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.o: home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c.o
+
+home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.i: home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c.i
+
+home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.s: home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.c.s
+
+home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.o: home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.o
+
+home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.i: home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.i
+
+home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.s: home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.s
+
+home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.o: home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.o
+
+home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.i: home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.i
+
+home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.s: home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +402,39 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm0.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm/cmd_fsm1.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_fsm_main.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_valid.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_valid.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/cmd_valid.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/flag_status.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/flag_status.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/flag_status.s"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.o"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.i"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/cmd_interpreter/fsm_state_handler.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/manuals/cmd_help.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/manuals/cmd_help.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/manuals/cmd_help.s"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.o"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.i"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/file_sys/path_valid.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.s"
 .PHONY : help
 
 
