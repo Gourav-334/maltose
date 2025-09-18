@@ -24,8 +24,13 @@ bin_generator/
         specs_store.c
         file_writer.c
 cmd_interpreter/
-    cmd_validator.c
+    cmd_fsm/
+        cmd_fsm0.c (DONE)
+        cmd_fsm1.c (DONE)
+    cmd_fsm_main.c (DONE)
+    cmd_valid.c (DONE)
     flag_status.c (DONE)
+    fsm_state_handler.c (DONE)
 data_structs/
     linked_list/
         insert.c
