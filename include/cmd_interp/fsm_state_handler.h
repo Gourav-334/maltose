@@ -22,7 +22,7 @@
 
 /* Functions declaration. */
 
-bool handle_fsm_state(signed short int *state, char *flag, char *mode);
+bool handle_fsm_state(signed short int *state, char *flag, char *mode);		// Decides what to do with final state of FSM.
 
 
 

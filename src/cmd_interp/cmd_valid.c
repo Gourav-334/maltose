@@ -1,7 +1,7 @@
 /* Including required headers. */
 
-#include "../../include/cmd_interpreter/cmd_valid.h"
-#include "../../include/cmd_interpreter/cmd_fsm_main.h"
+#include "../../include/cmd_interp/cmd_valid.h"
+#include "../../include/cmd_interp/cmd_fsm_main.h"
 #include "../../include/utils/str_verif/ill_char_scan.h"
 #include "../../include/utils/file_sys/path_valid.h"
 

@@ -17,9 +17,9 @@
 
 /* Functions declaration. */
 
-void cmd_help_repr();
-void cmd_help_rules();
-void cmd_help_flags();
+void cmd_help_repr();			// Pseudo representation of command usage.
+void cmd_help_rules();			// Instructing rules for passing arguments to assembler.
+void cmd_help_flags();			// Clarifying correct usage of flags.
 
 
 

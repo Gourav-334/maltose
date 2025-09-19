@@ -1,7 +1,7 @@
 /* Including required headers. */
 
-#include "../../include/cmd_interpreter/fsm_state_handler.h"
-#include "../../include/cmd_interpreter/flag_status.h"
+#include "../../include/cmd_interp/fsm_state_handler.h"
+#include "../../include/cmd_interp/flag_status.h"
 
 #include <stdio.h>		// For printing feedbacks to terminal.
 #include <string.h>		// For detecting chosen feedback mode.

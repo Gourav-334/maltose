@@ -14,7 +14,7 @@
 
 /* Declaring functions. */
 
-void cmd_fsm1(char *str, unsigned short int start, signed short int *state);
+void cmd_fsm1(char *str, unsigned short int start, signed short int *state);		// Handles state 10-19 of command FSM.
 
 
 

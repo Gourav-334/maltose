@@ -22,7 +22,7 @@
 
 /* Function declarations. */
 
-bool path_valid(char *path, bool exist, char *mode);
+bool path_valid(char *path, bool exist, char *mode);		// Validate if a path exists/ can exist or not.
 
 
 

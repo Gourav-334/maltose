@@ -34,13 +34,12 @@ struct Flag
 
 /* Declaring instances of structures. */
 
-extern struct Flag flag_deb;
-extern struct Flag flag_dev;
-extern struct Flag flag_log;
-extern struct Flag flag_mod;
-extern struct Flag flag_opt;
-extern struct Flag flag_nwr;
-extern struct Flag flag_help;
+extern struct Flag flag_deb;		// Handles debugging flag.
+extern struct Flag flag_dev;		// Handles developer flag.
+extern struct Flag flag_log;		// Handles log flag.
+extern struct Flag flag_mod;		// Handles metal mode flag.
+extern struct Flag flag_nwr;		// Handles no warning flag.
+extern struct Flag flag_help;		// Handles help manual flag.
 
 
 

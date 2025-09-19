@@ -22,7 +22,7 @@
 
 /* Declaring functions. */
 
-bool cmd_fsm_main(char *str, unsigned short int start, char *mode);
+bool cmd_fsm_main(char *str, unsigned short int start, char *mode);		// FSM handler, decides which part of assembler must be provided next symbol.
 
 
 

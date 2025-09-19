@@ -1,6 +1,6 @@
 /* Adding header(s) for unit testing. */
 
-#include "../include/cmd_interpreter/cmd_valid.h"
+#include "../include/file_loader.h"
 
 #include <stdio.h>
 
@@ -8,7 +8,7 @@
 
 int main(int argc, char **argv)
 {
-	cmd_valid(argc, argv, "user");
+	load_file("../../../src/test.c", "debug");
 
 
 	return 0;

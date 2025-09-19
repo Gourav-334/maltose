@@ -1,6 +1,6 @@
 /* Including required headers. */
 
-#include "../../include/cmd_interpreter/flag_status.h"
+#include "../../include/cmd_interp/flag_status.h"
 
 #include <stdio.h>			// Required to use NULL in subtypes.
 

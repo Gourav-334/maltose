@@ -1,6 +1,6 @@
 /* Including required headers. */
 
-#include "../../../include/cmd_interpreter/cmd_fsm/cmd_fsm1.h"
+#include "../../../include/cmd_interp/cmd_fsm/cmd_fsm1.h"
 
 
 

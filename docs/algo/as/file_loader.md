@@ -26,14 +26,16 @@ bool load_file(char *path, char *mode);
 
 1. Check if the passed mode for feedback is valid, proceed if yes.
 2. Check if the passed file exists or not, proceed if yes.
-3. Open at the offset of file, store the cursor position somewhere.
+3. Open the file in read mode.
 4. Check for correct opening of the file.
 5. Go to the end of the file, store the cursor position somewhere.
-6. Check for correct seeking of cursor.
-7. Calculate the required number of bytes as per their difference.
-8. Dynamically allocate memory for a global string variable.
-9. Check the correct working of memory allocator.
-10. Load all the content of file into it.
+6. Go to the offset of file, differentiate from current value.
+7. Check for correct seeking of cursor.
+8. Calculate the required number of bytes as per their difference.
+9. Dynamically allocate memory for a global string variable.
+10. Check the correct working of memory allocator.
+11. Load all the content of file into it.
+12. Check if all the contents were read.
 
 
 ### 2.3 <u>Time Complexity</u>:

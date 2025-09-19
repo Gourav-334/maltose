@@ -14,7 +14,7 @@
 
 /* Declaration of functions. */
 
-void push_alloc(char **str, char c, char *mode);
+void push_alloc(char **str, char c, char *mode);		// Dynamically push a character into target string.
 
 
 

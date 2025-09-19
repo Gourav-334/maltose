@@ -1,9 +1,9 @@
 /* Including required headers. */
 
-#include "../../include/cmd_interpreter/cmd_fsm_main.h"
-#include "../../include/cmd_interpreter/cmd_fsm/cmd_fsm0.h"
-#include "../../include/cmd_interpreter/cmd_fsm/cmd_fsm1.h"
-#include "../../include/cmd_interpreter/fsm_state_handler.h"
+#include "../../include/cmd_interp/cmd_fsm_main.h"
+#include "../../include/cmd_interp/cmd_fsm/cmd_fsm0.h"
+#include "../../include/cmd_interp/cmd_fsm/cmd_fsm1.h"
+#include "../../include/cmd_interp/fsm_state_handler.h"
 
 #include <stdio.h>			// Required for providing feedback to mode.
 #include <string.h>			// Required to measure string length.

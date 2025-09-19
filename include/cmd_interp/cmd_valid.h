@@ -23,7 +23,7 @@
 
 /* Function declarations. */
 
-bool cmd_valid(int argc, char **argv, char *mode);
+bool cmd_valid(int argc, char **argv, char *mode);		// Central engine that assembles all parts of command interpreter.
 
 
 
