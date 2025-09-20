@@ -42,15 +42,15 @@ data_structs/
 lexer/
     x86/
         err_log.c
-        fsm.c
+        token_fsm.c
         token_store.c
         tokenizer.c
         warn_log.c
 parser/
     x86/
         err_log.c
-        fsm.c
         label_store.c
+        parser_pda.c
         pattern_find.c
         register_store.c
         sec_merger.c
@@ -64,7 +64,7 @@ utils/
     str_verif/
         ill_char_scan.c (DONE)
     log_writer.c
-file_reader.c
+file_loader.c (DONE)
 main.c
 test.c (DONE)
 ```
