@@ -107,7 +107,7 @@ reserve <label>[<bytes>]    ; In bss section
 ### <u>AS</u>:
 
 ```asm
-mode <mode>      ; Real/protected/long mode
+mode .<mode>      ; Real/protected/long mode
 <scope> label    ; The scope of the program
 ```
 
@@ -233,7 +233,7 @@ f<op>d <double>            # Add <double> to ST(0)
 <dest> <op_set>= <src>      ; Register-to-register operation
 
 st(0) <op_set>= st(n)           ; Add ST(n) to ST(0)
-st(0) <op_set>= popped st(n)    ; Add ST(n) to ST(0) & pop ST(n)
+st(0) <op_set>= st(n).pop       ; Add ST(n) to ST(0) & pop ST(n)
 st(0) <op_set>= <float>         ; Add <float> to ST(0)
 st(0) <op_set>= <long>          ; Add <long> to ST(0)
 st(0) <op_set>= <double>        ; Add <double> to ST(0)
@@ -449,7 +449,7 @@ jnge <label>    # Not greater or equal
 ```asm
 <label>()       ; Unconditional
 
-<label>(=)      ; Equal
+<label>(==)     ; Equal
 <label>(!=)     ; Not equal
 
 <label>(0)      ; Zero
@@ -565,11 +565,11 @@ pop flags              ; Retrieve EFLAG/RFLAG
 ah = flags             ; Load lower 8-bits of FLAGS to AH
 flags = ah             ; Store AH to lower 8-bits of FLAGS
 
-enable(interrupts)     ; Disable/clear interrupt flag
-disable(interrupts)    ; Enable/set interrupt flag
+enable interf          ; Disable/clear interrupt flag
+disable interf         ; Enable/set interrupt flag
 
-ax = fpflag(w)         ; Copy FP flag to AX
-ax = fpflag(n)         ; Same as above but non-waiting
+ax = fpflag(.w)        ; Copy FP flag to AX
+ax = fpflag(.n)        ; Same as above but non-waiting
 <label> = fpflag       ; Copy FP flag to memory
 ```
 
