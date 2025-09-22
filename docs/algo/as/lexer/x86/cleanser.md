@@ -22,11 +22,14 @@ void cleanse(char *fstream, char *mode);
 ### 2.2 <u>Steps</u>:
 
 1. Start reading the filestream byte-by-byte.
-2. Keep pushing characters into a buffer until a delimeter appears or file ends.
-3. If a delimeter appears or file ends & the buffer is not empty, check the token with FSM.
-4. If token is written correctly, push it to token stack with metadata & empty the buffer.
-5. Else if the token if found in incorrect form, display error on screen.
-6. After the file reaches its end, end the process.
+2. As per the first byte, take the default state as delimiter or non-delimiter or skipper.
+3. If current state is delimiter, keep pushing until a non-delimeter, skipper or EOF appears.
+4. As per which of the 3 appeared, change the state & check the token in buffer if not empty.
+5. Else if current state is non-delimeter, keep pushing until a delimeter, skipper or EOF appears.
+6. As per which of the 3 appeared, change the state & check the token in buffer if not empty.
+7. Else if current state is skipper, keep skipping until a delimeter, non-delimeter or EOF appears.
+8. As per which of the 3 appeared, change the state & check the token in buffer if not empty.
+9. Else if EOF was encountered, halt the process.
 
 
 ### 2.3 <u>Time Complexity</u>:
