@@ -1,7 +1,7 @@
 /* Including guard to avoid multiple inclusions. */
 
-#ifndef CMD_FSM_MAIN_H
-	#define CMD_FSM_MAIN_H
+#ifndef TOKEN_FSM_MAIN_H
+	#define TOKEN_FSM_MAIN_H
 
 
 
@@ -22,7 +22,7 @@
 
 /* Declaring functions. */
 
-bool cmd_fsm_main(char *str, unsigned short int start, char *mode);		// FSM handler, decides which part of FSM must be provided next symbol.
+bool token_fsm_main(char *str, unsigned short int start, char *mode);		// FSM handler, decides which part of FSM must be provided next symbol.
 
 
 

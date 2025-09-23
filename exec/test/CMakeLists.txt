@@ -5,5 +5,7 @@ set(CMAKE_C_STANDARD_REQUIRED True)
 
 add_executable(test
 	../../src/test.c
-	../../src/file_loader.c
+	../../src/lexer/x86/token_fsm_main.c
+	../../src/lexer/x86/token_fsm/token_fsm0.c
+	../../src/lexer/x86/token_fsm/token_fsm1.c
 )

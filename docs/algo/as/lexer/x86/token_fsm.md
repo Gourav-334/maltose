@@ -37,26 +37,52 @@ This file explains implementation of **finite state machine** for categorizing u
 ## 3. Algorithm
 
 
-### 3.1 <u>Functions</u>:
+### 3.1 <u>Central Function</u>:
 
 ```c
-short int token_fsm(char *str, char *mode);
+bool token_fsm_main(char *str, unsigned short int start, char *mode);
 ```
 
-- `str` - String to be scanned by FSM.
-- `mode` - Mode requested by programmer.
+- `N` - A whole number representing a part of FSM, each part containing 10 states.
+- `str` - String which is passed to the FSM.
+- `start` - Index of string to start running machine.
+- `state` - Initial state of the machine.
 
 
-### 3.2 <u>Steps</u>:
+### 3.2 <u>Part Function</u>:
 
-1. Whole string is scanned as a tape in loop for each character.
-2. The stop state is returned.
+```c
+void token_fsmN(char *str, unsigned short int start, signed short int *state);
+```
+
+- `N` - A whole number representing a part of FSM, each part containing 10 states.
+- `str` - String which is passed to the FSM.
+- `start` - Index of string to start running machine.
+- `state` - Initial state of the machine.
 
 
-### 3.3 <u>Time Complexity</u>:
+### 3.3 <u>Steps (Central FSM)</u>:
 
-- **Best case -** $O(1)$ due to return at first encounter itself (if found at 0th index).
-- **Average case -** $O(n.m)$ for matching each character of target string with illegal character set.
-- **Worst case -** $O(n.m)$ Same reason as for the **average case**.
+1. Check if the mode passed is valid or not, proceed if valid or halt otherwise.
+2. Until the string hasn't been read completely, or no mistake is found, keep reading each char.
+3. Use the formula `state/10` to know which part of FSM to run.
+4. For an invalid state, display error on screen.
+5. Also displays message/diagnosis for unknown state.
+
+
+### 3.4 <u>Steps (Part of FSM)</u>:
+
+1. Check if the mode passed is valid or not, proceed if valid or halt otherwise.
+2. Change state as per the read symbol (char).
+
+
+
+## 4. Details
+
+- All parts of FSM are assembled at central FSM assembly point.
+- Central assembler runs on endless loop & switch-cases within which tell which part of FSM to jump in.
+- Initially, machine starts with 0th index of string & state `0`.
+- The central FSM handler uses formula `state/10` to get the case for next iteration.
+- Central FSM stores the global details like state.
 
 ---
