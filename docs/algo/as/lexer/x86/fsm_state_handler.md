@@ -14,14 +14,14 @@ This file describes implementation of unknown token's **state handler**, which p
 
 ### 2.1 <u>Non-Trap States</u>:
 
-- `0` - ERROR: Flag passed can't be empty!
+- `0` - ERROR: Token passed can't be empty!
 - `1` - ERROR: Sign without a value!
 - `[2,3]` - OK: Decimal value detected.
 - `4` - OK: Binary value detected.
 - `5` - OK: Decimal value detected.
 - `6` - OK: Octal value detected.
 - `7` - OK: Decimal value detected.
-- `8` - ERROR: Float without fraction part!
+- `8` - ERROR: Float without fraction part passed!
 - `9` - OK: Float value detected.
 - `10` - ERROR: Incomplete hex value!
 - `11` - OK: Hex value detected.

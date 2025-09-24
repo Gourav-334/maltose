@@ -1,1 +1,1 @@
-/usr/bin/cc "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/test.c.o" "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.c.o" "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm0.c.o" "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.c.o" -o test 
+/usr/bin/cc "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/test.c.o" "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o" -o test 

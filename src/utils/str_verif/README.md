@@ -8,6 +8,7 @@ This directory contains source code files for utility programs related to **stri
 
 ## 2. Directory Structure
 
+- `case_ins_match.c` - Source code of **case-insensitive matcher**, matching string characters insesitive of casings.
 - `ill_char_scan.h` - Source code files which scans for presence of illegal characters in a string.
 
 ---

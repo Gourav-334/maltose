@@ -1,11 +1,8 @@
-CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.c.o: \
- /home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.c \
+CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o: \
+ /home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c \
  /usr/include/stdc-predef.h \
- /home/gouraarav/myProjects/durden-ec/src/lexer/x86/../../../include/lexer/x86/token_fsm_main.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
- /home/gouraarav/myProjects/durden-ec/src/lexer/x86/../../../include/lexer/x86/token_fsm/token_fsm0.h \
- /home/gouraarav/myProjects/durden-ec/src/lexer/x86/../../../include/lexer/x86/token_fsm/token_fsm1.h \
- /usr/include/stdio.h \
+ /home/gouraarav/myProjects/durden-ec/src/utils/str_verif/../../../include/utils/str_verif/case_ins_match.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \

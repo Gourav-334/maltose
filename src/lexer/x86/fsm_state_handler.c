@@ -1,6 +1,6 @@
 /* Including required headers. */
 
-#include "../../include/lexer/x86/fsm_state_handler.h"
+#include "../../../include/lexer/x86/fsm_state_handler.h"
 
 #include <stdio.h>		// For printing feedbacks to terminal.
 #include <string.h>		// For detecting chosen feedback mode.
@@ -16,7 +16,7 @@
 
 /* Command interpreter's FSM state handler. */
 
-bool handle_token_fsm_state(signed short int *state, char *flag, char *mode)
+bool handle_token_fsm_state(signed short int *state, char *token, char *mode)
 {
 	/* Variables declarations/definitions. */
 
@@ -58,7 +58,7 @@ bool handle_token_fsm_state(signed short int *state, char *flag, char *mode)
 
 	if (M==DEV) {}
 	else if (M==USER) {}
-	else if (M==DEBUG) {printf("STAT :: state=%hd :: flag=\"%s\"\n", *state, flag);}
+	else if (M==DEBUG) {printf("STAT :: state=%hd :: token=\"%s\"\n", *state, token);}
 
 
 
@@ -70,39 +70,46 @@ bool handle_token_fsm_state(signed short int *state, char *flag, char *mode)
 	{
 		if (*state==0)
 		{
-			printf("ERROR: Flag passed can't be empty!\n");
+			printf("ERROR: Token passed can't be empty!\n");
 			func_ret = false;
 		}
 
 
 
-		else if (*state>=1 && *state<=2)
+		else if (*state==1)
 		{
-			printf("ERROR: No flag named \'%s\' exists! Did you meant \"deb\" or \"dev\"?\n", flag);
+			printf("ERROR: Sign without a value!\n");
 			func_ret = false;
 		}
 
 
 
-		else if (*state==3)
+		else if (*state>=2 && *state<=3)
 		{
-			if (flag_deb.status==false) {flag_deb.status = true; printf("OK: Flag \"deb\" is now active.\n");}
-			else if (flag_deb.status==true) {printf("ERROR: Flag \"deb\" passed multiple times!\n"); func_ret = false;}
+			printf("OK: Decimal value detected.\n");
+			func_ret = false;
 		}
 
 
 
 		else if (*state==4)
 		{
-			if (flag_dev.status==false) {flag_dev.status = true; printf("OK: Flag \"dev\" is now active.\n");}
-			else if (flag_dev.status==true) {printf("ERROR: Flag \"dev\" passed multiple times!\n"); func_ret = false;}
+			printf("OK: Binary value detected.\n");
+			func_ret = false;
+		}
+
+
+		else if (*state==5)
+		{
+			printf("OK: Decimal value detected.\n");
+			func_ret = false;
 		}
 
 
 
-		else if (*state>=5 && *state<=6)
+		else if (*state==6)
 		{
-			printf("ERROR: No flag named \'%s\' exists! Did you meant \"log\"?\n", flag);
+			printf("OK: Octal value detected.\n");
 			func_ret = false;
 		}
 
@@ -110,15 +117,23 @@ bool handle_token_fsm_state(signed short int *state, char *flag, char *mode)
 
 		else if (*state==7)
 		{
-			if (flag_log.status==false) {flag_log.status = true; printf("OK: Flag \"log\" is now active.\n");}
-			else if (flag_log.status==true) {printf("ERROR: Flag \"log\" passed multiple times!\n"); func_ret = false;}
+			printf("OK: Decimal value detected.\n");
+			func_ret = false;
 		}
 
 
 
-		else if (*state>=8 && *state<=9)
+		else if (*state==8)
 		{
-			printf("ERROR: No flag named \'%s\' exists! Did you meant \"mod\"?\n", flag);
+			printf("ERROR: Float without fraction part passed!\n");
+			func_ret = false;
+		}
+
+
+
+		else if (*state==9)
+		{
+			printf("OK: Float value detected.\n");
 			func_ret = false;
 		}
 
@@ -126,15 +141,23 @@ bool handle_token_fsm_state(signed short int *state, char *flag, char *mode)
 
 		else if (*state==10)
 		{
-			if (flag_mod.status==false) {flag_mod.status = true; printf("OK: Flag \"mod\" is now active.\n");}
-			else if (flag_mod.status==true) {printf("ERROR: Flag \"mod\" passed multiple times!\n"); func_ret = false;}
+			printf("ERROR: Incomplete hex value!\n");
+			func_ret = false;
 		}
 
 
 
-		else if (*state>=11 && *state<=12)
+		else if (*state==11)
 		{
-			printf("ERROR: No flag named \'%s\' exists! Did you meant \"nwr\"?\n", flag);
+			printf("OK: Hex value detected.\n");
+			func_ret = false;
+		}
+
+
+
+		else if (*state==12)
+		{
+			printf("ERROR: Incomplete hex value!\n");
 			func_ret = false;
 		}
 
@@ -142,24 +165,16 @@ bool handle_token_fsm_state(signed short int *state, char *flag, char *mode)
 
 		else if (*state==13)
 		{
-			if (flag_nwr.status==false) {flag_nwr.status = true; printf("OK: Flag \"nwr\" is now active.\n");}
-			else if (flag_nwr.status==true) {printf("ERROR: Flag \"nwr\" passed multiple times!\n"); func_ret = false;}
-		}
-
-
-
-		else if (*state>=14 && *state<=16)
-		{
-			printf("ERROR: No flag named \'%s\' exists! Did you meant \"help\"?\n", flag);
+			printf("OK: Hex value detected.\n");
 			func_ret = false;
 		}
 
 
 
-		else if (*state==17)
+		else if (*state==14)
 		{
-			if (flag_help.status==false) {flag_help.status = true; cmd_help_repr(); cmd_help_rules(); cmd_help_flags();}
-			else if (flag_help.status==true) {printf("ERROR: Flag \"help\" passed multiple times!\n"); func_ret = false;}
+			printf("OK: An identifier detected.\n");
+			func_ret = false;
 		}
 	}
 
@@ -181,13 +196,16 @@ bool handle_token_fsm_state(signed short int *state, char *flag, char *mode)
 
 		switch(*state)
 		{
-			case -1: printf("ERROR: No flag named \"%s\" exists!\n", flag); break;
-			case -2: printf("ERROR: No flag named \"%s\" exists! Did you meant \"deb\"?\n", flag); break;
-			case -3: printf("ERROR: No flag named \"%s\" exists! Did you meant \"dev\"?\n", flag); break;
-			case -4: printf("ERROR: No flag named \"%s\" exists! Did you meant \"log\"?\n", flag); break;
-			case -5: printf("ERROR: No flag named \"%s\" exists! Did you meant \"mod\"?\n", flag); break;
-			case -6: printf("ERROR: No flag named \"%s\" exists! Did you meant \"nwr\"?\n", flag); break;
-			case -7: printf("ERROR: No flag named \"%s\" exists! Did you meant \"help\"?\n", flag); break;
+			case -3: printf("ERROR: Unwanted character in possibly binary value \"%s\"!\n", token); break;
+			case -4: printf("ERROR: Unwanted character in possibly binary value \"%s\"!\n", token); break;
+			case -5: printf("ERROR: Unwanted character in possibly octal value \"%s\"!\n", token); break;
+			case -6: printf("ERROR: Unwanted character in possibly octal value \"%s\"!\n", token); break;
+			case -7: printf("ERROR: Unwanted character in possibly decimal value \"%s\"!\n", token); break;
+			case -8: printf("ERROR: Unwanted character in possibly float value \"%s\"!\n", token); break;
+			case -9: printf("ERROR: Unwanted character in possibly float value \"%s\"!\n", token); break;
+			case -10: printf("ERROR: Unwanted character in possibly hex value \"%s\"!\n", token); break;
+			case -11: printf("ERROR: Unwanted character in possibly hex value \"%s\"!\n", token); break;
+			case -13: printf("ERROR: Unwanted character in possibly hex value \"%s\"!\n", token); break;
 		}
 	}
 

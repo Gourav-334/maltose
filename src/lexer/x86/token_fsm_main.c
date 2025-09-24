@@ -3,7 +3,7 @@
 #include "../../../include/lexer/x86/token_fsm_main.h"
 #include "../../../include/lexer/x86/token_fsm/token_fsm0.h"
 #include "../../../include/lexer/x86/token_fsm/token_fsm1.h"
-#include "../../include/lexer/x86/fsm_state_handler.h"
+#include "../../../include/lexer/x86/fsm_state_handler.h"
 
 #include <stdio.h>			// Required for providing feedback to mode.
 #include <string.h>			// Required to measure string length.
@@ -98,5 +98,5 @@ bool token_fsm_main(char *str, unsigned short int start, char *mode)
 
 	/* Calling state handler to provide feedback. */
 
-	return handle_token_fsm_state(&state, str, "user");
+	return handle_token_fsm_state(&state, str, "debug");
 }

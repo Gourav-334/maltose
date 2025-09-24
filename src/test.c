@@ -1,6 +1,6 @@
 /* Adding header(s) for unit testing. */
 
-#include "../include/lexer/x86/token_fsm_main.h"
+#include "../include/utils/str_verif/case_ins_match.h"
 
 #include <stdio.h>
 
@@ -8,33 +8,17 @@
 
 int main(int argc, char **argv)
 {
-	token_fsm_main("42", 0, "debug"); printf("\n");
-	token_fsm_main("0", 0, "debug"); printf("\n");
-	token_fsm_main("123456", 0, "debug"); printf("\n");
-	token_fsm_main("-99", 0, "debug"); printf("\n");
-	printf("------------------------------------------\n");
-
-	token_fsm_main("3.14", 0, "debug"); printf("\n");
-	token_fsm_main("0.0", 0, "debug"); printf("\n");
-	token_fsm_main("-2.71828", 0, "debug"); printf("\n");
-	token_fsm_main("6.022e23", 0, "debug"); printf("\n");
-	token_fsm_main("-1.0E-10", 0, "debug"); printf("\n");
-	printf("------------------------------------------\n");
-
-	token_fsm_main("77o", 0, "debug"); printf("\n");
-	token_fsm_main("55q", 0, "debug"); printf("\n");
-	printf("------------------------------------------\n");
-
-	token_fsm_main("0x2A", 0, "debug"); printf("\n");
-	token_fsm_main("2Ah", 0, "debug"); printf("\n");
-	token_fsm_main("-0xFF", 0, "debug"); printf("\n");
-	token_fsm_main("0XdeadBEEF", 0, "debug"); printf("\n");
-	printf("------------------------------------------\n");
-
-	token_fsm_main("1010b", 0, "debug"); printf("\n");
-	token_fsm_main("1101B", 0, "debug"); printf("\n");
-	token_fsm_main("-101b", 0, "debug"); printf("\n");
-	printf("------------------------------------------\n");
+	match_ins_case("string", "string", true, "debug");
+	match_ins_case("STRING", "STRING", true, "debug");
+	match_ins_case("stRIng", "stRIng", true, "debug");
+	match_ins_case("StRiNg", "StRiNg", true, "debug");
+	match_ins_case("STriNG", "stRIng", true, "debug");
+	match_ins_case("string", "overflow", true, "debug");
+	match_ins_case("string", "overly", true, "debug");
+	match_ins_case("STRONG", "STRAIGHT", true, "debug");
+	match_ins_case("&**()", "&**()", true, "debug");
+	match_ins_case("&**()", "()**&", true, "debug");
+	match_ins_case("string", "&**()", true, "debug");
 
 
 	return 0;

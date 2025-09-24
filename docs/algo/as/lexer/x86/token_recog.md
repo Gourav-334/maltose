@@ -239,7 +239,7 @@ bool token_recog(char *str, char *mode);
 
 
 1. Simply go through all the conditional statements.
-2. For a matching condition, certain details need to be pushed to stack.
+2. For a matching condition, certain details need to be pushed into the record.
 
 
 
