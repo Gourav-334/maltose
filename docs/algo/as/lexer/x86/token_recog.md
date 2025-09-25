@@ -219,14 +219,7 @@ $$ \text{Total = 21} $$
 
 
 
-## 3. Unknown Token FSM
-
-
-![State Diagram](./assets/token_fsm1.png)
-
-
-
-## 4. Function Declarations
+## 3. Function Declarations
 
 
 ```c
@@ -235,20 +228,10 @@ bool token_recog(char *str, char *mode);
 
 
 
-## 5. Algorithm
+## 4. Algorithm
 
 
 1. Simply go through all the conditional statements.
 2. For a matching condition, certain details need to be pushed into the record.
-
-
-
-## 6. Details
-
-- All parts of FSM are assembled at central FSM assembly point.
-- Central assembler runs on endless loop & switch-cases within which tell which part of FSM to jump in.
-- Initially, machine starts with 0th index of string & state `0`.
-- The central FSM handler uses formula `state/10` to get the case for next iteration.
-- Central FSM stores the global details like state.
 
 ---

@@ -83,30 +83,30 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/test.c.s: cmake_forc
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/test.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/durden-ec/src/test.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/test.c.s
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o: /home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c
-CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o -c /home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.o: /home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.o -c /home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c > CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.i
+CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c > CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.i
 
-CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.s
+CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.s
 
 # Object files for target test
 test_OBJECTS = \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/test.c.o" \
-"CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o"
+"CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.o"
 
 # External object files for target test
 test_EXTERNAL_OBJECTS =
 
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/test.c.o
-test: CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o
+test: CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.o
 test: CMakeFiles/test.dir/build.make
 test: CMakeFiles/test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable test"

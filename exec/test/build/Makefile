@@ -129,6 +129,30 @@ test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
 
+home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.o: home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.o
+
+home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.i: home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.i
+
+home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.s: home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.s
+
 home/gouraarav/myProjects/durden-ec/src/test.o: home/gouraarav/myProjects/durden-ec/src/test.c.o
 .PHONY : home/gouraarav/myProjects/durden-ec/src/test.o
 
@@ -153,30 +177,6 @@ home/gouraarav/myProjects/durden-ec/src/test.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/test.c.s
 .PHONY : home/gouraarav/myProjects/durden-ec/src/test.c.s
 
-home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.o: home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o
-.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.o
-
-# target to build an object file
-home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o
-.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o
-
-home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.i: home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.i
-.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.i
-
-# target to preprocess a source file
-home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.i
-.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.i
-
-home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.s: home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.s
-.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.s
-
-# target to generate assembly for a file
-home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.s
-.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.s"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.o"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.i"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.s"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.o"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.i"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.s"
 .PHONY : help
 
 

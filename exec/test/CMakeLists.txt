@@ -5,5 +5,5 @@ set(CMAKE_C_STANDARD_REQUIRED True)
 
 add_executable(test
 	../../src/test.c
-	../../src/utils/str_verif/case_ins_match.c
+	../../src/linked_list/inserter.c
 )

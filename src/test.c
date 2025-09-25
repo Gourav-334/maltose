@@ -1,6 +1,7 @@
 /* Adding header(s) for unit testing. */
 
-#include "../include/utils/str_verif/case_ins_match.h"
+#include "../include/linked_list/ll_struct.h"
+#include "../include/linked_list/inserter.h"
 
 #include <stdio.h>
 
@@ -8,17 +9,12 @@
 
 int main(int argc, char **argv)
 {
-	match_ins_case("string", "string", true, "debug");
-	match_ins_case("STRING", "STRING", true, "debug");
-	match_ins_case("stRIng", "stRIng", true, "debug");
-	match_ins_case("StRiNg", "StRiNg", true, "debug");
-	match_ins_case("STriNG", "stRIng", true, "debug");
-	match_ins_case("string", "overflow", true, "debug");
-	match_ins_case("string", "overly", true, "debug");
-	match_ins_case("STRONG", "STRAIGHT", true, "debug");
-	match_ins_case("&**()", "&**()", true, "debug");
-	match_ins_case("&**()", "()**&", true, "debug");
-	match_ins_case("string", "&**()", true, "debug");
+	Ll_recorder my_recorder = {.total=0, .head=NULL, .tail=NULL};
+
+	insert(&my_recorder, "is", true, "debug");
+	insert(&my_recorder, "the", true, "debug");
+	insert(&my_recorder, "Who", false, "debug");
+	insert(&my_recorder, "Gigachad", true, "debug");
 
 
 	return 0;
