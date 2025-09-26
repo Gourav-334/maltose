@@ -7,4 +7,5 @@ add_executable(test
 	../../src/test.c
 	../../src/linked_list/inserter.c
 	../../src/linked_list/remover.c
+	../../src/linked_list/full_remover.c
 )

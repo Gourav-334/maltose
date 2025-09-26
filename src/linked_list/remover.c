@@ -17,7 +17,7 @@
 
 /* Removes a node from front or rear in linked list. */
 
-bool remove_node(Ll_recorder *recorder, bool rear, char *mode)
+void remove_node(Ll_recorder *recorder, bool rear, char *mode)
 {
 	/* Declaring/defining variables. */
 
@@ -41,7 +41,7 @@ bool remove_node(Ll_recorder *recorder, bool rear, char *mode)
 	else
 	{
 		printf("ERROR: Mode named \"%s\" doesn't exist!\n", mode);
-		return false;
+		return;
 	}
 
 
@@ -60,10 +60,8 @@ bool remove_node(Ll_recorder *recorder, bool rear, char *mode)
 		/* Providing feedback as per chosen mode. */
 
 		if (M==DEV) {}
-		else if (M==USER) {printf("ERROR: Linked list is already empty!\n");}
-		else if (M==DEBUG) {printf("ERROR :: Linked list is already empty!\n");}
-
-		return false;
+		else if (M==USER) {printf("WARN: Linked list is already empty.\n");}
+		else if (M==DEBUG) {printf("WARN :: Linked list is already empty.\n");}
 	}
 	else
 	{
@@ -161,12 +159,4 @@ bool remove_node(Ll_recorder *recorder, bool rear, char *mode)
 			printf("OK :: Node has been successfully removed!\n");
 		}
 	}
-
-
-
-
-
-	/* Returning 'true' for successful execution. */
-
-	return true;
 }

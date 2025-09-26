@@ -15,13 +15,12 @@ This file documents implementation of **linked list node remover**, which remove
 ### 2.1 <u>Function</u>:
 
 ```c
-bool remove_node(Ll_recorder *recorder, bool rear, char *mode);
+void remove_node(Ll_recorder *recorder, bool rear, char *mode);
 ```
 
 - `recorder` - Target recorder with the linked list.
 - `rear` - Removes a node from rear if set to `true`, else from front.
 - `mode` - Chosen mode to provide feedback in.
-- Returns `true` if whole execution was successful.
 
 
 ### 2.2 <u>Steps</u>:

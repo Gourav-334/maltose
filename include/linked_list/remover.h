@@ -24,7 +24,7 @@
 
 /* Declaring functions. */
 
-bool remove_node(Ll_recorder *recorder, bool rear, char *mode);		// Removes a node from front/rear in linked list.
+void remove_node(Ll_recorder *recorder, bool rear, char *mode);		// Removes a node from front/rear in linked list.
 
 
 

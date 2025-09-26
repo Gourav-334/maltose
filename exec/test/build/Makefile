@@ -129,6 +129,30 @@ test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
 
+home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.o: home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.c.o
+
+home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.i: home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.c.i
+
+home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.s: home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.c.s
+
 home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.o: home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.o
 .PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.o
 
@@ -210,6 +234,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.s"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.o"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.i"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.s"
