@@ -15,12 +15,13 @@ This file records implementation of **linked list node inserter**, which inserts
 ### 2.1 <u>Function</u>:
 
 ```c
-bool insert(Ll_recorder *recorder, char *data, bool rear, char *mode);
+bool insert_node(Ll_recorder *recorder, char *data, bool rear, char *mode);
 ```
 
 - `recorder` - The pointer to recorder/container that contains the target linked list.
 - `data` - The data to plant/insert in the new node.
 - `rear` - Tells if the data has to be inserted in rear or front.
+- Returns `true` if whole execution was successful.
 
 
 ### 2.2 <u>Steps</u>:

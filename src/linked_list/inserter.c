@@ -1,6 +1,5 @@
 /* Including required headers. */
 
-#include "../../include/linked_list/ll_struct.h"
 #include "../../include/linked_list/inserter.h"
 
 #include <stdio.h>		// To provide feedback as per chosen mode.
@@ -18,7 +17,7 @@
 
 /* Inserts a node in front or rear of a linked list. */
 
-bool insert(Ll_recorder *recorder, char *data, bool rear, char *mode)
+bool insert_node(Ll_recorder *recorder, char *data, bool rear, char *mode)
 {
 	/* Declaring/defining variables. */
 

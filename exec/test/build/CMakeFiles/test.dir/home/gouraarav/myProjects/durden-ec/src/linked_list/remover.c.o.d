@@ -1,7 +1,7 @@
-CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.o: \
- /home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c \
+CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c.o: \
+ /home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c \
  /usr/include/stdc-predef.h \
- /home/gouraarav/myProjects/durden-ec/src/linked_list/../../include/linked_list/inserter.h \
+ /home/gouraarav/myProjects/durden-ec/src/linked_list/../../include/linked_list/remover.h \
  /home/gouraarav/myProjects/durden-ec/src/linked_list/../../include/linked_list/../../include/linked_list/ll_struct.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \

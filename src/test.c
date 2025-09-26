@@ -2,6 +2,7 @@
 
 #include "../include/linked_list/ll_struct.h"
 #include "../include/linked_list/inserter.h"
+#include "../include/linked_list/remover.h"
 
 #include <stdio.h>
 
@@ -11,10 +12,21 @@ int main(int argc, char **argv)
 {
 	Ll_recorder my_recorder = {.total=0, .head=NULL, .tail=NULL};
 
-	insert(&my_recorder, "is", true, "debug");
-	insert(&my_recorder, "the", true, "debug");
-	insert(&my_recorder, "Who", false, "debug");
-	insert(&my_recorder, "Gigachad", true, "debug");
+	insert_node(&my_recorder, "ABC", true, "user");
+	insert_node(&my_recorder, "DEF", true, "user");
+	insert_node(&my_recorder, "GHI", false, "user");
+	insert_node(&my_recorder, "JKL", true, "user");
+	insert_node(&my_recorder, "MNO", false, "user");
+	insert_node(&my_recorder, "PQR", false, "user");
+
+	remove_node(&my_recorder, false, "debug");
+	remove_node(&my_recorder, true, "debug");
+	remove_node(&my_recorder, false, "debug");
+	remove_node(&my_recorder, true, "debug");
+	remove_node(&my_recorder, false, "debug");
+	remove_node(&my_recorder, true, "debug");
+	remove_node(&my_recorder, false, "debug");
+	remove_node(&my_recorder, true, "debug");
 
 
 	return 0;

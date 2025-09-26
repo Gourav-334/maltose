@@ -3,7 +3,10 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/test.c.o: \
  /usr/include/stdc-predef.h \
  /home/gouraarav/myProjects/durden-ec/src/../include/linked_list/ll_struct.h \
  /home/gouraarav/myProjects/durden-ec/src/../include/linked_list/inserter.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h /usr/include/stdio.h \
+ /home/gouraarav/myProjects/durden-ec/src/../include/linked_list/../../include/linked_list/ll_struct.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
+ /home/gouraarav/myProjects/durden-ec/src/../include/linked_list/remover.h \
+ /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \

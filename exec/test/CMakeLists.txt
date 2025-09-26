@@ -6,4 +6,5 @@ set(CMAKE_C_STANDARD_REQUIRED True)
 add_executable(test
 	../../src/test.c
 	../../src/linked_list/inserter.c
+	../../src/linked_list/remover.c
 )

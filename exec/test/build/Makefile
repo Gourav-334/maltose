@@ -153,6 +153,30 @@ home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.s
 .PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.s
 
+home/gouraarav/myProjects/durden-ec/src/linked_list/remover.o: home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/remover.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c.o
+
+home/gouraarav/myProjects/durden-ec/src/linked_list/remover.i: home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/remover.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c.i
+
+home/gouraarav/myProjects/durden-ec/src/linked_list/remover.s: home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/remover.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c.s
+
 home/gouraarav/myProjects/durden-ec/src/test.o: home/gouraarav/myProjects/durden-ec/src/test.c.o
 .PHONY : home/gouraarav/myProjects/durden-ec/src/test.o
 
@@ -189,6 +213,9 @@ help:
 	@echo "... home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.o"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.i"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/linked_list/remover.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/linked_list/remover.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/linked_list/remover.s"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.o"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.i"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.s"

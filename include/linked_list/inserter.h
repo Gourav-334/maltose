@@ -9,6 +9,8 @@
 
 /* Including headers. */
 
+#include "../../include/linked_list/ll_struct.h"
+
 #include <stdbool.h>		// To use boolean return type & parameters.
 
 
@@ -22,7 +24,7 @@
 
 /* Declaring functions. */
 
-bool insert(Ll_recorder *recorder, char *data, bool rear, char *mode);		// Inserts a node at front or rear of the linked list.
+bool insert_node(Ll_recorder *recorder, char *data, bool rear, char *mode);		// Inserts a node at front or rear of the linked list.
 
 
 
