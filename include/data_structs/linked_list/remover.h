@@ -9,7 +9,7 @@
 
 /* Including required headers. */
 
-#include "../../include/linked_list/ll_struct.h"
+#include "ll_struct.h"
 
 #include <stdbool.h>		// For boolean parameter & return boolean value.
 

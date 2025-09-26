@@ -1,7 +1,7 @@
 /* Including required headers. */
 
-#include "../../include/linked_list/full_remover.h"
-#include "../../include/linked_list/remover.h"
+#include "../../../include/data_structs/linked_list/full_remover.h"
+#include "../../../include/data_structs/linked_list/remover.h"
 
 
 

@@ -9,6 +9,7 @@ This directory contains all the header files.
 ## 2. Directory Structure
 
 - `cmd_interp/` - Contains all the headers for **commmand interpreter**.
+- `data_strcuts/` - Contains all the headers related to various **data structures**.
 - `manuals/` - Contains all the headers for messages to be displayed on terminal when required.
 - `utils/` - Contains all the headers for **utility programs**.
 - `file_loader.h` - Header for file loader, which loads a file from disk to RAM.

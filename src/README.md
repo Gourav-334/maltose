@@ -9,6 +9,7 @@ This directory contains all the source code files.
 ## 2. Directory Structure
 
 - `cmd_interp/` - Contains all the source code for **commmand interpreter**.
+- `data_structs/` - Contains all the source code related to **data structures**.
 - `manuals/` - Contains all the source code for messages to be displayed on terminal when required.
 - `utils/` - Contains all the source code for **utility programs**.
 - `file_loader.c` - Source code of file loader, which loads a file from disk to RAM.

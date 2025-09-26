@@ -23,7 +23,7 @@ bin_generator/
         specs_extract.c
         specs_store.c
         file_writer.c
-cmd_interpreter/
+cmd_interp/
     cmd_fsm/
         cmd_fsm0.c (DONE)
         cmd_fsm1.c (DONE)
@@ -31,20 +31,20 @@ cmd_interpreter/
     cmd_valid.c (DONE)
     flag_status.c (DONE)
     fsm_state_handler.c (DONE)
-data_structs/
-    linked_list/
-        insert.c
-        dequeue.c
-        length.c
-        peek.c
-        pop.c
-        struct.c
+linked_list/
+    full_remover.c (DONE)
+    inserter.c (DONE)
+    remover.c (DONE)
 lexer/
     x86/
+        token_fsm/
+            token_fsm0.c (DONE)
+            token_fsm1.c (DONE)
+        cleanser.c
         err_log.c
-        token_fsm.c
-        token_store.c
-        tokenizer.c
+        fsm_state_handler.c (DONE)
+        token_fsm_main.c (DONE)
+        token_recog.c
         warn_log.c
 parser/
     x86/

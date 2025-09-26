@@ -22,6 +22,7 @@ This file documents implementation for recognizer of tokenizer, which categorize
 |`)`|Bracket|Round|Closing|Outside|Soon|
 |`{`|Bracket|Curly|Opening|Anywhere|Soon|
 |`}`|Bracket|Curly|Closing|Anywhere|Soon|
+|`\n`|Special|Escape|Endline|Anywhere|Soon|
 |`ascii`|Data|ASCII|Unterminated|Data, Rodata|Soon|
 |`string`|Data|ASCII|Terminated|Data, Rodata|Soon|
 |`byte`|Data|Integer|Byte|Data, Rodata|Soon|

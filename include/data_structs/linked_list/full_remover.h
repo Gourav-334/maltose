@@ -9,7 +9,7 @@
 
 /* Including required libraries. */
 
-#include "../../include/linked_list/ll_struct.h"
+#include "ll_struct.h"
 
 
 

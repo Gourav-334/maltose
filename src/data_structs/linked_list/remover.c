@@ -1,6 +1,6 @@
 /* Including required headers. */
 
-#include "../../include/linked_list/remover.h"
+#include "../../../include/data_structs/linked_list/remover.h"
 
 #include <stdio.h>			// To provide feedback as per chosen mode.
 #include <stdlib.h>			// To free memory spaces.
