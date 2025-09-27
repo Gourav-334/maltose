@@ -12,6 +12,7 @@ add_executable(test
 	../../src/lexer/x86/fsm_state_handler.c
 	../../src/lexer/x86/token_fsm/token_fsm0.c
 	../../src/lexer/x86/token_fsm/token_fsm1.c
+	../../src/lexer/x86/token_fsm/token_fsm2.c
 	../../src/lexer/x86/token_recog.c
 	../../src/lexer/x86/token_store.c
 	../../src/utils/str_verif/case_ins_match.c

@@ -180,10 +180,15 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/
   /home/gouraarav/myProjects/durden-ec/include/lexer/x86/token_fsm/token_fsm1.h \
   /usr/include/stdc-predef.h
 
+CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.o: /home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c \
+  /home/gouraarav/myProjects/durden-ec/include/lexer/x86/token_fsm/token_fsm2.h \
+  /usr/include/stdc-predef.h
+
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.c.o: /home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.c \
   /home/gouraarav/myProjects/durden-ec/include/lexer/x86/fsm_state_handler.h \
   /home/gouraarav/myProjects/durden-ec/include/lexer/x86/token_fsm/token_fsm0.h \
   /home/gouraarav/myProjects/durden-ec/include/lexer/x86/token_fsm/token_fsm1.h \
+  /home/gouraarav/myProjects/durden-ec/include/lexer/x86/token_fsm/token_fsm2.h \
   /home/gouraarav/myProjects/durden-ec/include/lexer/x86/token_fsm_main.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
@@ -335,6 +340,8 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case
 
 /home/gouraarav/myProjects/durden-ec/include/lexer/x86/token_fsm_main.h:
 
+/home/gouraarav/myProjects/durden-ec/include/lexer/x86/token_fsm/token_fsm2.h:
+
 /home/gouraarav/myProjects/durden-ec/include/lexer/x86/token_fsm/token_fsm1.h:
 
 /home/gouraarav/myProjects/durden-ec/include/lexer/x86/token_fsm/token_fsm0.h:
@@ -462,6 +469,8 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case
 /usr/include/stdio.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
+
+/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 

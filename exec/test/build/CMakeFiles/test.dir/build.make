@@ -181,10 +181,24 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.c.s
 
+CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.o: /home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.o -c /home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c
+
+CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c > CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.i
+
+CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.s
+
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.o: /home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.o -c /home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c
 
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.i: cmake_force
@@ -198,7 +212,7 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_reco
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.o: /home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.o -c /home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c
 
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.i: cmake_force
@@ -212,7 +226,7 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_stor
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o: /home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o -c /home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c
 
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.i: cmake_force
@@ -233,6 +247,7 @@ test_OBJECTS = \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.c.o" \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm0.c.o" \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.c.o" \
+"CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.o" \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.o" \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.o" \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o"
@@ -248,12 +263,13 @@ test: CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/toke
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.c.o
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm0.c.o
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.c.o
+test: CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.o
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.o
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.o
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o
 test: CMakeFiles/test.dir/build.make
 test: CMakeFiles/test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C executable test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking C executable test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

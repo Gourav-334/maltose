@@ -3,6 +3,7 @@
 #include "../../../include/lexer/x86/token_fsm_main.h"
 #include "../../../include/lexer/x86/token_fsm/token_fsm0.h"
 #include "../../../include/lexer/x86/token_fsm/token_fsm1.h"
+#include "../../../include/lexer/x86/token_fsm/token_fsm2.h"
 #include "../../../include/lexer/x86/fsm_state_handler.h"
 
 #include <stdio.h>			// Required for providing feedback to mode.
@@ -75,6 +76,7 @@ bool token_fsm_main(char *str, unsigned short int start, char *mode)
 		{
 			case 0: token_fsm0(str, i, &state); break;
 			case 1: token_fsm1(str, i, &state); break;
+			case 2: token_fsm2(str, i, &state); break;
 		}
 	}
 

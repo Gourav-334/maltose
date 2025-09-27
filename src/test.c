@@ -21,7 +21,9 @@ int main(int argc, char **argv)
 	printf("Ebx: %b, ", token_recog("Ebx")); printf("%s(%p)\n", type.tail->data, type.tail);
 	printf("SeCtIoN: %b, ", token_recog("section")); printf("%s(%p)\n", type.tail->data, type.tail);
 	printf("0xdeadBEEF: %b, ", token_recog("0xdeadBEEF")); printf("%s(%p)\n", type.tail->data, type.tail);
-	printf("010101000b: %b, ", token_recog("10101000b")); printf("%s(%p)\n", type.tail->data, type.tail);
+	printf("010101000b: %b, ", token_recog("010101000b")); printf("%s(%p)\n", type.tail->data, type.tail);
+	printf("\"A string!\": %b, ", token_recog("\"A string!\"")); printf("%s(%p)\n", type.tail->data, type.tail);
+	printf("\': %b, ", token_recog("\'")); printf("%s(%p)\n", type.tail->data, type.tail);
 
 
 	return 0;

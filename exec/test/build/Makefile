@@ -273,6 +273,30 @@ home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.c.s
 .PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.c.s
 
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.o: home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.o
+
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.i: home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.i
+
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.s: home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.c.s
+
 home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.o: home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.c.o
 .PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.o
 
@@ -420,6 +444,9 @@ help:
 	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.o"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.i"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm2.s"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.o"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.i"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.s"

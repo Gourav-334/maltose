@@ -31,6 +31,8 @@ This file explains implementation of **finite state machine** for categorizing u
 ![Float](./assets/fsm_float.png)
 ![Hexadecimal](./assets/fsm_hex1.png)
 ![Hexadecimal](./assets/fsm_hex2.png)
+![Character](./assets/fsm_char.png)
+![String](./assets/fsm_string.png)
 
 
 

@@ -215,6 +215,57 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 
 			func_ret = false;
 		}
+
+
+
+		else if (*state>=15 && *state<=16)
+		{
+			printf("ERROR: Open inverted comma for character, never closed!\n");
+
+			func_ret = false;
+		}
+
+
+
+		else if (*state==17)
+		{
+			insert_node(&token, str, true, "dev");
+			insert_node(&categ, "literal", true, "dev");
+			insert_node(&sub_categ, "ascii", true, "dev");
+			insert_node(&type, "char", true, "dev");
+
+			func_ret = false;
+		}
+
+
+
+		else if (*state==18)
+		{
+			printf("ERROR: Open inverted comma for character, never closed!\n");
+
+			func_ret = false;
+		}
+
+
+
+		else if (*state>=19 && *state<=20)
+		{
+			printf("ERROR: Open inverted comma for string, never closed!\n");
+
+			func_ret = false;
+		}
+
+
+
+		else if (*state==21)
+		{
+			insert_node(&token, str, true, "dev");
+			insert_node(&categ, "literal", true, "dev");
+			insert_node(&sub_categ, "ascii", true, "dev");
+			insert_node(&type, "string", true, "dev");
+
+			func_ret = false;
+		}
 	}
 
 
@@ -235,16 +286,20 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 
 		switch(*state)
 		{
-			case -3: printf("ERROR: Unwanted character in possibly binary value \"%s\"!\n", str); break;
-			case -4: printf("ERROR: Unwanted character in possibly binary value \"%s\"!\n", str); break;
-			case -5: printf("ERROR: Unwanted character in possibly octal value \"%s\"!\n", str); break;
-			case -6: printf("ERROR: Unwanted character in possibly octal value \"%s\"!\n", str); break;
-			case -7: printf("ERROR: Unwanted character in possibly decimal value \"%s\"!\n", str); break;
-			case -8: printf("ERROR: Unwanted character in possibly float value \"%s\"!\n", str); break;
-			case -9: printf("ERROR: Unwanted character in possibly float value \"%s\"!\n", str); break;
-			case -10: printf("ERROR: Unwanted character in possibly hex value \"%s\"!\n", str); break;
-			case -11: printf("ERROR: Unwanted character in possibly hex value \"%s\"!\n", str); break;
-			case -13: printf("ERROR: Unwanted character in possibly hex value \"%s\"!\n", str); break;
+			case -3: printf("ERROR: Unwanted character in possibly binary value %s!\n", str); break;
+			case -4: printf("ERROR: Unwanted character in possibly binary value %s!\n", str); break;
+			case -5: printf("ERROR: Unwanted character in possibly octal value %s!\n", str); break;
+			case -6: printf("ERROR: Unwanted character in possibly octal value %s!\n", str); break;
+			case -7: printf("ERROR: Unwanted character in possibly decimal value %s!\n", str); break;
+			case -8: printf("ERROR: Unwanted character in possibly float value %s!\n", str); break;
+			case -9: printf("ERROR: Unwanted character in possibly float value %s!\n", str); break;
+			case -10: printf("ERROR: Unwanted character in possibly hex value %s!\n", str); break;
+			case -11: printf("ERROR: Unwanted character in possibly hex value %s!\n", str); break;
+			case -13: printf("ERROR: Unwanted character in possibly hex value %s!\n", str); break;
+			case -16: printf("ERROR: Multiple bytes written for a character \'%s\'!\n", str); break;
+			case -17: printf("ERROR: Characters written after closing of inverted comma %s!\n", str); break;
+			case -18: printf("ERROR: Unknown escape character passed %s!\n", str); break;
+			case -21: printf("ERROR: Characters written after closing of double inverted comma %s!\n", str); break;
 		}
 	}
 

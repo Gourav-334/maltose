@@ -24,6 +24,8 @@ void token_fsm0(char *str, unsigned short int start, signed short int *state)
 			else if (*(str+start)=='2' || *(str+start)=='3' || *(str+start)=='4' || *(str+start)=='5' || *(str+start)=='6' || *(str+start)=='7') {*state = 5;}
 			else if (*(str+start)=='8' || *(str+start)=='9') {*state = 7;}
 			else if (*(str+start)=='a' || *(str+start)=='A' || *(str+start)=='b' || *(str+start)=='B' || *(str+start)=='c' || *(str+start)=='C' || *(str+start)=='d' || *(str+start)=='D' || *(str+start)=='e' || *(str+start)=='E' || *(str+start)=='f' || *(str+start)=='F') {*state = 12;}
+			else if (*(str+start)=='\'') {*state = 15;}
+			else if (*(str+start)=='\"') {*state = 19;}
 			else {*state = 14;}
 
 			break;
