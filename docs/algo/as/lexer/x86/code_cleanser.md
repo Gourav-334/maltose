@@ -15,7 +15,7 @@ This file explains implementation of code cleanser, which cleanses the code into
 ### 2.1 <u>Functions</u>:
 
 ```c
-void cleanse(char *fstream, char *mode);
+void cleanse_code(char *fstream, char *mode);
 ```
 
 
@@ -30,12 +30,5 @@ void cleanse(char *fstream, char *mode);
 7. Else if current state is skipper, keep skipping until a delimeter, non-delimeter or EOF appears.
 8. As per which of the 3 appeared, change the state & check the token in buffer if not empty.
 9. Else if EOF was encountered, halt the process.
-
-
-### 2.3 <u>Time Complexity</u>:
-
-- **Best case -** $O(1)$ due to only one byte being present for best case scenario.
-- **Average case -** $O(n)$ for $n$ bytes being there (unknown quanitity).
-- **Worst case -** $O(n)$ Same reason as for the **average case**.
 
 ---

@@ -129,77 +129,221 @@ test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
 
-home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.o: home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.c.o
-.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.o
+home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.o: home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.o
 
 # target to build an object file
-home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.c.o
-.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.c.o
+home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.c.o
 
-home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.i: home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.c.i
-.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.i
+home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.i: home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.i
 
 # target to preprocess a source file
-home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.c.i
-.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.c.i
+home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.c.i
 
-home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.s: home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.c.s
-.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.s
+home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.s: home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.s
 
 # target to generate assembly for a file
-home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.c.s
-.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.c.s
+home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.c.s
 
-home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.o: home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.o
-.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.o
+home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/inserter.o: home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/inserter.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/inserter.o
 
 # target to build an object file
-home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.o
-.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.o
+home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/inserter.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/inserter.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/inserter.c.o
 
-home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.i: home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.i
-.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.i
+home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/inserter.i: home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/inserter.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/inserter.i
 
 # target to preprocess a source file
-home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.i
-.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.i
+home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/inserter.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/inserter.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/inserter.c.i
 
-home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.s: home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.s
-.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.s
+home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/inserter.s: home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/inserter.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/inserter.s
 
 # target to generate assembly for a file
-home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.s
-.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.c.s
+home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/inserter.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/inserter.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/inserter.c.s
 
-home/gouraarav/myProjects/durden-ec/src/linked_list/remover.o: home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c.o
-.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/remover.o
+home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.o: home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.o
 
 # target to build an object file
-home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c.o
-.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c.o
+home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.c.o
 
-home/gouraarav/myProjects/durden-ec/src/linked_list/remover.i: home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c.i
-.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/remover.i
+home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.i: home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.i
 
 # target to preprocess a source file
-home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c.i
-.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c.i
+home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.c.i
 
-home/gouraarav/myProjects/durden-ec/src/linked_list/remover.s: home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c.s
-.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/remover.s
+home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.s: home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.s
 
 # target to generate assembly for a file
-home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c.s
-.PHONY : home/gouraarav/myProjects/durden-ec/src/linked_list/remover.c.s
+home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.c.s
+
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.o: home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.c.o
+
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.i: home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.c.i
+
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.s: home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.c.s
+
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm0.o: home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm0.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm0.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm0.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm0.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm0.c.o
+
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm0.i: home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm0.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm0.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm0.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm0.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm0.c.i
+
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm0.s: home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm0.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm0.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm0.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm0.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm0.c.s
+
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.o: home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.c.o
+
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.i: home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.c.i
+
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.s: home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.c.s
+
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.o: home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.c.o
+
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.i: home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.c.i
+
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.s: home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.c.s
+
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.o: home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.o
+
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.i: home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.i
+
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.s: home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.s
+
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.o: home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.o
+
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.i: home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.i
+
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.s: home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.s
 
 home/gouraarav/myProjects/durden-ec/src/test.o: home/gouraarav/myProjects/durden-ec/src/test.c.o
 .PHONY : home/gouraarav/myProjects/durden-ec/src/test.o
@@ -225,6 +369,30 @@ home/gouraarav/myProjects/durden-ec/src/test.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/test.c.s
 .PHONY : home/gouraarav/myProjects/durden-ec/src/test.c.s
 
+home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.o: home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o
+
+home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.i: home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.i
+
+home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.s: home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -234,18 +402,39 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.o"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.i"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/linked_list/full_remover.s"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.o"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.i"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/linked_list/inserter.s"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/linked_list/remover.o"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/linked_list/remover.i"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/linked_list/remover.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/inserter.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/inserter.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/inserter.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm0.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm0.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm0.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm/token_fsm1.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.s"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.o"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.i"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.s"
 .PHONY : help
 
 

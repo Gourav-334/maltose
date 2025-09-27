@@ -51,7 +51,7 @@ This file describes implementation of unknown token's **state handler**, which p
 ### 3.1 <u>Function</u>:
 
 ```c
-bool handle_token_fsm_state(signed short int *state, char *flag, char *mode);
+bool handle_token_fsm_state(signed short int *state, char *str, char *mode);
 ```
 
 - `state` - The stop state of the FSM.

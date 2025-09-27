@@ -98,5 +98,5 @@ bool token_fsm_main(char *str, unsigned short int start, char *mode)
 
 	/* Calling state handler to provide feedback. */
 
-	return handle_token_fsm_state(&state, str, "debug");
+	return handle_token_fsm_state(&state, str, "user");
 }

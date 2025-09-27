@@ -2,6 +2,8 @@
 
 #include "../../../include/data_structs/linked_list/ll_struct.h"
 
+#include <stdio.h>		// To use NULL when initializing pointers.
+
 
 
 

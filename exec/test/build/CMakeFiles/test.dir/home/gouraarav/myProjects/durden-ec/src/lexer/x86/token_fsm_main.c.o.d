@@ -1,12 +1,11 @@
-CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/test.c.o: \
- /home/gouraarav/myProjects/durden-ec/src/test.c \
+CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.c.o: \
+ /home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_fsm_main.c \
  /usr/include/stdc-predef.h \
- /home/gouraarav/myProjects/durden-ec/src/../include/lexer/x86/token_recog.h \
+ /home/gouraarav/myProjects/durden-ec/src/lexer/x86/../../../include/lexer/x86/token_fsm_main.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
- /home/gouraarav/myProjects/durden-ec/src/../include/lexer/x86/token_store.h \
- /home/gouraarav/myProjects/durden-ec/src/../include/lexer/x86/../../data_structs/linked_list/ll_struct.h \
- /home/gouraarav/myProjects/durden-ec/src/../include/data_structs/linked_list/full_remover.h \
- /home/gouraarav/myProjects/durden-ec/src/../include/data_structs/linked_list/ll_struct.h \
+ /home/gouraarav/myProjects/durden-ec/src/lexer/x86/../../../include/lexer/x86/token_fsm/token_fsm0.h \
+ /home/gouraarav/myProjects/durden-ec/src/lexer/x86/../../../include/lexer/x86/token_fsm/token_fsm1.h \
+ /home/gouraarav/myProjects/durden-ec/src/lexer/x86/../../../include/lexer/x86/fsm_state_handler.h \
  /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -30,4 +29,7 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/test.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h
+ /usr/include/x86_64-linux-gnu/bits/floatn-common.h /usr/include/string.h \
+ /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+ /usr/include/strings.h

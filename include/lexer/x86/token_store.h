@@ -22,10 +22,10 @@
 
 /* Structure instances. */
 
-Ll_recorder token;
-Ll_recorder categ;
-Ll_recorder sub_categ;
-Ll_recorder type;
+extern Ll_recorder token;
+extern Ll_recorder categ;
+extern Ll_recorder sub_categ;
+extern Ll_recorder type;
 
 
 

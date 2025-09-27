@@ -45,7 +45,7 @@ int match_ins_case(char *str1, char *str2, bool full_match, char *mode)
 	else
 	{
 		printf("ERROR: Mode named \"%s\" doesn't exist!\n", mode);
-		return false;
+		return 1;
 	}
 
 
@@ -69,13 +69,13 @@ int match_ins_case(char *str1, char *str2, bool full_match, char *mode)
 	{
 		if (M==DEV) {}
 		else if (M==USER) {}
-		else if (M==DEBUG) {printf("OK :: len(str1) = len(str2) = %d\n", str_len);}
+		else if (M==DEBUG) {printf("OK :: len(\"%s\") = len(\"%s\") = %d\n", str1, str2, str_len);}
 	}
 	else
 	{
 		if (M==DEV) {}
 		else if (M==USER) {printf("ERROR: Length of both the strings don't match!\n");}
-		else if (M==DEBUG) {printf("ERROR :: len(str1)!=len(str2) :: len(str1)=%d\n", str_len);}
+		else if (M==DEBUG) {printf("ERROR :: len(\"%s\")!=len(\"%s\") :: len(\"%s\")=%d\n", str1, str2, str1, str_len);}
 
 		return 1;
 	}
@@ -109,8 +109,8 @@ int match_ins_case(char *str1, char *str2, bool full_match, char *mode)
 		else if (M==USER) {}
 		else if (M==DEBUG)
 		{
-			printf("STAT: str1[%d]=\'%c\' :: str2[%d]=\'%c\' :: type(str1)=%d :: str_len=%d\n",
-				i, *(str1+i), i, *(str2+i), type, str_len);
+			printf("STAT: str1[%d]=\'%c\' :: str2[%d]=\'%c\' :: type(\"%s\")=%d :: str_len=%d\n",
+				i, *(str1+i), i, *(str2+i), str1, type, str_len);
 		}
 
 
@@ -125,8 +125,8 @@ int match_ins_case(char *str1, char *str2, bool full_match, char *mode)
 			else if (*(str1+i)==*(str2+i)+LWR2UPR_DIFF) {continue;}
 			else
 			{
-				if (full_match==true) {count++;}
-				else if (full_match==false) {mismatch = true; break;}
+				count++;
+				if (full_match==false) {mismatch = true; break;}
 			}
 		}
 		else if (type==UPPERCASE)
@@ -135,8 +135,8 @@ int match_ins_case(char *str1, char *str2, bool full_match, char *mode)
 			else if (*(str1+i)==*(str2+i)-LWR2UPR_DIFF) {continue;}
 			else
 			{
-				if (full_match==true) {count++;}
-				else if (full_match==false) {mismatch = true; break;}
+				count++;
+				if (full_match==false) {mismatch = true; break;}
 			}
 		}
 		else
@@ -144,8 +144,8 @@ int match_ins_case(char *str1, char *str2, bool full_match, char *mode)
 			if (*(str1+i)==*(str2+i)) {continue;}
 			else
 			{
-				if (full_match==true) {count++;}
-				else if (full_match==false) {mismatch = true; break;}
+				count++;
+				if (full_match==false) {mismatch = true; break;}
 			}
 		}
 	}

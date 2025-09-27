@@ -1,8 +1,8 @@
 /* Adding header(s) for unit testing. */
 
-#include "../include/linked_list/ll_struct.h"
-#include "../include/linked_list/inserter.h"
-#include "../include/linked_list/full_remover.h"
+#include "../include/lexer/x86/token_recog.h"
+#include "../include/lexer/x86/token_store.h"
+#include "../include/data_structs/linked_list/full_remover.h"
 
 #include <stdio.h>
 
@@ -10,17 +10,18 @@
 
 int main(int argc, char **argv)
 {
-	Ll_recorder my_recorder = {.total=0, .head=NULL, .tail=NULL};
-
-	insert_node(&my_recorder, "ABC", true, "user");
-	insert_node(&my_recorder, "DEF", true, "user");
-	insert_node(&my_recorder, "GHI", false, "user");
-	insert_node(&my_recorder, "JKL", true, "user");
-	insert_node(&my_recorder, "MNO", false, "user");
-	insert_node(&my_recorder, "PQR", false, "user");
-
-	remove_all_nodes(&my_recorder, "debug");
-	remove_all_nodes(&my_recorder, "debug");
+	printf("section: %b, ", token_recog("section")); printf("%s(%p)\n", type.tail->data, type.tail);
+	printf("rodata: %b, ", token_recog("rodata")); printf("%s(%p)\n", type.tail->data, type.tail);
+	printf(".rodata: %b, ", token_recog(".rodata")); printf("%s(%p)\n", type.tail->data, type.tail);
+	printf("log: %b, ", token_recog("log")); printf("%s(%p)\n", type.tail->data, type.tail);
+	printf("rigid: %b, ", token_recog("rigid")); printf("%s(%p)\n", type.tail->data, type.tail);
+	printf("byte: %b, ", token_recog("byte")); printf("%s(%p)\n", type.tail->data, type.tail);
+	printf("word: %b, ", token_recog("word")); printf("%s(%p)\n", type.tail->data, type.tail);
+	printf("RAX: %b, ", token_recog("RAX")); printf("%s(%p)\n", type.tail->data, type.tail);
+	printf("Ebx: %b, ", token_recog("Ebx")); printf("%s(%p)\n", type.tail->data, type.tail);
+	printf("SeCtIoN: %b, ", token_recog("section")); printf("%s(%p)\n", type.tail->data, type.tail);
+	printf("0xdeadBEEF: %b, ", token_recog("0xdeadBEEF")); printf("%s(%p)\n", type.tail->data, type.tail);
+	printf("010101000b: %b, ", token_recog("10101000b")); printf("%s(%p)\n", type.tail->data, type.tail);
 
 
 	return 0;

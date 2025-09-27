@@ -1,6 +1,9 @@
 /* Including required headers. */
 
 #include "../../../include/lexer/x86/fsm_state_handler.h"
+#include "../../../include/lexer/x86/token_store.h"
+#include "../../../include/data_structs/linked_list/ll_struct.h"
+#include "../../../include/data_structs/linked_list/inserter.h"
 
 #include <stdio.h>		// For printing feedbacks to terminal.
 #include <string.h>		// For detecting chosen feedback mode.
@@ -16,7 +19,7 @@
 
 /* Command interpreter's FSM state handler. */
 
-bool handle_token_fsm_state(signed short int *state, char *token, char *mode)
+bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 {
 	/* Variables declarations/definitions. */
 
@@ -58,7 +61,7 @@ bool handle_token_fsm_state(signed short int *state, char *token, char *mode)
 
 	if (M==DEV) {}
 	else if (M==USER) {}
-	else if (M==DEBUG) {printf("STAT :: state=%hd :: token=\"%s\"\n", *state, token);}
+	else if (M==DEBUG) {printf("STAT :: state=%hd :: token=\"%s\"\n", *state, str);}
 
 
 
@@ -86,7 +89,11 @@ bool handle_token_fsm_state(signed short int *state, char *token, char *mode)
 
 		else if (*state>=2 && *state<=3)
 		{
-			printf("OK: Decimal value detected.\n");
+			insert_node(&token, str, true, "dev");
+			insert_node(&categ, "literal", true, "dev");
+			insert_node(&sub_categ, "numeric", true, "dev");
+			insert_node(&type, "decimal", true, "dev");
+
 			func_ret = false;
 		}
 
@@ -94,14 +101,22 @@ bool handle_token_fsm_state(signed short int *state, char *token, char *mode)
 
 		else if (*state==4)
 		{
-			printf("OK: Binary value detected.\n");
+			insert_node(&token, str, true, "dev");
+			insert_node(&categ, "literal", true, "dev");
+			insert_node(&sub_categ, "numeric", true, "dev");
+			insert_node(&type, "binary", true, "dev");
+
 			func_ret = false;
 		}
 
 
 		else if (*state==5)
 		{
-			printf("OK: Decimal value detected.\n");
+			insert_node(&token, str, true, "dev");
+			insert_node(&categ, "literal", true, "dev");
+			insert_node(&sub_categ, "numeric", true, "dev");
+			insert_node(&type, "decimal", true, "dev");
+
 			func_ret = false;
 		}
 
@@ -109,7 +124,11 @@ bool handle_token_fsm_state(signed short int *state, char *token, char *mode)
 
 		else if (*state==6)
 		{
-			printf("OK: Octal value detected.\n");
+			insert_node(&token, str, true, "dev");
+			insert_node(&categ, "literal", true, "dev");
+			insert_node(&sub_categ, "numeric", true, "dev");
+			insert_node(&type, "octal", true, "dev");
+
 			func_ret = false;
 		}
 
@@ -117,7 +136,11 @@ bool handle_token_fsm_state(signed short int *state, char *token, char *mode)
 
 		else if (*state==7)
 		{
-			printf("OK: Decimal value detected.\n");
+			insert_node(&token, str, true, "dev");
+			insert_node(&categ, "literal", true, "dev");
+			insert_node(&sub_categ, "numeric", true, "dev");
+			insert_node(&type, "decimal", true, "dev");
+
 			func_ret = false;
 		}
 
@@ -133,7 +156,11 @@ bool handle_token_fsm_state(signed short int *state, char *token, char *mode)
 
 		else if (*state==9)
 		{
-			printf("OK: Float value detected.\n");
+			insert_node(&token, str, true, "dev");
+			insert_node(&categ, "literal", true, "dev");
+			insert_node(&sub_categ, "numeric", true, "dev");
+			insert_node(&type, "float", true, "dev");
+
 			func_ret = false;
 		}
 
@@ -149,7 +176,11 @@ bool handle_token_fsm_state(signed short int *state, char *token, char *mode)
 
 		else if (*state==11)
 		{
-			printf("OK: Hex value detected.\n");
+			insert_node(&token, str, true, "dev");
+			insert_node(&categ, "literal", true, "dev");
+			insert_node(&sub_categ, "numeric", true, "dev");
+			insert_node(&type, "hex", true, "dev");
+
 			func_ret = false;
 		}
 
@@ -165,7 +196,11 @@ bool handle_token_fsm_state(signed short int *state, char *token, char *mode)
 
 		else if (*state==13)
 		{
-			printf("OK: Hex value detected.\n");
+			insert_node(&token, str, true, "dev");
+			insert_node(&categ, "literal", true, "dev");
+			insert_node(&sub_categ, "numeric", true, "dev");
+			insert_node(&type, "hex", true, "dev");
+
 			func_ret = false;
 		}
 
@@ -173,7 +208,11 @@ bool handle_token_fsm_state(signed short int *state, char *token, char *mode)
 
 		else if (*state==14)
 		{
-			printf("OK: An identifier detected.\n");
+			insert_node(&token, str, true, "dev");
+			insert_node(&categ, "others", true, "dev");
+			insert_node(&sub_categ, "names", true, "dev");
+			insert_node(&type, "identifier", true, "dev");
+
 			func_ret = false;
 		}
 	}
@@ -196,16 +235,16 @@ bool handle_token_fsm_state(signed short int *state, char *token, char *mode)
 
 		switch(*state)
 		{
-			case -3: printf("ERROR: Unwanted character in possibly binary value \"%s\"!\n", token); break;
-			case -4: printf("ERROR: Unwanted character in possibly binary value \"%s\"!\n", token); break;
-			case -5: printf("ERROR: Unwanted character in possibly octal value \"%s\"!\n", token); break;
-			case -6: printf("ERROR: Unwanted character in possibly octal value \"%s\"!\n", token); break;
-			case -7: printf("ERROR: Unwanted character in possibly decimal value \"%s\"!\n", token); break;
-			case -8: printf("ERROR: Unwanted character in possibly float value \"%s\"!\n", token); break;
-			case -9: printf("ERROR: Unwanted character in possibly float value \"%s\"!\n", token); break;
-			case -10: printf("ERROR: Unwanted character in possibly hex value \"%s\"!\n", token); break;
-			case -11: printf("ERROR: Unwanted character in possibly hex value \"%s\"!\n", token); break;
-			case -13: printf("ERROR: Unwanted character in possibly hex value \"%s\"!\n", token); break;
+			case -3: printf("ERROR: Unwanted character in possibly binary value \"%s\"!\n", str); break;
+			case -4: printf("ERROR: Unwanted character in possibly binary value \"%s\"!\n", str); break;
+			case -5: printf("ERROR: Unwanted character in possibly octal value \"%s\"!\n", str); break;
+			case -6: printf("ERROR: Unwanted character in possibly octal value \"%s\"!\n", str); break;
+			case -7: printf("ERROR: Unwanted character in possibly decimal value \"%s\"!\n", str); break;
+			case -8: printf("ERROR: Unwanted character in possibly float value \"%s\"!\n", str); break;
+			case -9: printf("ERROR: Unwanted character in possibly float value \"%s\"!\n", str); break;
+			case -10: printf("ERROR: Unwanted character in possibly hex value \"%s\"!\n", str); break;
+			case -11: printf("ERROR: Unwanted character in possibly hex value \"%s\"!\n", str); break;
+			case -13: printf("ERROR: Unwanted character in possibly hex value \"%s\"!\n", str); break;
 		}
 	}
 
