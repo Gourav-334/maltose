@@ -8,6 +8,7 @@ add_executable(test
 	../../src/data_structs/linked_list/inserter.c
 	../../src/data_structs/linked_list/remover.c
 	../../src/data_structs/linked_list/full_remover.c
+	../../src/data_structs/linked_list/displayer.c
 	../../src/lexer/x86/token_fsm_main.c
 	../../src/lexer/x86/fsm_state_handler.c
 	../../src/lexer/x86/token_fsm/token_fsm0.c
@@ -15,5 +16,9 @@ add_executable(test
 	../../src/lexer/x86/token_fsm/token_fsm2.c
 	../../src/lexer/x86/token_recog.c
 	../../src/lexer/x86/token_store.c
+	../../src/lexer/x86/code_cleanser.c
 	../../src/utils/str_verif/case_ins_match.c
+	../../src/utils/str_verif/ill_char_scan.c
+	../../src/utils/str_ops/push_alloc.c
+	../../src/file_loader.c
 )

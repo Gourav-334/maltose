@@ -12,6 +12,7 @@ This directory contains all the headers related to **linked list**, which is a l
 ## 2. File Structure
 
 
+- `displayer.h` - Contains header implementation for the **displayer**, which displays all linked list nodes.
 - `full_remover.h` - Contains header implementation for the **full remover**, which removes all the nodes from the linked list.
 - `inserter.h` - Contains header implementation for the **inserter**, which inserts a node to the linked list.
 - `ll_struct.h` - Contains header implementation for the **linked list structure**.

@@ -1,14 +1,9 @@
-CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/test.c.o: \
- /home/gouraarav/myProjects/durden-ec/src/test.c \
+CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.c.o: \
+ /home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.c \
  /usr/include/stdc-predef.h \
- /home/gouraarav/myProjects/durden-ec/src/../include/lexer/x86/code_cleanser.h \
- /home/gouraarav/myProjects/durden-ec/src/../include/lexer/x86/token_store.h \
- /home/gouraarav/myProjects/durden-ec/src/../include/lexer/x86/../../data_structs/linked_list/ll_struct.h \
- /home/gouraarav/myProjects/durden-ec/src/../include/file_loader.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
- /home/gouraarav/myProjects/durden-ec/src/../include/data_structs/linked_list/ll_struct.h \
- /home/gouraarav/myProjects/durden-ec/src/../include/data_structs/linked_list/displayer.h \
- /home/gouraarav/myProjects/durden-ec/src/../include/data_structs/linked_list/ll_struct.h \
+ /home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/../../../include/data_structs/linked_list/ll_struct.h \
+ /home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/../../../include/data_structs/linked_list/displayer.h \
+ /home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/../../../include/data_structs/linked_list/ll_struct.h \
  /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

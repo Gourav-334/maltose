@@ -9,6 +9,7 @@ This directory contains the executable(s) for purpose of unit testing & semi-int
 ## 2. File Descriptions
 
 - `build/` - CMake induced directory with build information.
+- `test.asm` - Test assembly file for DEC AS-1.
 - `CMakeLists.txt` - CMake text file to cross-compile current unit component test file.
 
 ---

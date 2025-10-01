@@ -129,6 +129,30 @@ test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
 
+home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.o: home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.c.o
+
+home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.i: home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.c.i
+
+home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.s: home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.c.s
+
 home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.o: home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.c.o
 .PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.o
 
@@ -200,6 +224,54 @@ home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.s: home
 home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.c.s
 .PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.c.s
+
+home/gouraarav/myProjects/durden-ec/src/file_loader.o: home/gouraarav/myProjects/durden-ec/src/file_loader.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/file_loader.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/file_loader.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/file_loader.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/file_loader.c.o
+
+home/gouraarav/myProjects/durden-ec/src/file_loader.i: home/gouraarav/myProjects/durden-ec/src/file_loader.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/file_loader.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/file_loader.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/file_loader.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/file_loader.c.i
+
+home/gouraarav/myProjects/durden-ec/src/file_loader.s: home/gouraarav/myProjects/durden-ec/src/file_loader.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/file_loader.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/file_loader.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/file_loader.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/file_loader.c.s
+
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.o: home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.c.o
+
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.i: home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.c.i
+
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.s: home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.c.s
 
 home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.o: home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.c.o
 .PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.o
@@ -393,6 +465,30 @@ home/gouraarav/myProjects/durden-ec/src/test.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/test.c.s
 .PHONY : home/gouraarav/myProjects/durden-ec/src/test.c.s
 
+home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.o: home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.o
+
+home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.i: home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.i
+
+home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.s: home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.s
+
 home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.o: home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o
 .PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.o
 
@@ -417,6 +513,30 @@ home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.s
 .PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.s
 
+home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.o: home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.o
+
+home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.i: home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.i
+
+home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.s: home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -426,6 +546,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.s"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.o"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.i"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.s"
@@ -435,6 +558,12 @@ help:
 	@echo "... home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.o"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.i"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/remover.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/file_loader.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/file_loader.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/file_loader.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.s"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.o"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.i"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.s"
@@ -459,9 +588,15 @@ help:
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.o"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.i"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.s"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.o"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.i"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.s"
 .PHONY : help
 
 

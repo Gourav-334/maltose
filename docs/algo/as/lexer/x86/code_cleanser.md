@@ -21,14 +21,14 @@ void cleanse_code(char *fstream, char *mode);
 
 ### 2.2 <u>Steps</u>:
 
-1. Start reading the filestream byte-by-byte.
-2. As per the first byte, take the default state as delimiter or non-delimiter or terminator.
-3. If current state is delimiter, keep pushing until a non-delimeter, terminator or EOF appears.
-4. As per which of the 3 appeared, change the state & check the token in buffer if not empty.
-5. Else if current state is non-delimeter, keep pushing until a delimeter, terminator or EOF appears.
-6. As per which of the 3 appeared, change the state & check the token in buffer if not empty.
-7. Else if current state is terminator, keep skipping until a delimeter, non-delimeter or EOF appears.
-8. As per which of the 3 appeared, change the state & check the token in buffer if not empty.
-9. Else if EOF was encountered, halt the process.
+1. Check if the passed mode is valid or not.
+2. Start reading the filestream byte-by-byte.
+3. As per the first byte, take the default state as delimiter or non-delimiter or terminator.
+4. If current state is delimiter, keep pushing until a non-delimeter, or terminator.
+5. As per which of the 3 appeared, change the state & check the token in buffer if not empty before pushing.
+6. Else if current state is non-delimeter, keep pushing until a delimeter or terminator.
+7. As per which of the 3 appeared, change the state & check the token in buffer if not empty before pushing.
+8. Else if current state is terminator, keep skipping until a delimeter or non-delimeter.
+9. As per which of the 3 appeared, change the state & check the token in buffer if not empty before pushing.
 
 ---
