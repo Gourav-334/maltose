@@ -4,6 +4,7 @@
 #include "../../../include/lexer/x86/token_recog.h"
 #include "../../../include/utils/str_verif/ill_char_scan.h"
 #include "../../../include/utils/str_ops/push_alloc.h"
+#include "../../../include/utils/str_ops/pop_dealloc.h"
 #include "../../../include/file_loader.h"
 
 #include <stdio.h>			// For providing feedback as per chosen mode.
@@ -25,11 +26,13 @@ void cleanse_code(char *fstream, char *mode)
 {
 	/* Variable declarations/definitions. */
 
-	char *deli = " (){}=\",[]+-*/<>@~?|!\0";
-	char *termn = "\n\0";
+	char *deli = " \t(){}=\",[]+-*/<>@~?|!\0";
+	char termn = '\n';
 	char *charstr = NULL;
 	long int charstr_len;
 	char *stack = NULL;
+	int row=1, col=0;
+	bool byte_pop = false;
 
 
 
@@ -88,15 +91,17 @@ void cleanse_code(char *fstream, char *mode)
 
 	/* Checking the first character of the filestream. */
 
+	col++;
+
 	if (scan_ill_chars(charstr, charstr_len, deli, "dev")==true)
 	{
 		S = DELI;
 		push_alloc(&stack, *charstr, "dev");
 	}
-	else if (scan_ill_chars(charstr, charstr_len, termn, "dev")==true)
+	else if (*charstr==termn)
 	{
 		S = TERMN;
-		if (*charstr=='\n') {push_alloc(&stack, *charstr, "dev");}
+		token_recog("\n");
 	}
 	else
 	{
@@ -137,54 +142,132 @@ void cleanse_code(char *fstream, char *mode)
 
 
 
-		/* Taking decision as per the current reading state. */
+
+
+
+
+
+
+
+		/* If a delimiter was being read. */
 
 		if (S==DELI)
 		{
-			/* Checking out if the state has actually changed for current character. */
+			/* (Delimiter was being read) + (Delimter is encountered) */
 
 			if (scan_ill_chars(charstr, charstr_len, deli, "dev")==true)
 			{
 				push_alloc(&stack, *charstr, "dev");
+				col++;
 			}
-			else if (scan_ill_chars(charstr, charstr_len, termn, "dev")==true)
+
+
+
+
+
+			/* (Delimiter was being read) + (Terminator is encountered) */
+
+			else if (*charstr==termn)
 			{
+				/* Proceeding only if stack contains something (not empty). */
+
 				if (stack!=NULL)
 				{
-					token_recog(stack);
+					/* Checking that if the delimiter susbests might be valid. */
+
+					while (token_recog(stack)!=true && *stack!='\0')	////////////////// LOOP LOGIC ISSUE/////////////////
+					{
+						byte_pop = true;
+
+						pop_dealloc(&stack, "debug");
+						col--; i--;
+					}
 					free(stack); stack = NULL;
 
-					stack = malloc(1*sizeof(char));
-					if (stack==NULL) {printf("ERROR: Problem allocating memory!\n"); return;}
 
-					*stack = '\0';
 
-					S = TERMN;
-					
-					if (*charstr=='\t') {continue;}
-					else if (*charstr=='\n') {push_alloc(&stack, *charstr, "dev");}
+					/* Recentering scanning to correct position (if changed). */
+
+					if (byte_pop==false)
+					{
+						S = TERMN;
+						token_recog("\n");
+
+						row++; col=0;
+					}
+					else if (byte_pop==true)
+					{
+						byte_pop = false;
+						col--; i--;
+
+						continue;
+					}
 				}
 			}
+
+
+
+
+
+			/* (Delimiter was being read) + (Non-delimter is encountered) */
+
 			else
 			{
+				/* Proceeding only if stack contains something (not empty). */
+
 				if (stack!=NULL)
 				{
-					token_recog(stack);
+					/* Checking that if the delimiter susbests might be valid. */
+
+					while (token_recog(stack)!=true && *stack!='\0')	////////////////// LOOP LOGIC ISSUE/////////////////
+					{
+						byte_pop = true;
+
+						pop_dealloc(&stack, "debug");
+						col--; i--;
+					}
 					free(stack); stack = NULL;
 
-					stack = malloc(1*sizeof(char));
-					if (stack==NULL) {printf("ERROR: Problem allocating memory!\n"); return;}
 
-					*stack = '\0';
 
-					S = NDELI;
-					push_alloc(&stack, *charstr, "dev");
+					/* Recentering scanning to correct position (if changed). */
+
+					if (byte_pop==false)
+					{
+						stack = malloc(1*sizeof(char));
+						if (stack==NULL) {printf("ERROR: Problem allocating memory!\n"); return;}
+
+						*stack = '\0';
+
+						S = NDELI;
+						push_alloc(&stack, *charstr, "dev");
+						col++;
+					}
+					else if (byte_pop==true)
+					{
+						byte_pop = false;
+						col--; i--;
+
+						continue;
+					}
 				}
 			}
 		}
+
+
+
+
+
+
+
+
+
+
+		/* Else if a non-delimeter was being read. */
+
 		else if (S==NDELI)
 		{
-			/* Checking out if the state has actually changed for current character. */
+			/* (Non-delimiter was being read) + (Delimter is encountered) */
 
 			if (scan_ill_chars(charstr, charstr_len, deli, "dev")==true)
 			{
@@ -200,39 +283,58 @@ void cleanse_code(char *fstream, char *mode)
 
 					S = DELI;
 					push_alloc(&stack, *charstr, "dev");
+					col++;
 				}
 			}
-			else if (scan_ill_chars(charstr, charstr_len, termn, "dev")==true)
+
+
+
+
+
+			/* (Non-delimiter was being read) + (Terminator is encountered) */
+
+			else if (*charstr==termn)
 			{
 				if (stack!=NULL)
 				{
 					token_recog(stack);
 					free(stack); stack = NULL;
 
-					stack = malloc(1*sizeof(char));
-					if (stack==NULL) {printf("ERROR: Problem allocating memory!\n"); return;}
-
-					*stack = '\0';
 
 					S = TERMN;
-					
-					if (*charstr=='\t') {continue;}
-					else if (*charstr=='\n') {push_alloc(&stack, *charstr, "dev");}
+					token_recog("\n");
+					row++; col=0;
 				}
 			}
-			else {push_alloc(&stack, *charstr, "dev");}
+
+
+
+
+
+			/* (Non-delimiter was being read) + (Non-delimeter is encountered) */
+
+			else {push_alloc(&stack, *charstr, "dev"); col++;}
 		}
+
+
+
+
+
+
+
+
+
+
+		/* Else if a terminator was being read. */
+
 		else if (S==TERMN)
 		{
-			/* Checking out if the state has actually changed for current character. */
+			/* (Terminator was being read) + (Delimter is encountered) */
 
 			if (scan_ill_chars(charstr, charstr_len, deli, "dev")==true)
 			{
 				if (stack!=NULL)
 				{
-					token_recog(stack);
-					free(stack); stack = NULL;
-
 					stack = malloc(1*sizeof(char));
 					if (stack==NULL) {printf("ERROR: Problem allocating memory!\n"); return;}
 
@@ -240,20 +342,32 @@ void cleanse_code(char *fstream, char *mode)
 
 					S = DELI;
 					push_alloc(&stack, *charstr, "dev");
+					col++;
 				}
 			}
-			else if (scan_ill_chars(charstr, charstr_len, termn, "dev")==true)
+
+
+
+
+
+			/* (Terminator was being read) + (Terminator is encountered) */
+
+			else if (*charstr==termn)
 			{
-				if (*charstr=='\t') {continue;}
-				else if (*charstr=='\n') {push_alloc(&stack, *charstr, "dev");}
+				token_recog("\n");
+				row++;
 			}
+
+
+
+
+
+			/* (Terminator was being read) + (Non-delimter is encountered) */
+
 			else
 			{
 				if (stack!=NULL)
 				{
-					token_recog(stack);
-					free(stack); stack = NULL;
-
 					stack = malloc(1*sizeof(char));
 					if (stack==NULL) {printf("ERROR: Problem allocating memory!\n"); return;}
 
@@ -261,20 +375,74 @@ void cleanse_code(char *fstream, char *mode)
 
 					S = NDELI;
 					push_alloc(&stack, *charstr, "dev");
+					col++;
 				}
 			}
 		}
-	}
 
 
 
 
 
-	/* Pushing the last token from stack to FSM (recognizer). */
 
-	if (stack!=NULL)
-	{
-		token_recog(stack);
-		free(stack); stack = NULL;
+
+
+
+
+		/* Final iteration's token verification & reversing iteration for unmatching. */
+
+		if ((i==file_size-1) && (stack!=NULL))
+		{
+			/* If final state was delimiter. */
+
+			if (S==DELI)
+			{
+				/* Checking that if the delimiter susbests might be valid. */
+
+				while (token_recog(stack)!=true && *stack!='\0')	////////////////// LOOP LOGIC ISSUE/////////////////
+				{
+					byte_pop = true;
+
+					pop_dealloc(&stack, "debug");
+					col--; i--;
+				}
+				free(stack); stack = NULL;
+
+
+
+				/* Recentering scanning to correct position (if changed). */
+
+				if (byte_pop==false)
+				{
+					stack = malloc(1*sizeof(char));
+					if (stack==NULL) {printf("ERROR: Problem allocating memory!\n"); return;}
+
+					*stack = '\0';
+
+					S = NDELI;
+					push_alloc(&stack, *charstr, "dev");
+					col++;
+				}
+				else if (byte_pop==true)
+				{
+					byte_pop = false;
+					col--; i--;
+
+					continue;
+				}
+			}
+
+
+
+
+
+			/* Else if final state is non-delimeter. */
+
+			else if (S==NDELI)
+			{
+				token_recog(stack);
+				free(stack); stack = NULL;
+			}
+		}
 	}
 }

@@ -94,7 +94,7 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 			insert_node(&sub_categ, "numeric", true, "dev");
 			insert_node(&type, "decimal", true, "dev");
 
-			func_ret = false;
+			func_ret = true;
 		}
 
 
@@ -106,7 +106,7 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 			insert_node(&sub_categ, "numeric", true, "dev");
 			insert_node(&type, "binary", true, "dev");
 
-			func_ret = false;
+			func_ret = true;
 		}
 
 
@@ -117,7 +117,7 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 			insert_node(&sub_categ, "numeric", true, "dev");
 			insert_node(&type, "decimal", true, "dev");
 
-			func_ret = false;
+			func_ret = true;
 		}
 
 
@@ -129,7 +129,7 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 			insert_node(&sub_categ, "numeric", true, "dev");
 			insert_node(&type, "octal", true, "dev");
 
-			func_ret = false;
+			func_ret = true;
 		}
 
 
@@ -141,7 +141,7 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 			insert_node(&sub_categ, "numeric", true, "dev");
 			insert_node(&type, "decimal", true, "dev");
 
-			func_ret = false;
+			func_ret = true;
 		}
 
 
@@ -161,7 +161,7 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 			insert_node(&sub_categ, "numeric", true, "dev");
 			insert_node(&type, "float", true, "dev");
 
-			func_ret = false;
+			func_ret = true;
 		}
 
 
@@ -181,7 +181,7 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 			insert_node(&sub_categ, "numeric", true, "dev");
 			insert_node(&type, "hex", true, "dev");
 
-			func_ret = false;
+			func_ret = true;
 		}
 
 
@@ -201,7 +201,7 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 			insert_node(&sub_categ, "numeric", true, "dev");
 			insert_node(&type, "hex", true, "dev");
 
-			func_ret = false;
+			func_ret = true;
 		}
 
 
@@ -213,7 +213,7 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 			insert_node(&sub_categ, "names", true, "dev");
 			insert_node(&type, "identifier", true, "dev");
 
-			func_ret = false;
+			func_ret = true;
 		}
 
 
@@ -234,7 +234,7 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 			insert_node(&sub_categ, "ascii", true, "dev");
 			insert_node(&type, "char", true, "dev");
 
-			func_ret = false;
+			func_ret = true;
 		}
 
 
@@ -264,7 +264,7 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 			insert_node(&sub_categ, "ascii", true, "dev");
 			insert_node(&type, "string", true, "dev");
 
-			func_ret = false;
+			func_ret = true;
 		}
 	}
 

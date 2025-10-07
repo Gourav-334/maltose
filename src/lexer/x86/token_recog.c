@@ -184,7 +184,7 @@ bool token_recog(char *str)
 
 	/* For identifiers & numerical literals. */
 
-	else {token_fsm_main(str, 0, "dev"); return true;}
+	else {return token_fsm_main(str, 0, "dev");}
 
 
 

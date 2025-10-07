@@ -8,6 +8,7 @@ This directory contains all the utilities' source codes related to operations on
 
 ## 2. File Descriptions
 
+- `pop_dealloc.c` - Source implementation of **pop deallocator**, which pops characters from the end of the string.
 - `push_alloc.c` - Source implementation of **push allocator**, used to safely push characters to a dynamic string.
 
 ---

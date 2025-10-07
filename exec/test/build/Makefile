@@ -465,6 +465,30 @@ home/gouraarav/myProjects/durden-ec/src/test.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/test.c.s
 .PHONY : home/gouraarav/myProjects/durden-ec/src/test.c.s
 
+home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.o: home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.c.o
+
+home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.i: home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.c.i
+
+home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.s: home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.c.s
+
 home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.o: home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.o
 .PHONY : home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.o
 
@@ -588,6 +612,9 @@ help:
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.o"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.i"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.s"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.o"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.i"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.s"
