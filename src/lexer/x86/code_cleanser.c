@@ -174,8 +174,8 @@ void cleanse_code(char *fstream, char *mode)
 				if (stack!=NULL)
 				{
 					/* Checking that if the delimiter susbests might be valid. */
-
-					while (token_recog(stack)!=true && *stack!='\0')	////////////////// LOOP LOGIC ISSUE/////////////////
+//printf("TOKEN_RECOG: %b, *STACK: %c\n", token_recog(stack), *stack);
+					while (!(token_recog(stack)==true || *stack=='\0'))	////////////////// LOOP LOGIC ISSUE //////////////
 					{
 						byte_pop = true;
 
@@ -219,7 +219,7 @@ void cleanse_code(char *fstream, char *mode)
 				{
 					/* Checking that if the delimiter susbests might be valid. */
 
-					while (token_recog(stack)!=true && *stack!='\0')	////////////////// LOOP LOGIC ISSUE/////////////////
+					while (!(token_recog(stack)==true || *stack=='\0'))	////////////////// LOOP LOGIC ISSUE //////////////
 					{
 						byte_pop = true;
 
@@ -399,7 +399,7 @@ void cleanse_code(char *fstream, char *mode)
 			{
 				/* Checking that if the delimiter susbests might be valid. */
 
-				while (token_recog(stack)!=true && *stack!='\0')	////////////////// LOOP LOGIC ISSUE/////////////////
+				while (!(token_recog(stack)==true || *stack=='\0'))	////////////////// LOOP LOGIC ISSUE //////////////
 				{
 					byte_pop = true;
 

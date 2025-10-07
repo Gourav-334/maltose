@@ -221,7 +221,6 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 		else if (*state>=15 && *state<=16)
 		{
 			printf("ERROR: Open inverted comma for character, never closed!\n");
-
 			func_ret = false;
 		}
 
@@ -242,7 +241,6 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 		else if (*state==18)
 		{
 			printf("ERROR: Open inverted comma for character, never closed!\n");
-
 			func_ret = false;
 		}
 
@@ -251,7 +249,6 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 		else if (*state>=19 && *state<=20)
 		{
 			printf("ERROR: Open inverted comma for string, never closed!\n");
-
 			func_ret = false;
 		}
 
