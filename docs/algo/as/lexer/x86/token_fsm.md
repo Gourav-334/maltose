@@ -30,7 +30,7 @@ This file explains implementation of **finite state machine** for categorizing u
 ![Decimal](./assets/fsm_dec.png)
 ![Float](./assets/fsm_float.png)
 ![Hexadecimal](./assets/fsm_hex1.png)
-![Hexadecimal](./assets/fsm_hex2.png)
+![Identifier](./assets/fsm_identifier.png)
 ![Character](./assets/fsm_char.png)
 ![String](./assets/fsm_string.png)
 
@@ -81,6 +81,7 @@ void token_fsmN(char *str, unsigned short int start, signed short int *state);
 
 ## 4. Details
 
+- Vacant states: `13`
 - All parts of FSM are assembled at central FSM assembly point.
 - Central assembler runs on endless loop & switch-cases within which tell which part of FSM to jump in.
 - Initially, machine starts with 0th index of string & state `0`.

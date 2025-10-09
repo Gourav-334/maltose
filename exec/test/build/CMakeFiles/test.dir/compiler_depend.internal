@@ -233,9 +233,13 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/file_loader.c.o
 
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.c.o
  /home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.c
+ /home/gouraarav/myProjects/durden-ec/include/data_structs/linked_list/inserter.h
+ /home/gouraarav/myProjects/durden-ec/include/data_structs/linked_list/ll_struct.h
  /home/gouraarav/myProjects/durden-ec/include/file_loader.h
+ /home/gouraarav/myProjects/durden-ec/include/data_structs/linked_list/ll_struct.h
  /home/gouraarav/myProjects/durden-ec/include/lexer/x86/code_cleanser.h
  /home/gouraarav/myProjects/durden-ec/include/lexer/x86/token_recog.h
+ /home/gouraarav/myProjects/durden-ec/include/lexer/x86/token_store.h
  /home/gouraarav/myProjects/durden-ec/include/utils/str_ops/pop_dealloc.h
  /home/gouraarav/myProjects/durden-ec/include/utils/str_ops/push_alloc.h
  /home/gouraarav/myProjects/durden-ec/include/utils/str_verif/ill_char_scan.h

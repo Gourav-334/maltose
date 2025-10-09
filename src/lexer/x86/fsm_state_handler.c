@@ -188,32 +188,27 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 
 		else if (*state==12)
 		{
-			printf("ERROR: Incomplete hex value!\n");
-			func_ret = false;
-		}
-
-
-
-		else if (*state==13)
-		{
-			insert_node(&token, str, true, "dev");
-			insert_node(&categ, "literal", true, "dev");
-			insert_node(&sub_categ, "numeric", true, "dev");
-			insert_node(&type, "hex", true, "dev");
-
-			func_ret = true;
-		}
-
-
-
-		else if (*state==14)
-		{
 			insert_node(&token, str, true, "dev");
 			insert_node(&categ, "others", true, "dev");
 			insert_node(&sub_categ, "names", true, "dev");
 			insert_node(&type, "identifier", true, "dev");
 
 			func_ret = true;
+		}
+
+
+
+		else if (*state==13)
+		{
+			// VACANT STATE
+		}
+
+
+
+		else if (*state==14)
+		{
+			printf("ERROR: Unknown character encountered %s!\n", str);
+			func_ret = false;
 		}
 
 
@@ -292,7 +287,8 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 			case -9: printf("ERROR: Unwanted character in possibly float value %s!\n", str); break;
 			case -10: printf("ERROR: Unwanted character in possibly hex value %s!\n", str); break;
 			case -11: printf("ERROR: Unwanted character in possibly hex value %s!\n", str); break;
-			case -13: printf("ERROR: Unwanted character in possibly hex value %s!\n", str); break;
+			case -12: printf("ERROR: Unwanted character encountered in identifier %s!\n", str); break;
+			case -14: printf("ERROR: Unknown character encountered %s!\n", str); break;
 			case -16: printf("ERROR: Multiple bytes written for a character \'%s\'!\n", str); break;
 			case -17: printf("ERROR: Characters written after closing of inverted comma %s!\n", str); break;
 			case -18: printf("ERROR: Unknown escape character passed %s!\n", str); break;

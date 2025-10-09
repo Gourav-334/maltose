@@ -19,24 +19,33 @@ void cleanse_code(char *fstream, char *mode);
 ```
 
 
-### 2.2 <u>Steps</u>:
+### 2.2 <u>Steps (v2.0.0)</u>:
 
 1. Check if the passed mode is valid or not.
-2. Start reading the filestream byte-by-byte.
-3. As per the first byte, take the default state as delimiter or non-delimiter or terminator.
-4. If current state is delimiter, keep pushing until a non-delimeter, or terminator appears.
-5. As per which of the 3 appeared to break flow, change the state.
-6. Else if current state is non-delimeter, keep pushing until a delimeter or terminator appears.
-7. As per which of the 3 appeared, change the state & check the token in buffer if not empty before pushing.
-8. Else if current state is terminator, keep skipping until a delimeter or non-delimeter appears.
-9. As per which of the 3 appeared, change the state & check the token in buffer if not empty before pushing.
+2. Set the count of row & column as `0` & `0`.
+3. Start reading the filestream.
+4. If reading for the first time, set the state as per the first character.
+5. If a character encountered is terminator, call token recognizer to recognize endline.
+6. Else if a character encountered is delimiter & not special (';', '\'', '\"'), keep pushing to stack until a terminator, non-delimeter or EOF occurs.
+7. When terminator, non-delimeter or EOF appears, pass the stack for token recognition.
+8. If recognized, good. Else pop a character the end & try again.
+9. Keep trying until either it is accepted, or the stack becomes empty.
+10. If stack becomes empty, display lexing error on screen.
+11. Else if the character is special delimiter, depending on the character encountered, do the following.
+12. If character is ';', keep passing through the characters until EOF or endline occurs.
+13. Else if character is '\'' or '\"', keep pushing everything to stack until it reappears again or EOF is reached.
+14. Then add a character/string node in linked list with the same data in stack.
+15. After that, continue from the point of acception.
+16. Else if a character encountered is non-delimiter, keep pushing to stack until a terminator, delimiter or EOF appears.
+17. When a terminator, delimiter or EOF appears, pass the stack for token recognition.
+18. If the end is reached but stack isn't empty, do the following as per the state.
+19. For a delimiter, follow from step `6` to `15`.
+20. For a non-delimiter, directly pass it to the token recognizer.
 
 
-### 2.3 <u>Steps (Addition)</u>:
+### 2.3 <u>Cautions</u>:
 
-1. Pass the delimeter token in buffer to FSM if not empty before pushing.
-2. Until the token isn't accepted by FSM or the buffer doesn't become empty, keep popping characters from end.
-3. Move the filestream pointer back to the place after the last accepted/rejected token.
-4. When the loop is on final iteration, check for the token verification & continue loop if required.
+- Take care of the row & column count.
+- Remember to set up debug information informers everywhere.
 
 ---
