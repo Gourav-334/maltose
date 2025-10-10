@@ -441,6 +441,30 @@ home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.s
 .PHONY : home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.s
 
+home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.o: home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.o
+
+home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.i: home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.i
+
+home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.s: home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.s
+
 home/gouraarav/myProjects/durden-ec/src/test.o: home/gouraarav/myProjects/durden-ec/src/test.c.o
 .PHONY : home/gouraarav/myProjects/durden-ec/src/test.o
 
@@ -609,6 +633,9 @@ help:
 	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.o"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.i"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.s"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.o"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.i"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.s"

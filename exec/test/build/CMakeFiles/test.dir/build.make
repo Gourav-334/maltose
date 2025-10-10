@@ -251,10 +251,24 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_clean
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.c.s
 
+CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.o: /home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c
+CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.o -c /home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c
+
+CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c > CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.i
+
+CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c -o CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.s
+
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o: /home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o -c /home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c
 
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.i: cmake_force
@@ -268,7 +282,7 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.o: /home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.o -c /home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c
 
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.i: cmake_force
@@ -282,7 +296,7 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.o: /home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.o -c /home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c
 
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.i: cmake_force
@@ -296,7 +310,7 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_a
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.c.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.c.o: /home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.c
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.c.o -c /home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.c
 
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.c.i: cmake_force
@@ -310,7 +324,7 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_de
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/file_loader.c.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/file_loader.c.o: /home/gouraarav/myProjects/durden-ec/src/file_loader.c
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/file_loader.c.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/file_loader.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/file_loader.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/file_loader.c.o -MF CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/file_loader.c.o.d -o CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/file_loader.c.o -c /home/gouraarav/myProjects/durden-ec/src/file_loader.c
 
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/file_loader.c.i: cmake_force
@@ -336,6 +350,7 @@ test_OBJECTS = \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.o" \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.o" \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.c.o" \
+"CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.o" \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o" \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.o" \
 "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.o" \
@@ -358,6 +373,7 @@ test: CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/toke
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.o
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.o
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_cleanser.c.o
+test: CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.o
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/case_ins_match.c.o
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_verif/ill_char_scan.c.o
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/push_alloc.c.o
@@ -365,7 +381,7 @@ test: CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/
 test: CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/file_loader.c.o
 test: CMakeFiles/test.dir/build.make
 test: CMakeFiles/test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking C executable test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking C executable test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

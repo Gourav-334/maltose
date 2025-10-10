@@ -25,6 +25,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_recog.c.o.d"
   "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.o"
   "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_store.c.o.d"
+  "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.o"
+  "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.o.d"
   "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/test.c.o"
   "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/test.c.o.d"
   "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/utils/str_ops/pop_dealloc.c.o"

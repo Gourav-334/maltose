@@ -17,6 +17,7 @@ add_executable(test
 	../../src/lexer/x86/token_recog.c
 	../../src/lexer/x86/token_store.c
 	../../src/lexer/x86/code_cleanser.c
+	../../src/manuals/audit_msng.c
 	../../src/utils/str_verif/case_ins_match.c
 	../../src/utils/str_verif/ill_char_scan.c
 	../../src/utils/str_ops/push_alloc.c

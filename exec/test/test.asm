@@ -1,7 +1,7 @@
 ; Contains all the declarations.
 
 section(.data) {
-	string msg = "Hello, World!\n"
+	string msg = "Hello, World!\n
 }
 
 

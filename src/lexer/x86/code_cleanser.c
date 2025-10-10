@@ -5,6 +5,7 @@
 #include "../../../include/lexer/x86/code_cleanser.h"
 #include "../../../include/lexer/x86/token_recog.h"
 #include "../../../include/lexer/x86/token_store.h"
+#include "../../../include/manuals/audit_msng.h"
 #include "../../../include/utils/str_verif/ill_char_scan.h"
 #include "../../../include/utils/str_ops/push_alloc.h"
 #include "../../../include/utils/str_ops/pop_dealloc.h"
@@ -210,8 +211,12 @@ void cleanse_code(char *fstream, char *mode)
 
 						if (*charstr!='\'')
 						{
-							printf("%d:%d :: ERROR (Lexer) :: \nCharacter enclosers opened but not closed!\n",
-								row, column);
+							msg_audit_res(fstream, __FILE__,
+								i, row, column,
+								"ERROR\0", "Lexical\0",
+								"Character encloser opened but never closed!\0",
+								"debug"
+							);
 						}
 						else
 						{
@@ -256,8 +261,12 @@ void cleanse_code(char *fstream, char *mode)
 
 						if (*charstr!='\"')
 						{
-							printf("%d:%d :: ERROR (Lexer) :: \nString enclosers opened but not closed!\n",
-								row, column);
+							msg_audit_res(fstream, __FILE__,
+								i, row, column,
+								"ERROR\0", "Lexical\0",
+								"String encloser opened but never closed!\0",
+								"debug"
+							);
 						}
 						else
 						{
@@ -317,8 +326,13 @@ void cleanse_code(char *fstream, char *mode)
 
 				if (*charstr=='\0')
 				{
-					printf("%d:%d :: ERROR (Lexer) :: \nUnknown character: %c\n",
-						row, column, *(fstream+i+1));
+					msg_audit_res(fstream, __FILE__,
+						i, row, column,
+						"ERROR\0", "Lexical\0",
+						"Unknown character encountered!\0",
+						"debug"
+					);
+
 					i++;
 				}
 
@@ -361,13 +375,5 @@ void cleanse_code(char *fstream, char *mode)
 
 			i--;
 		}
-
-
-
-
-
-		/* Going back by 1 index to freshly investigate new encounter. */
-
-		// if (S!=TERMN) {i--;}
 	}
 }

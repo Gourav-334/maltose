@@ -12,10 +12,9 @@
 
 int main(int argc, char **argv)
 {
-	if (load_file("../test.asm", "user")==true)
+	if (load_file("../test.asm", "dev")==true)
 	{
-		cleanse_code(fstream, "debug");
-		display_nodes(&token);
+		cleanse_code(fstream, "dev");
 	}
 
 
