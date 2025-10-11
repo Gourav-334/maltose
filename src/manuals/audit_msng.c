@@ -153,6 +153,11 @@ void msg_audit_res(char *code, char *filename, int point, int row, int column, c
 	if (*(loc+count-1)!='\n') {push_alloc(&loc, '\n', "dev");}
 
 
+	/* Increasing count to display cursor in case of point=end. */
+
+	if (point==end) {count++;}
+
+
 
 
 

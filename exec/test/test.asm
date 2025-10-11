@@ -2,7 +2,7 @@
 
 section(.data) {
 	string msg = "Hello, World!\n"
-} 0x 
+} 0x
 0x537ba73d
 
 
