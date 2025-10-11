@@ -301,9 +301,11 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/code_clean
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.c.o: /home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_handler.c \
   /home/gouraarav/myProjects/durden-ec/include/data_structs/linked_list/inserter.h \
   /home/gouraarav/myProjects/durden-ec/include/data_structs/linked_list/ll_struct.h \
+  /home/gouraarav/myProjects/durden-ec/include/file_loader.h \
   /home/gouraarav/myProjects/durden-ec/include/data_structs/linked_list/ll_struct.h \
   /home/gouraarav/myProjects/durden-ec/include/lexer/x86/fsm_state_handler.h \
   /home/gouraarav/myProjects/durden-ec/include/lexer/x86/token_store.h \
+  /home/gouraarav/myProjects/durden-ec/include/manuals/audit_msng.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/stdc-predef.h \
@@ -427,6 +429,7 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/token_stor
 
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c.o: /home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c \
   /home/gouraarav/myProjects/durden-ec/include/manuals/audit_msng.h \
+  /home/gouraarav/myProjects/durden-ec/include/utils/str_ops/push_alloc.h \
   /usr/include/alloca.h \
   /usr/include/endian.h \
   /usr/include/features-time64.h \

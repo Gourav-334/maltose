@@ -18,6 +18,7 @@
 /* Variables/constant definitions. */
 
 char *fstream = NULL;
+char *src_filename = NULL;
 long int file_size = 0;
 
 
@@ -37,6 +38,7 @@ bool load_file(char *path, char *mode)
 
 	FILE *file = NULL;
 	size_t bytes_read;
+	long int path_len = strlen(path);
 
 
 
@@ -75,11 +77,20 @@ bool load_file(char *path, char *mode)
 	file = fopen(path, "r");
 
 
+
 	/* Checking if the file really exists or not. */
 
 	if (file==NULL) {perror("ERROR"); return false;}
 	else
 	{
+		/* Copying path to the global variable. */
+
+		src_filename = malloc((size_t)path_len*sizeof(char));
+		strncpy(src_filename, path, (size_t)path_len);
+
+
+		/* Providing feedback as per the chosen mode. */
+
 		if (M==DEV) {}
 		else if (M==USER) {}
 		else if (M==DEBUG) {printf("OK :: File pointed through %p.\n", file);}

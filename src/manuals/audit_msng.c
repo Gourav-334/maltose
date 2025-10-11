@@ -1,6 +1,7 @@
 /* Including all required headers. */
 
 #include "../../include/manuals/audit_msng.h"
+#include "../../include/utils/str_ops/push_alloc.h"
 
 #include <stdio.h>			// For displaying output on console/terminal.
 #include <stdlib.h>			// For dynamically allocating memory for buffers.
@@ -60,16 +61,20 @@ void msg_audit_res(char *code, char *filename, int point, int row, int column, c
 
 	/* Detecting the distance between point & previous terminator/ start of tape. */
 
-	while (!(*(code+i)=='\n' || i==0))
+	if (i>0)
 	{
-		/* Providing feedback as per the chosen mode. */
+		do
+		{
+			/* Providing feedback as per the chosen mode. */
 
-		if (M==DEV) {}
-		else if (M==USER) {}
-		else if (M==DEBUG) {printf("STAT:%d :: Moving to start :: *(code+%d)=\'%c\'\n", __LINE__, i, *(code+i));}
+			if (M==DEV) {}
+			else if (M==USER) {}
+			else if (M==DEBUG) {printf("STAT:%d :: Moving to start :: *(code+%d)=\'%c\'\n", __LINE__, i, *(code+i));}
 
 
-		i--;
+			i--;
+		}
+		while (!(*(code+i)=='\n' || i==0));
 	}
 
 
@@ -138,6 +143,16 @@ void msg_audit_res(char *code, char *filename, int point, int row, int column, c
 	*(loc + count) = '\0';
 
 
+	/* Replacing tabspaces in LOC with whitespaces for synced view. */
+
+	for (int iter=0; iter<count; iter++) {if (*(loc+iter)=='\t') {*(loc + iter) = ' ';}}
+
+
+	/* Adding an endline at the end of LOC if one is not there already. */
+
+	if (*(loc+count-1)!='\n') {push_alloc(&loc, '\n', "dev");}
+
+
 
 
 
@@ -148,7 +163,7 @@ void msg_audit_res(char *code, char *filename, int point, int row, int column, c
 		ts_cursor = malloc((size_t)count*sizeof(char));
 		if (loc==NULL) {printf("ERROR: Problem allocating memory dynamically!\n");}
 
-		memset(ts_cursor, '~', (point - start));
+		memset(ts_cursor, ' ', (point - start));
 		*(ts_cursor + (point - start)) = '^';
 
 		if (point!=end) {memset((ts_cursor + (point - start + 1)), '~', (end - point));}
@@ -179,6 +194,6 @@ void msg_audit_res(char *code, char *filename, int point, int row, int column, c
 
 	/* Printing the audit message on console. */
 
-	printf("%s\n%s (%s) :: Line=%d:%d :: %s\n%s\n", filename, type, stage, row, column, just, loc);
-	if (count>1) {printf("%s\n", ts_cursor);}
+	printf("%s\n%s (%s) :: Line=%d:%d :: %s\n%s", filename, type, stage, row, column, just, loc);
+	if (count>1) {printf("%s\n\n", ts_cursor);}
 }

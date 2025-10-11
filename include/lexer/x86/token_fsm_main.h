@@ -22,7 +22,11 @@
 
 /* Declaring functions. */
 
-bool token_fsm_main(char *str, unsigned short int start, char *mode);		// FSM handler, decides which part of FSM must be provided next symbol.
+bool token_fsm_main(
+	char *str, unsigned short int start,
+	int point, int row, int column,
+	char *mode
+);	// FSM handler, decides which part of FSM must be provided next symbol.
 
 
 

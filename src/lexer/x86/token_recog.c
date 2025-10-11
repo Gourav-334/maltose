@@ -16,7 +16,7 @@
 
 /* Recognizes token & stores related information. */
 
-bool token_recog(char *str)
+bool token_recog(char *str, int point, int row, int column)
 {
 	/* Singular/unit tokens. */
 
@@ -187,7 +187,7 @@ bool token_recog(char *str)
 
 	/* For identifiers & numerical literals. */
 
-	else {return token_fsm_main(str, 0, "dev");}
+	else {return token_fsm_main(str, 0, point, row, column, "dev");}
 
 
 

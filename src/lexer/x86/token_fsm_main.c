@@ -20,7 +20,7 @@
 
 /* Central Finite State Machine handler. */
 
-bool token_fsm_main(char *str, unsigned short int start, char *mode)
+bool token_fsm_main(char *str, unsigned short int start, int point, int row, int column, char *mode)
 {
 	/* Variable declarations/definitions. */
 
@@ -100,5 +100,5 @@ bool token_fsm_main(char *str, unsigned short int start, char *mode)
 
 	/* Calling state handler to provide feedback. */
 
-	return handle_token_fsm_state(&state, str, "user");
+	return handle_token_fsm_state(&state, str, point, row, column, "user");
 }

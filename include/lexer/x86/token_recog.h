@@ -22,7 +22,7 @@
 
 /* Recognizes token & stores related information. */
 
-bool token_recog(char *str);
+bool token_recog(char *str, int point, int row, int column);
 
 
 

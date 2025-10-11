@@ -22,7 +22,11 @@
 
 /* Functions declaration. */
 
-bool handle_token_fsm_state(signed short int *state, char *str, char *mode);		// Decides what to do with final state of FSM.
+bool handle_token_fsm_state(
+	signed short int *state, char *str,
+	int point, int row, int column,
+	char *mode
+);		// Decides what to do with final state of FSM.
 
 
 

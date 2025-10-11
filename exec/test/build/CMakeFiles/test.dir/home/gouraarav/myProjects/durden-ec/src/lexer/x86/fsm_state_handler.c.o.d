@@ -8,6 +8,8 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/lexer/x86/fsm_state_
  /home/gouraarav/myProjects/durden-ec/src/lexer/x86/../../../include/data_structs/linked_list/ll_struct.h \
  /home/gouraarav/myProjects/durden-ec/src/lexer/x86/../../../include/data_structs/linked_list/inserter.h \
  /home/gouraarav/myProjects/durden-ec/src/lexer/x86/../../../include/data_structs/linked_list/ll_struct.h \
+ /home/gouraarav/myProjects/durden-ec/src/lexer/x86/../../../include/file_loader.h \
+ /home/gouraarav/myProjects/durden-ec/src/lexer/x86/../../../include/manuals/audit_msng.h \
  /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

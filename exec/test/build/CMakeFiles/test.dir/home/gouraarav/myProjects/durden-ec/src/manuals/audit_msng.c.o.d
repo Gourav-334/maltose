@@ -2,6 +2,7 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c
  /home/gouraarav/myProjects/durden-ec/src/manuals/audit_msng.c \
  /usr/include/stdc-predef.h \
  /home/gouraarav/myProjects/durden-ec/src/manuals/../../include/manuals/audit_msng.h \
+ /home/gouraarav/myProjects/durden-ec/src/manuals/../../include/utils/str_ops/push_alloc.h \
  /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

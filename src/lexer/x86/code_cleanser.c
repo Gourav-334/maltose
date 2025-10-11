@@ -35,7 +35,7 @@ void cleanse_code(char *fstream, char *mode)
 	char *deli = " `~!@#$%^&*()-=+[{]}\\|;:\'\",<>/?\t\0";
 	char termn = '\n';
 
-	int row=0, column=0;
+	int row=1, column=0;
 	long int charstr_len = 1 + 1;
 
 
@@ -134,7 +134,7 @@ void cleanse_code(char *fstream, char *mode)
 		if (S==TERMN)		/* Reading loop :: Identifying char type :: Terminator mode */
 		{
 			row++; column=0;
-			token_recog("\n");
+			token_recog("\n", i, row, column);
 
 
 			/* Reading loop :: Providing feedback */
@@ -211,11 +211,11 @@ void cleanse_code(char *fstream, char *mode)
 
 						if (*charstr!='\'')
 						{
-							msg_audit_res(fstream, __FILE__,
+							msg_audit_res(fstream, src_filename,
 								i, row, column,
 								"ERROR\0", "Lexical\0",
 								"Character encloser opened but never closed!\0",
-								"debug"
+								"user"
 							);
 						}
 						else
@@ -261,11 +261,11 @@ void cleanse_code(char *fstream, char *mode)
 
 						if (*charstr!='\"')
 						{
-							msg_audit_res(fstream, __FILE__,
+							msg_audit_res(fstream, src_filename,
 								i, row, column,
 								"ERROR\0", "Lexical\0",
 								"String encloser opened but never closed!\0",
-								"debug"
+								"user"
 							);
 						}
 						else
@@ -279,6 +279,12 @@ void cleanse_code(char *fstream, char *mode)
 
 						break;
 				}
+
+
+
+				/* For freshly reading new encounter, without risk of re-reading from second encloser again */
+
+				if (!(*charstr=='\'' || *charstr=='\"')) {i--;}
 
 
 				/* Freeing the stack with old data. */
@@ -314,7 +320,8 @@ void cleanse_code(char *fstream, char *mode)
 				} i--;
 
 
-				while (!(token_recog(stack)==true || *stack=='\0'))
+
+				while (!(token_recog(stack, i, row, column)==true || *stack=='\0'))
 				{
 					i--; column--;
 					pop_dealloc(&stack, "dev");
@@ -326,11 +333,11 @@ void cleanse_code(char *fstream, char *mode)
 
 				if (*charstr=='\0')
 				{
-					msg_audit_res(fstream, __FILE__,
+					msg_audit_res(fstream, src_filename,
 						i, row, column,
 						"ERROR\0", "Lexical\0",
 						"Unknown character encountered!\0",
-						"debug"
+						"user"
 					);
 
 					i++;
@@ -364,7 +371,7 @@ void cleanse_code(char *fstream, char *mode)
 			}
 
 
-			token_recog(stack);
+			token_recog(stack, i, row, column);
 
 			free(stack); stack = NULL;
 			stack = malloc(1*sizeof(char));

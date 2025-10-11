@@ -42,13 +42,20 @@ This file explains implementation of **finite state machine** for categorizing u
 ### 3.1 <u>Central Function</u>:
 
 ```c
-bool token_fsm_main(char *str, unsigned short int start, char *mode);
+bool token_fsm_main(char *str, unsigned short int start,
+	int point, int row, int column,
+	char *mode
+);
 ```
 
 - `N` - A whole number representing a part of FSM, each part containing 10 states.
 - `str` - String which is passed to the FSM.
 - `start` - Index of string to start running machine.
 - `state` - Initial state of the machine.
+- `point` - Point in line from where the message has to be called out.
+- `row` - Current row in the stage.
+- `column` - Current column in the stage.
+- `mode` - Programmer chosen mode for feedback.
 
 
 ### 3.2 <u>Part Function</u>:

@@ -31,6 +31,7 @@ void msg_audit_res(
 - `type` - Type of message.
 - `stage` - Stage at which message is requested.
 - `just` - Justification for the message.
+- `mode` - Programmer chosen mode for feedback.
 
 
 ### 2.2 <u>Steps</u>:

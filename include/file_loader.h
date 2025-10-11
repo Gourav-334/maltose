@@ -23,6 +23,7 @@
 /* Declaring variables. */
 
 extern char *fstream;			// Pointer to filestream present in memory.
+extern char *src_filename;		// Name of the source assembly file.
 extern long int file_size;		// Size of the filestream in memory.
 
 

@@ -4,6 +4,8 @@
 #include "../../../include/lexer/x86/token_store.h"
 #include "../../../include/data_structs/linked_list/ll_struct.h"
 #include "../../../include/data_structs/linked_list/inserter.h"
+#include "../../../include/file_loader.h"
+#include "../../../include/manuals/audit_msng.h"
 
 #include <stdio.h>		// For printing feedbacks to terminal.
 #include <string.h>		// For detecting chosen feedback mode.
@@ -19,7 +21,7 @@
 
 /* Command interpreter's FSM state handler. */
 
-bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
+bool handle_token_fsm_state(signed short int *state, char *str, int point, int row, int column, char *mode)
 {
 	/* Variables declarations/definitions. */
 
@@ -73,7 +75,7 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 	{
 		if (*state==0)
 		{
-			printf("ERROR: Token passed can't be empty!\n");
+			msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Token passed can't be empty!\0", "user");
 			func_ret = false;
 		}
 
@@ -81,7 +83,7 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 
 		else if (*state==1)
 		{
-			printf("ERROR: Sign without a value!\n");
+			msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Sign without a value!\0", "user");
 			func_ret = false;
 		}
 
@@ -148,7 +150,7 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 
 		else if (*state==8)
 		{
-			printf("ERROR: Float without fraction part passed!\n");
+			msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Float without fraction part passed!\0", "user");
 			func_ret = false;
 		}
 
@@ -168,7 +170,7 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 
 		else if (*state==10)
 		{
-			printf("ERROR: Incomplete hex value!\n");
+			msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Incomplete hex value!\0", "debug");
 			func_ret = false;
 		}
 
@@ -207,7 +209,7 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 
 		else if (*state==14)
 		{
-			printf("ERROR: Unknown character encountered %s!\n", str);
+			//msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Unknown character encountered!\0", "user");
 			func_ret = false;
 		}
 
@@ -215,7 +217,7 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 
 		else if (*state>=15 && *state<=16)
 		{
-			printf("ERROR: Open inverted comma for character, never closed!\n");
+			msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Open inverted comma for character, never closed!\0", "user");
 			func_ret = false;
 		}
 
@@ -235,7 +237,7 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 
 		else if (*state==18)
 		{
-			printf("ERROR: Open inverted comma for character, never closed!\n");
+			msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Open inverted comma for character, never closed!\0", "user");
 			func_ret = false;
 		}
 
@@ -243,7 +245,7 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 
 		else if (*state>=19 && *state<=20)
 		{
-			printf("ERROR: Open inverted comma for string, never closed!\n");
+			msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Open inverted comma for string, never closed!\0", "user");
 			func_ret = false;
 		}
 
@@ -278,21 +280,21 @@ bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 
 		switch(*state)
 		{
-			case -3: printf("ERROR: Unwanted character in possibly binary value %s!\n", str); break;
-			case -4: printf("ERROR: Unwanted character in possibly binary value %s!\n", str); break;
-			case -5: printf("ERROR: Unwanted character in possibly octal value %s!\n", str); break;
-			case -6: printf("ERROR: Unwanted character in possibly octal value %s!\n", str); break;
-			case -7: printf("ERROR: Unwanted character in possibly decimal value %s!\n", str); break;
-			case -8: printf("ERROR: Unwanted character in possibly float value %s!\n", str); break;
-			case -9: printf("ERROR: Unwanted character in possibly float value %s!\n", str); break;
-			case -10: printf("ERROR: Unwanted character in possibly hex value %s!\n", str); break;
-			case -11: printf("ERROR: Unwanted character in possibly hex value %s!\n", str); break;
-			case -12: printf("ERROR: Unwanted character encountered in identifier %s!\n", str); break;
-			case -14: printf("ERROR: Unknown character encountered %s!\n", str); break;
-			case -16: printf("ERROR: Multiple bytes written for a character \'%s\'!\n", str); break;
-			case -17: printf("ERROR: Characters written after closing of inverted comma %s!\n", str); break;
-			case -18: printf("ERROR: Unknown escape character passed %s!\n", str); break;
-			case -21: printf("ERROR: Characters written after closing of double inverted comma %s!\n", str); break;
+			case -3: msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Unwanted character in possibly binary value!\0", "user"); break;
+			case -4: msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Unwanted character in possibly binary value!\0", "user"); break;
+			case -5: msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Unwanted character in possibly octal value!\0", "user"); break;
+			case -6: msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Unwanted character in possibly octal value!\0", "user"); break;
+			case -7: msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Unwanted character in possibly decimal value!\0", "user"); break;
+			case -8: msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Unwanted character in possibly float value!\0", "user"); break;
+			case -9: msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Unwanted character in possibly float value!\0", "user"); break;
+			case -10: msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Unwanted character in possibly hex value!\0", "user"); break;
+			case -11: msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Unwanted character in possibly hex value!\0", "user"); break;
+			case -12: msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Unwanted character encountered in identifier!\0", "user"); break;
+			//case -14: msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Unknown character encountered!\0", "user"); break;
+			case -16: msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Multiple bytes written for a character!\0", "user"); break;
+			case -17: msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Characters written after closing of inverted comma!\0", "user"); break;
+			case -18: msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Unknown escape character passed!\0", "user"); break;
+			case -21: msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Characters written after closing of double inverted comma!\0", "user"); break;
 		}
 	}
 

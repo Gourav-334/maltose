@@ -1,9 +1,9 @@
 ; Contains all the declarations.
 
 section(.data) {
-	string msg = "Hello, World!\n
-}
-
+	string msg = "Hello, World!\n"
+} 0x 
+0x537ba73d
 
 
 ; Contains the main code.

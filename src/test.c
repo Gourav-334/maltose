@@ -15,6 +15,7 @@ int main(int argc, char **argv)
 	if (load_file("../test.asm", "dev")==true)
 	{
 		cleanse_code(fstream, "dev");
+		//display_nodes(&token);
 	}
 
 
