@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/common_store.c.o"
+  "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/common_store.c.o.d"
   "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.c.o"
   "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.c.o.d"
   "CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/full_remover.c.o"

@@ -223,10 +223,7 @@ $$ \text{Total = 21} $$
 
 
 ```c
-bool token_recog(
-	char *str,
-	int point, int row, int column
-);
+bool token_recog(char *str);
 ```
 
 - `str` - The token to be checked.

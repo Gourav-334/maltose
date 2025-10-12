@@ -1,5 +1,6 @@
 /* Including required headers. */
 
+#include "../../../include/common_store.h"
 #include "../../../include/lexer/x86/token_fsm_main.h"
 #include "../../../include/lexer/x86/token_fsm/token_fsm0.h"
 #include "../../../include/lexer/x86/token_fsm/token_fsm1.h"
@@ -20,11 +21,11 @@
 
 /* Central Finite State Machine handler. */
 
-bool token_fsm_main(char *str, unsigned short int start, int point, int row, int column, char *mode)
+bool token_fsm_main(char *str, unsigned short int start, char *mode)
 {
 	/* Variable declarations/definitions. */
 
-	long int str_len = strlen(str);
+	str_len = strlen(str);
 	signed short int state = 0;
 
 
@@ -56,7 +57,9 @@ bool token_fsm_main(char *str, unsigned short int start, int point, int row, int
 
 	/* Primary state transition loop. */
 
-	for (unsigned short int i=start; i<str_len; i++)
+	i_token_fsm = 0;
+
+	for (i_token_fsm=start; i_token_fsm<str_len; i_token_fsm++)
 	{
 		/* Giving feedback as per chosen mode. */
 
@@ -64,9 +67,19 @@ bool token_fsm_main(char *str, unsigned short int start, int point, int row, int
 		else if (M==USER) {}
 		else if (M==DEBUG)
 		{
-			printf("STAT :: start=%d : str_len=%ld : i=%hu : state=%hd : symbol=%c\n",
-				start, str_len, i, state, *(str+i));
+			printf("STAT :: start=%d : str_len=%ld : i_token_fsm=%hu : state=%hd : symbol=%c\n",
+				start, str_len, i_token_fsm, state, *(str+i_token_fsm));
 		}
+
+
+
+
+
+		/* Shifting point's value for error states. */
+
+		//if ((*state==) || && point_shift==0)
+
+
 
 
 
@@ -74,9 +87,9 @@ bool token_fsm_main(char *str, unsigned short int start, int point, int row, int
 
 		switch(state/10)
 		{
-			case 0: token_fsm0(str, i, &state); break;
-			case 1: token_fsm1(str, i, &state); break;
-			case 2: token_fsm2(str, i, &state); break;
+			case 0: token_fsm0(str, i_token_fsm, &state); break;
+			case 1: token_fsm1(str, i_token_fsm, &state); break;
+			case 2: token_fsm2(str, i_token_fsm, &state); break;
 		}
 	}
 
@@ -100,5 +113,7 @@ bool token_fsm_main(char *str, unsigned short int start, int point, int row, int
 
 	/* Calling state handler to provide feedback. */
 
-	return handle_token_fsm_state(&state, str, point, row, column, "user");
+	point -= point_shift;
+
+	return handle_token_fsm_state(&state, str, "user");
 }

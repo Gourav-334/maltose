@@ -23,4 +23,5 @@ add_executable(test
 	../../src/utils/str_ops/push_alloc.c
 	../../src/utils/str_ops/pop_dealloc.c
 	../../src/file_loader.c
+	../../src/common_store.c
 )

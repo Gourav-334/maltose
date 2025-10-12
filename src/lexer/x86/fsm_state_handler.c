@@ -1,5 +1,6 @@
 /* Including required headers. */
 
+#include "../../../include/common_store.h"
 #include "../../../include/lexer/x86/fsm_state_handler.h"
 #include "../../../include/lexer/x86/token_store.h"
 #include "../../../include/data_structs/linked_list/ll_struct.h"
@@ -21,7 +22,7 @@
 
 /* Command interpreter's FSM state handler. */
 
-bool handle_token_fsm_state(signed short int *state, char *str, int point, int row, int column, char *mode)
+bool handle_token_fsm_state(signed short int *state, char *str, char *mode)
 {
 	/* Variables declarations/definitions. */
 
@@ -170,7 +171,7 @@ bool handle_token_fsm_state(signed short int *state, char *str, int point, int r
 
 		else if (*state==10)
 		{
-			msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Incomplete hex value!\0", "debug");
+			msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Incomplete hex value!\0", "user");
 			func_ret = false;
 		}
 
@@ -217,48 +218,35 @@ bool handle_token_fsm_state(signed short int *state, char *str, int point, int r
 
 		else if (*state>=15 && *state<=16)
 		{
-			msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Open inverted comma for character, never closed!\0", "user");
-			func_ret = false;
+			// VACANT STATE
 		}
 
 
 
 		else if (*state==17)
 		{
-			insert_node(&token, str, true, "dev");
-			insert_node(&categ, "literal", true, "dev");
-			insert_node(&sub_categ, "ascii", true, "dev");
-			insert_node(&type, "char", true, "dev");
-
-			func_ret = true;
+			// VACANT STATE
 		}
 
 
 
 		else if (*state==18)
 		{
-			msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Open inverted comma for character, never closed!\0", "user");
-			func_ret = false;
+			// VACANT STATE
 		}
 
 
 
 		else if (*state>=19 && *state<=20)
 		{
-			msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Open inverted comma for string, never closed!\0", "user");
-			func_ret = false;
+			// VACANT STATE
 		}
 
 
 
 		else if (*state==21)
 		{
-			insert_node(&token, str, true, "dev");
-			insert_node(&categ, "literal", true, "dev");
-			insert_node(&sub_categ, "ascii", true, "dev");
-			insert_node(&type, "string", true, "dev");
-
-			func_ret = true;
+			// VACANT STATE
 		}
 	}
 
@@ -290,7 +278,6 @@ bool handle_token_fsm_state(signed short int *state, char *str, int point, int r
 			case -10: msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Unwanted character in possibly hex value!\0", "user"); break;
 			case -11: msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Unwanted character in possibly hex value!\0", "user"); break;
 			case -12: msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Unwanted character encountered in identifier!\0", "user"); break;
-			//case -14: msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Unknown character encountered!\0", "user"); break;
 			case -16: msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Multiple bytes written for a character!\0", "user"); break;
 			case -17: msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Characters written after closing of inverted comma!\0", "user"); break;
 			case -18: msg_audit_res(fstream, src_filename, point, row, column, "ERROR\0", "Lexical\0", "Unknown escape character passed!\0", "user"); break;
@@ -305,6 +292,7 @@ bool handle_token_fsm_state(signed short int *state, char *str, int point, int r
 	/* Reverting state back to initial. */
 
 	*state = 0;
+	point_shift = 0;
 
 
 	/* Returning boolean as per execution. */

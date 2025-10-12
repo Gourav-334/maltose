@@ -1,5 +1,6 @@
 /* Including required headers. */
 
+#include "../../../include/common_store.h"
 #include "../../../include/data_structs/linked_list/ll_struct.h"
 #include "../../../include/data_structs/linked_list/inserter.h"
 #include "../../../include/lexer/x86/code_cleanser.h"
@@ -34,9 +35,14 @@ void cleanse_code(char *fstream, char *mode)
 	char *stack = NULL;
 	char *deli = " `~!@#$%^&*()-=+[{]}\\|;:\'\",<>/?\t\0";
 	char termn = '\n';
-
-	int row=1, column=0;
 	long int charstr_len = 1 + 1;
+
+
+
+	/* Global variables re-declarations. */
+
+	row = 1;
+	column = 0;
 
 
 
@@ -93,11 +99,11 @@ void cleanse_code(char *fstream, char *mode)
 
 	/* Reading loop */
 
-	for (int i=0; i<file_size; i++)
+	for (point=0; point<file_size; point++)
 	{
 		/* Reading loop :: Syncing char & stream */
 
-		*charstr = *(fstream + i);
+		*charstr = *(fstream + point);
 
 
 
@@ -117,7 +123,7 @@ void cleanse_code(char *fstream, char *mode)
 		else if (M==DEBUG)
 		{
 			printf("STAT:%d :: %d:%d :: fstream[%d]=\'%c\' :: *charstr=\'%c\' :: stack=\"%s\" :: S=%d\n",
-				__LINE__, row, column, i, *(fstream+i), *charstr, stack, S);
+				__LINE__, row, column, point, *(fstream+point), *charstr, stack, S);
 		}
 
 
@@ -134,7 +140,7 @@ void cleanse_code(char *fstream, char *mode)
 		if (S==TERMN)		/* Reading loop :: Identifying char type :: Terminator mode */
 		{
 			row++; column=0;
-			token_recog("\n", i, row, column);
+			token_recog("\n");
 
 
 			/* Reading loop :: Providing feedback */
@@ -144,7 +150,7 @@ void cleanse_code(char *fstream, char *mode)
 			else if (M==DEBUG)
 			{
 				printf("STAT:%d :: %d:%d :: fstream[%d]=\'%c\' :: *charstr=\'%c\' :: stack=\"%s\" :: S=%d\n",
-					__LINE__, row, column, i, *(fstream+i), *charstr, stack, S);
+					__LINE__, row, column, point, *(fstream+point), *charstr, stack, S);
 			}
 		}
 		else if (S==DELI)		/* Reading loop :: Identifying char type :: Delimiter mode */
@@ -161,8 +167,8 @@ void cleanse_code(char *fstream, char *mode)
 
 						while (!(*charstr=='\n' || *charstr=='\0'))
 						{
-							column++; i++;
-							*charstr = *(fstream + i);
+							column++; point++;
+							*charstr = *(fstream + point);
 
 
 							/* Reading loop :: Providing feedback */
@@ -172,7 +178,7 @@ void cleanse_code(char *fstream, char *mode)
 							else if (M==DEBUG)
 							{
 								printf("STAT:%d :: %d:%d :: fstream[%d]=\'%c\' :: *charstr=\'%c\' :: stack=\"%s\" :: S=%d\n",
-									__LINE__, row, column, i, *(fstream+i), *charstr, stack, S);
+									__LINE__, row, column, point, *(fstream+point), *charstr, stack, S);
 							}
 						}
 
@@ -187,8 +193,8 @@ void cleanse_code(char *fstream, char *mode)
 						
 						do
 						{
-							column++; i++;
-							*charstr = *(fstream + i);
+							column++; point++;
+							*charstr = *(fstream + point);
 
 							if (*charstr=='\n') {row++; column=0;}
 							if (*charstr!='\'') {push_alloc(&stack, *charstr, "dev");}
@@ -201,7 +207,7 @@ void cleanse_code(char *fstream, char *mode)
 							else if (M==DEBUG)
 							{
 								printf("STAT:%d :: %d:%d :: fstream[%d]=\'%c\' :: *charstr=\'%c\' :: stack=\"%s\" :: S=%d\n",
-									__LINE__, row, column, i, *(fstream+i), *charstr, stack, S);
+									__LINE__, row, column, point, *(fstream+point), *charstr, stack, S);
 							}
 						}
 						while (!(*charstr=='\'' || *charstr=='\0'));
@@ -212,7 +218,7 @@ void cleanse_code(char *fstream, char *mode)
 						if (*charstr!='\'')
 						{
 							msg_audit_res(fstream, src_filename,
-								i, row, column,
+								point, row, column,
 								"ERROR\0", "Lexical\0",
 								"Character encloser opened but never closed!\0",
 								"user"
@@ -237,8 +243,8 @@ void cleanse_code(char *fstream, char *mode)
 						
 						do
 						{
-							column++; i++;
-							*charstr = *(fstream + i);
+							column++; point++;
+							*charstr = *(fstream + point);
 
 							if (*charstr=='\n') {row++; column=0;}
 							if (*charstr!='\"') {push_alloc(&stack, *charstr, "dev");}
@@ -251,7 +257,7 @@ void cleanse_code(char *fstream, char *mode)
 							else if (M==DEBUG)
 							{
 								printf("STAT:%d :: %d:%d :: fstream[%d]=\'%c\' :: *charstr=\'%c\' :: stack=\"%s\" :: S=%d\n",
-									__LINE__, row, column, i, *(fstream+i), *charstr, stack, S);
+									__LINE__, row, column, point, *(fstream+point), *charstr, stack, S);
 							}
 						}
 						while (!(*charstr=='\"' || *charstr=='\0'));
@@ -262,7 +268,7 @@ void cleanse_code(char *fstream, char *mode)
 						if (*charstr!='\"')
 						{
 							msg_audit_res(fstream, src_filename,
-								i, row, column,
+								point, row, column,
 								"ERROR\0", "Lexical\0",
 								"String encloser opened but never closed!\0",
 								"user"
@@ -284,7 +290,7 @@ void cleanse_code(char *fstream, char *mode)
 
 				/* For freshly reading new encounter, without risk of re-reading from second encloser again */
 
-				if (!(*charstr=='\'' || *charstr=='\"')) {i--;}
+				if (!(*charstr=='\'' || *charstr=='\"')) {point--;}
 
 
 				/* Freeing the stack with old data. */
@@ -302,10 +308,10 @@ void cleanse_code(char *fstream, char *mode)
 			{
 				while (!(*charstr=='\n' || *charstr=='\0') && scan_ill_chars(charstr, charstr_len, deli, "dev")==true)
 				{
-					i++; column++;
+					point++; column++;
 					push_alloc(&stack, *charstr, "dev");
 
-					*charstr = *(fstream + i);
+					*charstr = *(fstream + point);
 
 
 					/* Reading loop :: Providing feedback */
@@ -315,15 +321,19 @@ void cleanse_code(char *fstream, char *mode)
 					else if (M==DEBUG)
 					{
 						printf("STAT:%d :: %d:%d :: fstream[%d]=\'%c\' :: *charstr=\'%c\' :: stack=\"%s\" :: S=%d\n",
-							__LINE__, row, column, i, *(fstream+i), *charstr, stack, S);
+							__LINE__, row, column, point, *(fstream+point), *charstr, stack, S);
 					}
-				} i--;
+				} point--;
 
 
 
-				while (!(token_recog(stack, i, row, column)==true || *stack=='\0'))
+				column--;		// Returning back to last character of flow.
+
+
+
+				while (!(token_recog(stack)==true || *stack=='\0'))
 				{
-					i--; column--;
+					point--; column--;
 					pop_dealloc(&stack, "dev");
 				}
 
@@ -331,16 +341,16 @@ void cleanse_code(char *fstream, char *mode)
 
 				/*  .. :: .. :: .. :: .. :: .. :: Ensuring token is valid */
 
-				if (*charstr=='\0')
+				if (*charstr=='\0' && !*charstr=='\0')
 				{
 					msg_audit_res(fstream, src_filename,
-						i, row, column,
+						point, row, column,
 						"ERROR\0", "Lexical\0",
 						"Unknown character encountered!\0",
 						"user"
 					);
 
-					i++;
+					point++;
 				}
 
 
@@ -353,10 +363,10 @@ void cleanse_code(char *fstream, char *mode)
 		{
 			while (!(*charstr=='\n' || scan_ill_chars(charstr, charstr_len, deli, "dev")==true || *charstr=='\0'))
 			{
-				i++; column++;
+				point++; column++;
 				push_alloc(&stack, *charstr, "dev");
 
-				*charstr = *(fstream + i);
+				*charstr = *(fstream + point);
 
 
 				/* Reading loop :: Providing feedback */
@@ -366,12 +376,15 @@ void cleanse_code(char *fstream, char *mode)
 				else if (M==DEBUG)
 				{
 					printf("STAT:%d :: %d:%d :: fstream[%d]=\'%c\' :: *charstr=\'%c\' :: stack=\"%s\" :: S=%d\n",
-						__LINE__, row, column, i, *(fstream+i), *charstr, stack, S);
+						__LINE__, row, column, point, *(fstream+point), *charstr, stack, S);
 				}
 			}
 
 
-			token_recog(stack, i, row, column);
+			column--;		// Returning back to last character of flow.
+
+
+			token_recog(stack);
 
 			free(stack); stack = NULL;
 			stack = malloc(1*sizeof(char));
@@ -380,7 +393,7 @@ void cleanse_code(char *fstream, char *mode)
 
 			/* Moving back by 1 to read flow-breaking character. */
 
-			i--;
+			point--;
 		}
 	}
 }

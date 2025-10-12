@@ -20,9 +20,9 @@
 
 
 
-/* Recognizes token & stores related information. */
+/* Functions declarations. */
 
-bool token_recog(char *str, int point, int row, int column);
+bool token_recog(char *str);		// Recognizes token & stores related information.
 
 
 

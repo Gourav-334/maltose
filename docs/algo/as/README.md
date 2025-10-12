@@ -13,6 +13,7 @@ This directory contains all the algorithms particular to **AS**.
 - `lexer/` - Set of implementation details for lexer's components.
 - `manuals/` - Set of messages to be displayed on terminal when required.
 - `utils/` - Set of utility programs to aid faster programming & prototyping.
+- `common_store.md` - Common storage for all units, for dependency-free usage of global variables.
 - `file_loader.md` - Implementation of file loader, which loads a file from disk to RAM.
 
 ---

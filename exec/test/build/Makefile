@@ -129,6 +129,30 @@ test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
 
+home/gouraarav/myProjects/durden-ec/src/common_store.o: home/gouraarav/myProjects/durden-ec/src/common_store.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/common_store.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/common_store.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/common_store.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/common_store.c.o
+
+home/gouraarav/myProjects/durden-ec/src/common_store.i: home/gouraarav/myProjects/durden-ec/src/common_store.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/common_store.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/common_store.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/common_store.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/common_store.c.i
+
+home/gouraarav/myProjects/durden-ec/src/common_store.s: home/gouraarav/myProjects/durden-ec/src/common_store.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/common_store.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/common_store.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/common_store.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/common_store.c.s
+
 home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.o: home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.c.o
 .PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.o
 
@@ -594,6 +618,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/common_store.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/common_store.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/common_store.s"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.o"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.i"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/data_structs/linked_list/displayer.s"

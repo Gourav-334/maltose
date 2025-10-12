@@ -42,10 +42,7 @@ This file explains implementation of **finite state machine** for categorizing u
 ### 3.1 <u>Central Function</u>:
 
 ```c
-bool token_fsm_main(char *str, unsigned short int start,
-	int point, int row, int column,
-	char *mode
-);
+bool token_fsm_main(char *str, unsigned short int start, char *mode);
 ```
 
 - `N` - A whole number representing a part of FSM, each part containing 10 states.
