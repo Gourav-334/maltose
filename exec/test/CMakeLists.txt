@@ -3,6 +3,10 @@ project(AS1_UNIT_TESTING C)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED True)
 
+set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_C_FLAGS_DEBUG "-g")
+
+
 add_executable(test
 	../../src/test.c
 	../../src/data_structs/linked_list/inserter.c
