@@ -74,7 +74,7 @@ bool insert_node(Ll_recorder *recorder, char *data, bool rear, char *mode)
 
 	/* Allocating memory space for data at the newly allocated memory space. */
 
-	trav -> data = malloc(sizeof((size_t)(strlen(data)+1)));
+	trav -> data = malloc(sizeof(char)*(strlen(data)+1));
 
 
 

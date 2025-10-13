@@ -227,7 +227,7 @@ void cleanse_code(char *fstream, char *mode)
 						else
 						{
 							insert_node(&token, stack, true, "dev");
-							insert_node(&categ, "literal", true, "debug");	// FAULTY / SERIOUS MEMORY ISSUE!
+							insert_node(&categ, "literal", true, "dev");
 							insert_node(&sub_categ, "ascii", true, "dev");
 							insert_node(&type, "char", true, "dev");
 						}
@@ -277,7 +277,7 @@ void cleanse_code(char *fstream, char *mode)
 						else
 						{
 							insert_node(&token, stack, true, "dev");
-							insert_node(&categ, "literal", true, "debug");	// FAULTY / SERIOUS MEMORY ISSUE!
+							insert_node(&categ, "literal", true, "dev");
 							insert_node(&sub_categ, "ascii", true, "dev");
 							insert_node(&type, "string", true, "dev");
 						}
