@@ -1,15 +1,8 @@
 CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/test.c.o: \
  /home/gouraarav/myProjects/durden-ec/src/test.c \
  /usr/include/stdc-predef.h \
- /home/gouraarav/myProjects/durden-ec/src/../include/lexer/x86/code_cleanser.h \
- /home/gouraarav/myProjects/durden-ec/src/../include/lexer/x86/token_store.h \
- /home/gouraarav/myProjects/durden-ec/src/../include/lexer/x86/../../data_structs/linked_list/ll_struct.h \
- /home/gouraarav/myProjects/durden-ec/src/../include/file_loader.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
- /home/gouraarav/myProjects/durden-ec/src/../include/data_structs/linked_list/ll_struct.h \
- /home/gouraarav/myProjects/durden-ec/src/../include/data_structs/linked_list/displayer.h \
- /home/gouraarav/myProjects/durden-ec/src/../include/data_structs/linked_list/ll_struct.h \
- /usr/include/stdio.h \
+ /home/gouraarav/myProjects/durden-ec/src/../include/parser/x86/register_store.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -18,11 +11,15 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/test.c.o: \
  /usr/include/x86_64-linux-gnu/bits/long-double.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
  /usr/include/x86_64-linux-gnu/bits/time64.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-least.h /usr/include/stdio.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
@@ -32,4 +29,5 @@ CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/test.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h
+ /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+ /usr/include/inttypes.h

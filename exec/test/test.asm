@@ -2,14 +2,13 @@
 
 section(.data) {
 	string msg = "Hello, World!\n"
-} 0x
-0x537ba73d
+}
 
-sa 0x '0x 0xx 0x32432
+
 
 ; Contains the main code.
 
-section(.text) 0101010111d 1261753103rty [ {
+section(.text) {
 	global _start
 
 	_start {
