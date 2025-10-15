@@ -14,7 +14,7 @@
 
 /* Declaring structures. */
 
-typedef struct Ll_node
+typedef struct Ll_node			// Represents a single/unit node in linked list.
 {
 	char *data;
 	struct Ll_node *next;
@@ -22,7 +22,9 @@ typedef struct Ll_node
 
 
 
-typedef struct Ll_recorder
+
+
+typedef struct Ll_recorder		// Records all the information about the linked list.
 {
 	int total;
 

@@ -11,6 +11,7 @@ This directory contains all the source codes related to **data structures**, use
 ## 2. Directory Structure
 
 
+- `hash_table/` - Contains all the source codes related to **hash table**.
 - `linked_list/` - Contains all the source codes related to **linked list**.
 
 ---

@@ -11,6 +11,7 @@ This directory contains all the documentation related to **data structures**, us
 ## 2. Directory Structure
 
 
+- `hash_table/` - Contains implementation details related to **hash table**.
 - `linked_list/` - Contains implementation details related to **linked list**.
 
 ---

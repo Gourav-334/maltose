@@ -7,6 +7,18 @@
 
 
 
+/* Shortcut numerical representations for various data types. */
+
+#define CHARACTER 1				// Character
+#define STRING 2 				// String
+#define SHORT_INTEGER 3 		// Short
+#define INTEGER 4				// Integer
+#define LONG_INTEGER 5 			// Long
+
+
+
+
+
 
 
 
