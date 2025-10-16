@@ -21,7 +21,7 @@ typedef struct Ht_entry			// Represents a single entry in the hash table.
 	void *key;					// Pointer to key of a particular entry.
 	void *value;				// Pointer to value of a particular entry.
 	struct Ht_entry *next;		// Pointer to next entry in index (if any).
-}
+} Ht_entry;
 
 
 

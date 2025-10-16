@@ -129,29 +129,53 @@ test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
 
-home/gouraarav/myProjects/durden-ec/src/parser/x86/register_store.o: home/gouraarav/myProjects/durden-ec/src/parser/x86/register_store.c.o
-.PHONY : home/gouraarav/myProjects/durden-ec/src/parser/x86/register_store.o
+home/gouraarav/myProjects/durden-ec/src/common_store.o: home/gouraarav/myProjects/durden-ec/src/common_store.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/common_store.o
 
 # target to build an object file
-home/gouraarav/myProjects/durden-ec/src/parser/x86/register_store.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/parser/x86/register_store.c.o
-.PHONY : home/gouraarav/myProjects/durden-ec/src/parser/x86/register_store.c.o
+home/gouraarav/myProjects/durden-ec/src/common_store.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/common_store.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/common_store.c.o
 
-home/gouraarav/myProjects/durden-ec/src/parser/x86/register_store.i: home/gouraarav/myProjects/durden-ec/src/parser/x86/register_store.c.i
-.PHONY : home/gouraarav/myProjects/durden-ec/src/parser/x86/register_store.i
+home/gouraarav/myProjects/durden-ec/src/common_store.i: home/gouraarav/myProjects/durden-ec/src/common_store.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/common_store.i
 
 # target to preprocess a source file
-home/gouraarav/myProjects/durden-ec/src/parser/x86/register_store.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/parser/x86/register_store.c.i
-.PHONY : home/gouraarav/myProjects/durden-ec/src/parser/x86/register_store.c.i
+home/gouraarav/myProjects/durden-ec/src/common_store.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/common_store.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/common_store.c.i
 
-home/gouraarav/myProjects/durden-ec/src/parser/x86/register_store.s: home/gouraarav/myProjects/durden-ec/src/parser/x86/register_store.c.s
-.PHONY : home/gouraarav/myProjects/durden-ec/src/parser/x86/register_store.s
+home/gouraarav/myProjects/durden-ec/src/common_store.s: home/gouraarav/myProjects/durden-ec/src/common_store.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/common_store.s
 
 # target to generate assembly for a file
-home/gouraarav/myProjects/durden-ec/src/parser/x86/register_store.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/parser/x86/register_store.c.s
-.PHONY : home/gouraarav/myProjects/durden-ec/src/parser/x86/register_store.c.s
+home/gouraarav/myProjects/durden-ec/src/common_store.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/common_store.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/common_store.c.s
+
+home/gouraarav/myProjects/durden-ec/src/data_structs/hash_table/ht_inserter.o: home/gouraarav/myProjects/durden-ec/src/data_structs/hash_table/ht_inserter.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/hash_table/ht_inserter.o
+
+# target to build an object file
+home/gouraarav/myProjects/durden-ec/src/data_structs/hash_table/ht_inserter.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/data_structs/hash_table/ht_inserter.c.o
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/hash_table/ht_inserter.c.o
+
+home/gouraarav/myProjects/durden-ec/src/data_structs/hash_table/ht_inserter.i: home/gouraarav/myProjects/durden-ec/src/data_structs/hash_table/ht_inserter.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/hash_table/ht_inserter.i
+
+# target to preprocess a source file
+home/gouraarav/myProjects/durden-ec/src/data_structs/hash_table/ht_inserter.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/data_structs/hash_table/ht_inserter.c.i
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/hash_table/ht_inserter.c.i
+
+home/gouraarav/myProjects/durden-ec/src/data_structs/hash_table/ht_inserter.s: home/gouraarav/myProjects/durden-ec/src/data_structs/hash_table/ht_inserter.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/hash_table/ht_inserter.s
+
+# target to generate assembly for a file
+home/gouraarav/myProjects/durden-ec/src/data_structs/hash_table/ht_inserter.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/home/gouraarav/myProjects/durden-ec/src/data_structs/hash_table/ht_inserter.c.s
+.PHONY : home/gouraarav/myProjects/durden-ec/src/data_structs/hash_table/ht_inserter.c.s
 
 home/gouraarav/myProjects/durden-ec/src/test.o: home/gouraarav/myProjects/durden-ec/src/test.c.o
 .PHONY : home/gouraarav/myProjects/durden-ec/src/test.o
@@ -186,9 +210,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/parser/x86/register_store.o"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/parser/x86/register_store.i"
-	@echo "... home/gouraarav/myProjects/durden-ec/src/parser/x86/register_store.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/common_store.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/common_store.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/common_store.s"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/data_structs/hash_table/ht_inserter.o"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/data_structs/hash_table/ht_inserter.i"
+	@echo "... home/gouraarav/myProjects/durden-ec/src/data_structs/hash_table/ht_inserter.s"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.o"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.i"
 	@echo "... home/gouraarav/myProjects/durden-ec/src/test.s"

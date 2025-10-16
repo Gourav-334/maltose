@@ -9,7 +9,8 @@ set(CMAKE_C_FLAGS_DEBUG "-g")
 
 add_executable(test
 	../../src/test.c
-	../../src/parser/x86/register_store.c
+	../../src/common_store.c
+	../../src/data_structs/hash_table/ht_inserter.c
 	# ../../src/data_structs/linked_list/inserter.c
 	# ../../src/data_structs/linked_list/remover.c
 	# ../../src/data_structs/linked_list/full_remover.c

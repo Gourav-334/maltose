@@ -14,6 +14,9 @@
 #define SHORT_INTEGER 3 		// Short
 #define INTEGER 4				// Integer
 #define LONG_INTEGER 5 			// Long
+#define FLOAT_POINT 6			// Floating-point
+#define DOUBLE 7				// Double
+#define LONG_DOUBLE 8			// Long double
 
 
 
