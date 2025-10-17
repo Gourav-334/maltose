@@ -31,7 +31,7 @@ void *fetch_ht_entry(Ht_recorder *recorder, void *key, char *mode);
 3. Else for any other type of key, apply the formula directly `index = key % bucket`.
 4. Access the index as per the value obtained for `index`.
 5. If there is no entry at that index, return `NULL`.
-6. Else if there exist entries(s), keep travelling through them until either value is found, or entries run out.
+6. Else if there exist entries(s), keep travelling through them until either key is found, or entries run out.
 7. If an entry was found, return its address.
 8. Else if none was found, return `NULL`.
 

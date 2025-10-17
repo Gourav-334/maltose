@@ -174,10 +174,10 @@ bool insert_ht_entry(Ht_recorder *recorder, void *key, void *value, char *mode)
 	switch (recorder->value_type)
 	{
 		case CHARACTER: char_value = *(char*)value; break;
-		case STRING: str_value_len = strlen(value); str_value = (char*)value; break;
+		case STRING: str_value = (char*)value; str_value_len = strlen(str_value); break;
 		case INTEGER: int_value = *(int*)value; break;
 		case SHORT_INTEGER: short_value = *(short*)value; break;
-		case LONG_INTEGER: short_value = *(long*)value; break;
+		case LONG_INTEGER: long_value = *(long*)value; break;
 		case FLOAT_POINT: float_value = *(float*)value; break;
 		case DOUBLE: double_value = *(double*)value; break;
 		case LONG_DOUBLE: long_double_value = *(long double*)value; break;
@@ -226,7 +226,7 @@ bool insert_ht_entry(Ht_recorder *recorder, void *key, void *value, char *mode)
 	switch (recorder->key_type)
 	{
 		case CHARACTER: entry -> key = malloc(sizeof(char)); break;
-		case STRING: entry -> key = malloc(sizeof(char)*str_key_len); break;
+		case STRING: entry -> key = malloc(sizeof(char)*(str_key_len+1)); break;
 		case SHORT_INTEGER: entry -> key = malloc(sizeof(short)); break;
 		case INTEGER: entry -> key = malloc(sizeof(int)); break;
 		case LONG_INTEGER: entry -> key = malloc(sizeof(long)); break;
@@ -282,7 +282,7 @@ bool insert_ht_entry(Ht_recorder *recorder, void *key, void *value, char *mode)
 	switch (recorder->value_type)
 	{
 		case CHARACTER: entry -> value = malloc(sizeof(char)); break;
-		case STRING: entry -> value = malloc(sizeof(char)*str_value_len); break;
+		case STRING: entry -> value = malloc(sizeof(char)*(str_value_len+1)); break;
 		case SHORT_INTEGER: entry -> value = malloc(sizeof(short)); break;
 		case INTEGER: entry -> value = malloc(sizeof(int)); break;
 		case LONG_INTEGER: entry -> value = malloc(sizeof(long)); break;
@@ -366,7 +366,7 @@ bool insert_ht_entry(Ht_recorder *recorder, void *key, void *value, char *mode)
 			switch (recorder->key_type)
 			{
 				case CHARACTER: if(char_key==*(char*)trav->key) {key_exists = false;} break;
-				case STRING: if(strcmp(str_key,(char*)trav->key)) {key_exists = false;} break;
+				case STRING: if(!strcmp(str_key,(char*)trav->key)) {key_exists = false;} break;
 				case SHORT_INTEGER: if(short_key==*(short*)trav->key) {key_exists = false;} break;
 				case INTEGER: if(int_key==*(int*)trav->key) {key_exists = false;} break;
 				case LONG_INTEGER: if(long_key==*(long*)trav->key) {key_exists = false;} break;
@@ -392,7 +392,7 @@ bool insert_ht_entry(Ht_recorder *recorder, void *key, void *value, char *mode)
 		switch (recorder->key_type)
 		{
 			case CHARACTER: if(char_key==*(char*)trav->key) {key_exists = false;} break;
-			case STRING: if(strcmp(str_key,(char*)trav->key)) {key_exists = false;} break;
+			case STRING: if(!strcmp(str_key,(char*)trav->key)) {key_exists = false;} break;
 			case SHORT_INTEGER: if(short_key==*(short*)trav->key) {key_exists = false;} break;
 			case INTEGER: if(int_key==*(int*)trav->key) {key_exists = false;} break;
 			case LONG_INTEGER: if(long_key==*(long*)trav->key) {key_exists = false;} break;

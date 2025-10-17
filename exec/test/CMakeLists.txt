@@ -11,6 +11,8 @@ add_executable(test
 	../../src/test.c
 	../../src/common_store.c
 	../../src/data_structs/hash_table/ht_inserter.c
+	../../src/data_structs/hash_table/ht_fetcher.c
+	../../src/data_structs/hash_table/ht_dropper.c
 	# ../../src/data_structs/linked_list/inserter.c
 	# ../../src/data_structs/linked_list/remover.c
 	# ../../src/data_structs/linked_list/full_remover.c
