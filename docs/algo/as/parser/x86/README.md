@@ -12,6 +12,8 @@ This directory contains all the available parser component implementation detail
 ## 2. Directory Structure
 
 
+- `pattern_finder.md` - Contains implementation details for pattern finder, which looks for section blocks.
 - `register_store.md` - Contains implementation details for storehouse of all registers & hardware units.
+- `section_store.md` - Contains implementation details for each major section's each checkpoint.
 
 ---
