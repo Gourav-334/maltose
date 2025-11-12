@@ -19,76 +19,76 @@ digraph Assembler
 
 	// Command interpreter
 
-	cmd_fsm0 [fontsize=28, width=1.5, height=1.0, label="Command FSM0", shape=box, fillcolor=skyblue, style=filled];
-	cmd_fsm1 [fontsize=28, width=1.5, height=1.0, label="Command FSM1", shape=box, fillcolor=skyblue, style=filled];
-	cmd_fsm_main [fontsize=28, width=1.5, height=1.0, label="Command FSM Main", shape=box, fillcolor=skyblue, style=filled];
-	cmd_valid [fontsize=28, width=1.5, height=1.0, label="Command Validator", shape=box, fillcolor=skyblue, style=filled];
-	flag_status [fontsize=28, width=1.5, height=1.0, label="Flag Status", shape=box, fillcolor=skyblue, style=filled];
-	cmd_fsm_handler [fontsize=28, width=1.5, height=1.0, label="Command FSM Handler", shape=box, fillcolor=skyblue, style=filled];
+	cmd_fsm0 [fontsize=32, width=1.5, height=1.0, label="Command FSM0", shape=box, fillcolor=skyblue, style=filled];
+	cmd_fsm1 [fontsize=32, width=1.5, height=1.0, label="Command FSM1", shape=box, fillcolor=skyblue, style=filled];
+	cmd_fsm_main [fontsize=32, width=1.5, height=1.0, label="Command FSM Main", shape=box, fillcolor=skyblue, style=filled];
+	cmd_valid [fontsize=32, width=1.5, height=1.0, label="Command Validator", shape=box, fillcolor=skyblue, style=filled];
+	flag_status [fontsize=32, width=1.5, height=1.0, label="Flag Status", shape=box, fillcolor=skyblue, style=filled];
+	cmd_fsm_handler [fontsize=32, width=1.5, height=1.0, label="Command FSM Handler", shape=box, fillcolor=skyblue, style=filled];
 
 
 
 	// Data structures
 
-	ht_dropper [fontsize=28, width=1.5, height=1.0, label="HT Entry Dropper", shape=box, fillcolor=orange, style=filled];
-	ht_fetcher [fontsize=28, width=1.5, height=1.0, label="HT Entry Fetcher", shape=box, fillcolor=orange, style=filled];
-	ht_inserter [fontsize=28, width=1.5, height=1.0, label="HT Entry Inserter", shape=box, fillcolor=orange, style=filled];
-	ht_struct [fontsize=28, width=1.5, height=1.0, label="HT Structure", shape=box, fillcolor=orange, style=filled];
+	ht_dropper [fontsize=32, width=1.5, height=1.0, label="HT Entry Dropper", shape=box, fillcolor=orange, style=filled];
+	ht_fetcher [fontsize=32, width=1.5, height=1.0, label="HT Entry Fetcher", shape=box, fillcolor=orange, style=filled];
+	ht_inserter [fontsize=32, width=1.5, height=1.0, label="HT Entry Inserter", shape=box, fillcolor=orange, style=filled];
+	ht_struct [fontsize=32, width=1.5, height=1.0, label="HT Structure", shape=box, fillcolor=orange, style=filled];
 
-	displayer [fontsize=28, width=1.5, height=1.0, label="LL Displayer", shape=box, fillcolor=orange, style=filled];
-	full_remover [fontsize=28, width=1.5, height=1.0, label="LL Full Remover", shape=box, fillcolor=orange, style=filled];
-	inserter [fontsize=28, width=1.5, height=1.0, label="LL Node Inserter", shape=box, fillcolor=orange, style=filled];
-	ll_struct [fontsize=28, width=1.5, height=1.0, label="LL Structure", shape=box, fillcolor=orange, style=filled];
-	remover [fontsize=28, width=1.5, height=1.0, label="LL Node Remover", shape=box, fillcolor=orange, style=filled];
+	displayer [fontsize=32, width=1.5, height=1.0, label="LL Displayer", shape=box, fillcolor=orange, style=filled];
+	full_remover [fontsize=32, width=1.5, height=1.0, label="LL Full Remover", shape=box, fillcolor=orange, style=filled];
+	inserter [fontsize=32, width=1.5, height=1.0, label="LL Node Inserter", shape=box, fillcolor=orange, style=filled];
+	ll_struct [fontsize=32, width=1.5, height=1.0, label="LL Structure", shape=box, fillcolor=orange, style=filled];
+	remover [fontsize=32, width=1.5, height=1.0, label="LL Node Remover", shape=box, fillcolor=orange, style=filled];
 
 
 
 	// Lexer
 
-	token_fsm0 [fontsize=28, width=1.5, height=1.0, label="Token FSM 0", shape=box, fillcolor=yellow, style=filled];
-	token_fsm1 [fontsize=28, width=1.5, height=1.0, label="Token FSM 1", shape=box, fillcolor=yellow, style=filled];
-	token_fsm2 [fontsize=28, width=1.5, height=1.0, label="Token FSM 2", shape=box, fillcolor=yellow, style=filled];
-	code_cleanser [fontsize=28, width=1.5, height=1.0, label="Code Cleanser", shape=box, fillcolor=yellow, style=filled];
-	token_fsm_handler [fontsize=28, width=1.5, height=1.0, label="Token FSM Handler", shape=box, fillcolor=yellow, style=filled];
-	token_fsm_main [fontsize=28, width=1.5, height=1.0, label="Token FSM Main", shape=box, fillcolor=yellow, style=filled];
-	token_recog [fontsize=28, width=1.5, height=1.0, label="Token Recognizer", shape=box, fillcolor=yellow, style=filled];
-	token_store [fontsize=28, width=1.5, height=1.0, label="Token Storehouse", shape=box, fillcolor=yellow, style=filled];
+	token_fsm0 [fontsize=32, width=1.5, height=1.0, label="Token FSM 0", shape=box, fillcolor=yellow, style=filled];
+	token_fsm1 [fontsize=32, width=1.5, height=1.0, label="Token FSM 1", shape=box, fillcolor=yellow, style=filled];
+	token_fsm2 [fontsize=32, width=1.5, height=1.0, label="Token FSM 2", shape=box, fillcolor=yellow, style=filled];
+	code_cleanser [fontsize=32, width=1.5, height=1.0, label="Code Cleanser", shape=box, fillcolor=yellow, style=filled];
+	token_fsm_handler [fontsize=32, width=1.5, height=1.0, label="Token FSM Handler", shape=box, fillcolor=yellow, style=filled];
+	token_fsm_main [fontsize=32, width=1.5, height=1.0, label="Token FSM Main", shape=box, fillcolor=yellow, style=filled];
+	token_recog [fontsize=32, width=1.5, height=1.0, label="Token Recognizer", shape=box, fillcolor=yellow, style=filled];
+	token_store [fontsize=32, width=1.5, height=1.0, label="Token Storehouse", shape=box, fillcolor=yellow, style=filled];
 
 
 
 	// Manuals
 
-	audit_msng [fontsize=28, width=1.5, height=1.0, label="Audit Messenger", shape=box, fillcolor=green, style=filled];
-	cmd_help [fontsize=28, width=1.5, height=1.0, label="Command Helper", shape=box, fillcolor=green, style=filled];
+	audit_msng [fontsize=32, width=1.5, height=1.0, label="Audit Messenger", shape=box, fillcolor=green, style=filled];
+	cmd_help [fontsize=32, width=1.5, height=1.0, label="Command Helper", shape=box, fillcolor=green, style=filled];
 
 
 
 	// Parser
 
-	pattern_fsm [fontsize=28, width=1.5, height=1.0, label="Pattern FSM", shape=box, fillcolor=brown2, style=filled];
-	register_store [fontsize=28, width=1.5, height=1.0, label="Register Storehouse", shape=box, fillcolor=brown2, style=filled];
-	section_store [fontsize=28, width=1.5, height=1.0, label="Section Storehouse", shape=box, fillcolor=brown2, style=filled];
+	pattern_fsm [fontsize=32, width=1.5, height=1.0, label="Pattern FSM", shape=box, fillcolor=brown2, style=filled];
+	register_store [fontsize=32, width=1.5, height=1.0, label="Register Storehouse", shape=box, fillcolor=brown2, style=filled];
+	section_store [fontsize=32, width=1.5, height=1.0, label="Section Storehouse", shape=box, fillcolor=brown2, style=filled];
 
 
 
 	// Utilities
 
-	path_valid [fontsize=28, width=1.5, height=1.0, label="Path Validator", shape=box, fillcolor=pink, style=filled];
+	path_valid [fontsize=32, width=1.5, height=1.0, label="Path Validator", shape=box, fillcolor=pink, style=filled];
 
-	pop_dealloc [fontsize=28, width=1.5, height=1.0, label="Pop Deallocator", shape=box, fillcolor=pink, style=filled];
-	push_alloc [fontsize=28, width=1.5, height=1.0, label="Push Allocator", shape=box, fillcolor=pink, style=filled];
+	pop_dealloc [fontsize=32, width=1.5, height=1.0, label="Pop Deallocator", shape=box, fillcolor=pink, style=filled];
+	push_alloc [fontsize=32, width=1.5, height=1.0, label="Push Allocator", shape=box, fillcolor=pink, style=filled];
 
-	case_ins_matcher [fontsize=28, width=1.5, height=1.0, label="Case Insensitive Matcher", shape=box, fillcolor=pink, style=filled];
-	ill_char_scan [fontsize=28, width=1.5, height=1.0, label="Illegal Character Scanner", shape=box, fillcolor=pink, style=filled];
+	case_ins_matcher [fontsize=32, width=1.5, height=1.0, label="Case Insensitive Matcher", shape=box, fillcolor=pink, style=filled];
+	ill_char_scan [fontsize=32, width=1.5, height=1.0, label="Illegal Character Scanner", shape=box, fillcolor=pink, style=filled];
 
 
 
 	// Central files
 
-	common_store [fontsize=28, width=1.5, height=1.0, label="Common Storehouse", shape=box, fillcolor=gray, style=filled];
-	file_loader [fontsize=28, width=1.5, height=1.0, label="File Loader", shape=box, fillcolor=gray, style=filled];
-	main [fontsize=28, width=1.5, height=1.0, label="Main Program", shape=box, fillcolor=gray, style=filled];
-	test [fontsize=28, width=1.5, height=1.0, label="Test Program", shape=box, fillcolor=gray, style=filled];
+	common_store [fontsize=32, width=1.5, height=1.0, label="Common Storehouse", shape=box, fillcolor=gray, style=filled];
+	file_loader [fontsize=32, width=1.5, height=1.0, label="File Loader", shape=box, fillcolor=gray, style=filled];
+	main [fontsize=32, width=1.5, height=1.0, label="Main Program", shape=box, fillcolor=gray, style=filled];
+	test [fontsize=32, width=1.5, height=1.0, label="Test Program", shape=box, fillcolor=gray, style=filled];
 
 
 
@@ -103,69 +103,69 @@ digraph Assembler
 
 	// Command interpreter
 
-	cmd_fsm0 -> cmd_fsm_main [fontsize=28, width=1.5, height=1.0, label="Joining FSM parts", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	cmd_fsm1 -> cmd_fsm_main [fontsize=28, width=1.5, height=1.0, label="Joining FSM parts", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	cmd_fsm_handler -> cmd_fsm_main [fontsize=28, width=1.5, height=1.0, label="Joining state handler", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	cmd_fsm_main -> cmd_valid [fontsize=28, width=1.5, height=1.0, label="Assembling whole FSM", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	ill_char_scan -> cmd_valid [fontsize=28, width=1.5, height=1.0, label="Scans illegal chars", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	path_valid -> cmd_valid [fontsize=28, width=1.5, height=1.0, label="Verifies paths", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	flag_status -> cmd_fsm_handler [fontsize=28, width=1.5, height=1.0, label="Manipulates flags", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	cmd_fsm0 -> cmd_fsm_main [fontsize=32, width=1.5, height=1.0, label="Joining FSM parts", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	cmd_fsm1 -> cmd_fsm_main [fontsize=32, width=1.5, height=1.0, label="Joining FSM parts", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	cmd_fsm_handler -> cmd_fsm_main [fontsize=32, width=1.5, height=1.0, label="Joining state handler", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	cmd_fsm_main -> cmd_valid [fontsize=32, width=1.5, height=1.0, label="Assembling whole FSM", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	ill_char_scan -> cmd_valid [fontsize=32, width=1.5, height=1.0, label="Scans illegal chars", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	path_valid -> cmd_valid [fontsize=32, width=1.5, height=1.0, label="Verifies paths", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	flag_status -> cmd_fsm_handler [fontsize=32, width=1.5, height=1.0, label="Manipulates flags", color=black, style=solid, fontcolor=black, arrowhead=normal];
 
 
 
 	// Data structures
 
-	ht_struct -> ht_fetcher [fontsize=28, width=1.5, height=1.0, label="Using HT struct", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	ht_struct -> ht_inserter [fontsize=28, width=1.5, height=1.0, label="Using HT struct", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	ht_struct -> ht_dropper [fontsize=28, width=1.5, height=1.0, label="Using HT struct", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	common_store -> ht_fetcher [fontsize=28, width=1.5, height=1.0, label="Using HT struct", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	common_store -> ht_inserter [fontsize=28, width=1.5, height=1.0, label="Using HT struct", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	ht_struct -> ht_fetcher [fontsize=32, width=1.5, height=1.0, label="Using HT struct", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	ht_struct -> ht_inserter [fontsize=32, width=1.5, height=1.0, label="Using HT struct", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	ht_struct -> ht_dropper [fontsize=32, width=1.5, height=1.0, label="Using HT struct", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	common_store -> ht_fetcher [fontsize=32, width=1.5, height=1.0, label="Using HT struct", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	common_store -> ht_inserter [fontsize=32, width=1.5, height=1.0, label="Using HT struct", color=black, style=solid, fontcolor=black, arrowhead=normal];
 	
-	ll_struct -> displayer [fontsize=28, width=1.5, height=1.0, label="Using LL struct", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	ll_struct -> full_remover [fontsize=28, width=1.5, height=1.0, label="Using LL struct", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	remover -> full_remover [fontsize=28, width=1.5, height=1.0, label="Iterative removal", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	ll_struct -> inserter [fontsize=28, width=1.5, height=1.0, label="Using LL struct", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	ll_struct -> remover [fontsize=28, width=1.5, height=1.0, label="Using LL struct", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	ll_struct -> displayer [fontsize=32, width=1.5, height=1.0, label="Using LL struct", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	ll_struct -> full_remover [fontsize=32, width=1.5, height=1.0, label="Using LL struct", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	remover -> full_remover [fontsize=32, width=1.5, height=1.0, label="Iterative removal", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	ll_struct -> inserter [fontsize=32, width=1.5, height=1.0, label="Using LL struct", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	ll_struct -> remover [fontsize=32, width=1.5, height=1.0, label="Using LL struct", color=black, style=solid, fontcolor=black, arrowhead=normal];
 
 
 
 	// Lexer
 
-	ll_struct -> token_store [fontsize=28, width=1.5, height=1.0, label="construct LL", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	common_store -> token_fsm0 [fontsize=28, width=1.5, height=1.0, label="Stores FSM condition", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	common_store -> token_fsm1 [fontsize=28, width=1.5, height=1.0, label="Stores FSM condition", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	common_store -> token_fsm2 [fontsize=28, width=1.5, height=1.0, label="Stores FSM condition", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	common_store -> code_cleanser [fontsize=28, width=1.5, height=1.0, label="Knows FSM condition", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	ll_struct -> code_cleanser [fontsize=28, width=1.5, height=1.0, label="Manipulates LL", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	inserter -> code_cleanser [fontsize=28, width=1.5, height=1.0, label="Inserts LL nodes", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	token_recog -> code_cleanser [fontsize=28, width=1.5, height=1.0, label="Calls recognizer", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	token_store -> code_cleanser [fontsize=28, width=1.5, height=1.0, label="Stores tokens", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	audit_msng -> code_cleanser [fontsize=28, width=1.5, height=1.0, label="Terminal display", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	ill_char_scan -> code_cleanser [fontsize=28, width=1.5, height=1.0, label="Checks for illegal chars", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	push_alloc -> code_cleanser [fontsize=28, width=1.5, height=1.0, label="Dynamically pushing char", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	pop_dealloc -> code_cleanser [fontsize=28, width=1.5, height=1.0, label="Dynamically popping char", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	file_loader -> code_cleanser [fontsize=28, width=1.5, height=1.0, label="Loading fstream", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	common_store -> token_fsm_handler [fontsize=28, width=1.5, height=1.0, label="Reads FSM condition", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	token_store -> token_fsm_handler [fontsize=28, width=1.5, height=1.0, label="Stores tokens", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	ll_struct -> token_fsm_handler [fontsize=28, width=1.5, height=1.0, label="Using LL", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	inserter -> token_fsm_handler [fontsize=28, width=1.5, height=1.0, label="Pushing validated tokens", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	file_loader -> token_fsm_handler [fontsize=28, width=1.5, height=1.0, label="Extracting line from fstream", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	audit_msng -> token_fsm_handler [fontsize=28, width=1.5, height=1.0, label="Feedback on terminal", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	common_store -> token_fsm_main [fontsize=28, width=1.5, height=1.0, label="Accessing FSM conditions", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	token_fsm0 -> token_fsm_main [fontsize=28, width=1.5, height=1.0, label="Joining FSM parts", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	token_fsm1 -> token_fsm_main [fontsize=28, width=1.5, height=1.0, label="Joining FSM parts", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	token_fsm2 -> token_fsm_main [fontsize=28, width=1.5, height=1.0, label="Joining FSM parts", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	token_fsm_handler -> token_fsm_main [fontsize=28, width=1.5, height=1.0, label="Assembling state handler", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	case_ins_matcher -> token_recog [fontsize=28, width=1.5, height=1.0, label="Case-insensitive matching", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	inserter -> token_recog [fontsize=28, width=1.5, height=1.0, label="Inserting recognized tokens", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	token_store -> token_recog [fontsize=28, width=1.5, height=1.0, label="Storing recognized tokens", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	token_fsm_main -> token_recog [fontsize=28, width=1.5, height=1.0, label="Assembling token recognizer", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	ll_struct -> token_store [fontsize=32, width=1.5, height=1.0, label="construct LL", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	common_store -> token_fsm0 [fontsize=32, width=1.5, height=1.0, label="Stores FSM condition", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	common_store -> token_fsm1 [fontsize=32, width=1.5, height=1.0, label="Stores FSM condition", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	common_store -> token_fsm2 [fontsize=32, width=1.5, height=1.0, label="Stores FSM condition", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	common_store -> code_cleanser [fontsize=32, width=1.5, height=1.0, label="Knows FSM condition", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	ll_struct -> code_cleanser [fontsize=32, width=1.5, height=1.0, label="Manipulates LL", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	inserter -> code_cleanser [fontsize=32, width=1.5, height=1.0, label="Inserts LL nodes", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	token_recog -> code_cleanser [fontsize=32, width=1.5, height=1.0, label="Calls recognizer", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	token_store -> code_cleanser [fontsize=32, width=1.5, height=1.0, label="Stores tokens", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	audit_msng -> code_cleanser [fontsize=32, width=1.5, height=1.0, label="Terminal display", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	ill_char_scan -> code_cleanser [fontsize=32, width=1.5, height=1.0, label="Checks for illegal chars", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	push_alloc -> code_cleanser [fontsize=32, width=1.5, height=1.0, label="Dynamically pushing char", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	pop_dealloc -> code_cleanser [fontsize=32, width=1.5, height=1.0, label="Dynamically popping char", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	file_loader -> code_cleanser [fontsize=32, width=1.5, height=1.0, label="Loading fstream", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	common_store -> token_fsm_handler [fontsize=32, width=1.5, height=1.0, label="Reads FSM condition", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	token_store -> token_fsm_handler [fontsize=32, width=1.5, height=1.0, label="Stores tokens", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	ll_struct -> token_fsm_handler [fontsize=32, width=1.5, height=1.0, label="Using LL", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	inserter -> token_fsm_handler [fontsize=32, width=1.5, height=1.0, label="Pushing validated tokens", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	file_loader -> token_fsm_handler [fontsize=32, width=1.5, height=1.0, label="Extracting line from fstream", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	audit_msng -> token_fsm_handler [fontsize=32, width=1.5, height=1.0, label="Feedback on terminal", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	common_store -> token_fsm_main [fontsize=32, width=1.5, height=1.0, label="Accessing FSM conditions", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	token_fsm0 -> token_fsm_main [fontsize=32, width=1.5, height=1.0, label="Joining FSM parts", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	token_fsm1 -> token_fsm_main [fontsize=32, width=1.5, height=1.0, label="Joining FSM parts", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	token_fsm2 -> token_fsm_main [fontsize=32, width=1.5, height=1.0, label="Joining FSM parts", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	token_fsm_handler -> token_fsm_main [fontsize=32, width=1.5, height=1.0, label="Assembling state handler", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	case_ins_matcher -> token_recog [fontsize=32, width=1.5, height=1.0, label="Case-insensitive matching", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	inserter -> token_recog [fontsize=32, width=1.5, height=1.0, label="Inserting recognized tokens", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	token_store -> token_recog [fontsize=32, width=1.5, height=1.0, label="Storing recognized tokens", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	token_fsm_main -> token_recog [fontsize=32, width=1.5, height=1.0, label="Assembling token recognizer", color=black, style=solid, fontcolor=black, arrowhead=normal];
 
 
 
 	// Manuals
 
-	push_alloc -> audit_msng [fontsize=28, width=1.5, height=1.0, label="Pushing chars to auditer", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	push_alloc -> audit_msng [fontsize=32, width=1.5, height=1.0, label="Pushing chars to auditer", color=black, style=solid, fontcolor=black, arrowhead=normal];
 
 
 
@@ -177,14 +177,14 @@ digraph Assembler
 
 	// Utilities
 
-	push_alloc -> path_valid [fontsize=28, width=1.5, height=1.0, label="Pushing chars to pathname", color=black, style=solid, fontcolor=black, arrowhead=normal];
-	push_alloc -> ill_char_scan [fontsize=28, width=1.5, height=1.0, label="Scanning illegal chars", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	push_alloc -> path_valid [fontsize=32, width=1.5, height=1.0, label="Pushing chars to pathname", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	push_alloc -> ill_char_scan [fontsize=32, width=1.5, height=1.0, label="Scanning illegal chars", color=black, style=solid, fontcolor=black, arrowhead=normal];
 
 
 
 	// Central files
 
-	cmd_valid -> main [fontsize=28, width=1.5, height=1.0, label="Assembling command interpreter", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	cmd_valid -> main [fontsize=32, width=1.5, height=1.0, label="Assembling command interpreter", color=black, style=solid, fontcolor=black, arrowhead=normal];
 
 
 
