@@ -1,3 +1,0 @@
-/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles/test.dir
-/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles/edit_cache.dir
-/home/gouraarav/myProjects/durden-ec/exec/test/build/CMakeFiles/rebuild_cache.dir
