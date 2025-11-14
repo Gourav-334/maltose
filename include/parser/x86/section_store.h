@@ -7,6 +7,14 @@
 
 
 
+/* Including required headers. */
+
+#include "../../data_structs/linked_list/ll_struct.h"
+
+
+
+
+
 
 
 
@@ -14,10 +22,10 @@
 
 /* Declaring variables. */
 
-extern long int **sec_text;
-extern long int **sec_data;
-extern long int **sec_bss;
-extern long int **sec_rodata;
+extern Ll_recorder **sec_text;
+extern Ll_recorder **sec_data;
+extern Ll_recorder **sec_bss;
+extern Ll_recorder **sec_rodata;
 
 
 

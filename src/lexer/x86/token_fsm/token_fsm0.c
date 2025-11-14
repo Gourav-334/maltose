@@ -12,7 +12,7 @@
 
 
 
-/* 1st part of command interpreter FSM. */
+/* 1st part of token interpreter FSM. */
 
 void token_fsm0(char *str, unsigned short int start, signed short int *state)
 {

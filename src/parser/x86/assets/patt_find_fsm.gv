@@ -4,6 +4,8 @@ digraph sec_find_fsm
 
 
 
+
+
 	q0 [label="q0", fontcolor=black, fontsize=32, shape=circle];
 	q1 [label="q1", fontcolor=black, fontsize=32, shape=circle];
 	q2 [label="q2", fontcolor=black, fontsize=32, shape=circle];
@@ -12,23 +14,28 @@ digraph sec_find_fsm
 	q5 [label="q5", fontcolor=black, fontsize=32, shape=circle];
 	q6 [label="q6", fontcolor=black, fontsize=32, shape=circle];
 	q7 [label="q7", fontcolor=black, fontsize=32, shape=doublecircle];
+	q8 [label="q8", fontcolor=black, fontsize=32, shape=doublecircle];
 
 
 
-	q0 -> q0 [label="ELSE", fontcolor=black, fontsize=28, arrowhead=normal];
+
+
+	q0 -> q0 [label="\\n, \\t", fontcolor=black, fontsize=28, arrowhead=normal];
 	q0 -> q1 [label="section", fontcolor=black, fontsize=28, arrowhead=normal];
-	q1 -> q1 [label=" ", fontcolor=black, fontsize=28, arrowhead=normal];
+	q1 -> q1 [label="\\t", fontcolor=black, fontsize=28, arrowhead=normal];
 	q1 -> q2 [label="(", fontcolor=black, fontsize=28, arrowhead=normal];
-	q2 -> q2 [label=" ", fontcolor=black, fontsize=28, arrowhead=normal];
+	q2 -> q2 [label="\\t", fontcolor=black, fontsize=28, arrowhead=normal];
 	q2 -> q3 [label=".sec_name", fontcolor=black, fontsize=28, arrowhead=normal];
-	q3 -> q3 [label=" ", fontcolor=black, fontsize=28, arrowhead=normal];
+	q3 -> q3 [label="\\t", fontcolor=black, fontsize=28, arrowhead=normal];
 	q3 -> q4 [label=")", fontcolor=black, fontsize=28, arrowhead=normal];
-	q4 -> q4 [label=" ", fontcolor=black, fontsize=28, arrowhead=normal];
-	q4 -> q5 [label="\\n", fontcolor=black, fontsize=28, arrowhead=normal];
-	q5 -> q5 [label="\\n,  ", fontcolor=black, fontsize=28, arrowhead=normal];
-	q5 -> q6 [label="{", fontcolor=black, fontsize=28, arrowhead=normal];
+	q4 -> q4 [label="\\n, \\t", fontcolor=black, fontsize=28, arrowhead=normal];
+	q4 -> q5 [label="{", fontcolor=black, fontsize=28, arrowhead=normal];
+	q5 -> q5 [label="\\t", fontcolor=black, fontsize=28, arrowhead=normal];
+	q5 -> q6 [label="\\n", fontcolor=black, fontsize=28, arrowhead=normal];
 	q6 -> q6 [label="ELSE", fontcolor=black, fontsize=28, arrowhead=normal];
 	q6 -> q7 [label="}", fontcolor=black, fontsize=28, arrowhead=normal];
-	q7 -> q7 [label="ELSE", fontcolor=black, fontsize=28, arrowhead=normal];
-	q7 -> q1 [label="section", fontcolor=black, fontsize=28, arrowhead=normal];
+	q7 -> q7 [label="\\t", fontcolor=black, fontsize=28, arrowhead=normal];
+	q7 -> q8 [label="\\n", fontcolor=black, fontsize=28, arrowhead=normal];
+	q8 -> q8 [label="\\n, \\t", fontcolor=black, fontsize=28, arrowhead=normal];
+	q8 -> q1 [label="section", fontcolor=black, fontsize=28, arrowhead=normal];
 }

@@ -15,7 +15,7 @@
 
 /* Defining variables. */
 
-long int **sec_text = NULL;
-long int **sec_data = NULL;
-long int **sec_bss = NULL;
-long int **sec_rodata = NULL;
+Ll_recorder **sec_text = NULL;
+Ll_recorder **sec_data = NULL;
+Ll_recorder **sec_bss = NULL;
+Ll_recorder **sec_rodata = NULL;

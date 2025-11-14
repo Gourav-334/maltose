@@ -13,10 +13,10 @@ This file documents the implementation for **section storehouse**, which stores 
 
 
 ```c
-long int **sec_text;
-long int **sec_data;
-long int **sec_bss;
-long int **sec_rodata;
+Ll_recorder **sec_text;
+Ll_recorder **sec_data;
+Ll_recorder **sec_bss;
+Ll_recorder **sec_rodata;
 ```
 
 ---
