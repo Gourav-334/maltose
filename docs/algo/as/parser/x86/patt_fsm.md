@@ -16,7 +16,7 @@ This file records the implementation of **pattern finder**, which looks for sect
 
 #### 2.1.1 FSM PARTS:-
 ```c
-void patt_fsmN(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *subcateg_ptr, Ll_node *type_ptr,
+void patt_fsmN(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, Ll_node *type_ptr,
 	unsigned short int start, signed short int *state);
 ```
 
@@ -29,7 +29,7 @@ void patt_fsmN(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *subcateg_ptr, Ll
 
 #### 2.1.2 MAIN FSM:-
 ```c
-bool patt_fsm_main(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *subcateg_ptr, Ll_node *type_ptr,
+bool patt_fsm_main(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, Ll_node *type_ptr,
 	unsigned short int start, char *mode);
 ```
 

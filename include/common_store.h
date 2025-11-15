@@ -34,6 +34,7 @@ extern int row;
 extern int column;
 
 extern long int str_len;
+extern long int newlines;
 extern unsigned short int i_token_fsm;
 extern unsigned short int point_shift;
 

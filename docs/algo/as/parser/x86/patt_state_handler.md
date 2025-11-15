@@ -31,6 +31,7 @@ This file records the implementation of **pattern FSM state handler**, which han
 - `-4`: Expected `{` after `)` but something else written!
 - `-5`: Expected change of line after `{` but something else written!
 - `-7`: Expected `}` after section code but something else written!
+- `-8`: Code written outside sections!
 
 
 

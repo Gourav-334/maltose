@@ -1,5 +1,6 @@
 /* Including required headers. */
 
+#include "../../../include/common_store.h"
 #include "../../../include/parser/patt_state_handler.h"
 #include "../../../include/data_structs/linked_list/ll_struct.h"
 
@@ -17,7 +18,7 @@
 
 /* Command interpreter's FSM state handler. */
 
-bool handle_patt_fsm_state(signed short int *state, Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *subcateg_ptr, Ll_node *type_ptr, char *mode);
+bool handle_patt_fsm_state(signed short int *state, Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, Ll_node *type_ptr, char *mode);
 {
 	/* Variables declarations/definitions. */
 
@@ -71,7 +72,7 @@ bool handle_patt_fsm_state(signed short int *state, Ll_node *token_ptr, Ll_node 
 	{
 		if (*state==0)
 		{
-			//
+			printf("ERROR (Semantic) :: Line=%ld :: No section found in whole code!\n\n", newlines);
 
 			func_ret = false;
 		}
@@ -80,63 +81,62 @@ bool handle_patt_fsm_state(signed short int *state, Ll_node *token_ptr, Ll_node 
 
 		else if (*state==1)
 		{
-			//
+			printf("ERROR (Semantic) :: Line=%ld :: Expected \'(\' after \'section\' but missing!\n\n", newlines);
 
 			func_ret = false;
 		}
 
 
 
-		else if (*state>=2 && *state<=3)
+		else if (*state==2)
 		{
-			//
+			printf("ERROR (Semantic) :: Line=%ld :: Expected section name after \'(\' but missing!\n\n", newlines);
 
-			func_ret = true;
+			func_ret = false;
+		}
+
+
+
+		else if (*state==3)
+		{
+			printf("ERROR (Semantic) :: Line=%ld :: Expected \')\' name after section name but missing!\n\n", newlines);
+
+			func_ret = false;
 		}
 
 
 
 		else if (*state==4)
 		{
-			//
+			printf("ERROR (Semantic) :: Line=%ld :: Expected \'{\' after \')\' but missing!\n\n", newlines);
 
-			func_ret = true;
+			func_ret = false;
 		}
 
 
 		else if (*state==5)
 		{
-			//
+			printf("ERROR (Semantic) :: Line=%ld :: Expected change of line after \'{\' but missing!\n\n", newlines);
 
-			func_ret = true;
+			func_ret = false;
 		}
 
 
 
 		else if (*state==6)
 		{
-			//
-
-			func_ret = true;
-		}
-
-
-
-		else if (*state==7)
-		{
-			//
-
-			func_ret = true;
-		}
-
-
-
-		else if (*state==8)
-		{
-			//
+			printf("ERROR (Semantic) :: Line=%ld :: Expected \'}\' after section code but missing!\n\n", newlines);
 
 			func_ret = false;
 		}
+
+
+
+		else if (*state==7) {func_ret = true;}
+
+
+
+		else if (*state==8) {func_ret = true;}
 	}
 
 
@@ -157,12 +157,14 @@ bool handle_patt_fsm_state(signed short int *state, Ll_node *token_ptr, Ll_node 
 
 		switch(*state)
 		{
-			case -1: break;
-			case -2: break;
-			case -3: break;
-			case -4: break;
-			case -5: break;
-			case -7: break;
+			case -1: printf("ERROR (Semantic) :: Line=%ld :: Expected \'(\' after \'section\' but something else written!\n\n", newlines); break;
+			case -2: printf("ERROR (Semantic) :: Line=%ld :: Expected section name after \'(\' but something else written!\n\n", newlines); break;
+			case -3: printf("ERROR (Semantic) :: Line=%ld :: Expected \')\' name after section name but something else written!\n\n", newlines); break;
+			case -4: printf("ERROR (Semantic) :: Line=%ld :: Expected \'{\' after \')\' but something else written!\n\n", newlines); break;
+			case -5: printf("ERROR (Semantic) :: Line=%ld :: Expected change of line after \'{\' but something else written!\n\n", newlines); break;
+			case -6: printf("ERROR (Semantic) :: Line=%ld :: Couldn't expand memory for section addresses!\n\n", newlines); break;
+			case -7: printf("ERROR (Semantic) :: Line=%ld :: Expected \'}\' after section code but something else written!\n\n", newlines); break;
+			case -8: printf("ERROR (Semantic) :: Line=%ld :: Code written outside sections!\n\n", newlines); break;
 		}
 	}
 

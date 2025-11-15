@@ -11,6 +11,8 @@
 
 #include "../../data_structs/linked_list/ll_struct.h"
 
+#include <stdint.h>			// For using pointer special data type.
+
 
 
 
@@ -22,10 +24,28 @@
 
 /* Declaring variables. */
 
-extern Ll_recorder **sec_text;
-extern Ll_recorder **sec_data;
-extern Ll_recorder **sec_bss;
-extern Ll_recorder **sec_rodata;
+extern uintptr_t *sec_text;
+extern uintptr_t *sec_data;
+extern uintptr_t *sec_bss;
+extern uintptr_t *sec_rodata;
+
+extern uintptr_t *sec_ptr;
+
+
+extern long int sec_text_blocks;
+extern long int sec_data_blocks;
+extern long int sec_bss_blocks;
+extern long int sec_rodata_blocks;
+
+extern long int *sec_block_count;
+
+
+
+
+
+/* Non-linear structures. */
+
+extern enum Section{SEC_TEXT, SEC_DATA, SEC_BSS, SEC_RODATA} SEC;
 
 
 

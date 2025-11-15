@@ -181,6 +181,8 @@ digraph Assembler
 	patt_fsm_handler -> patt_fsm_main [fontsize=32, width=1.5, height=1.0, label="Storing addresses to sections", color=black, style=solid, fontcolor=black, arrowhead=normal];
 	token_store -> patt_fsm_main [fontsize=32, width=1.5, height=1.0, label="Storing addresses to sections", color=black, style=solid, fontcolor=black, arrowhead=normal];
 	ll_struct -> patt_fsm_handler [fontsize=32, width=1.5, height=1.0, label="Storing addresses to sections", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	common_store -> patt_fsm0 [fontsize=32, width=1.5, height=1.0, label="Storing addresses to sections", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	common_store -> patt_fsm_handler [fontsize=32, width=1.5, height=1.0, label="Storing addresses to sections", color=black, style=solid, fontcolor=black, arrowhead=normal];
 
 
 

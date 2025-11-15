@@ -23,7 +23,7 @@
 /* Declaring functions. */
 
 bool patt_fsm_main(
-	Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *subcateg_ptr, Ll_node *type_ptr,
+	Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, Ll_node *type_ptr,
 	unsigned short int start, char *mode
 );		// FSM handler, decides which part of FSM must be provided next symbol.
 

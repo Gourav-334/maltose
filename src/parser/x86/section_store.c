@@ -15,7 +15,17 @@
 
 /* Defining variables. */
 
-Ll_recorder **sec_text = NULL;
-Ll_recorder **sec_data = NULL;
-Ll_recorder **sec_bss = NULL;
-Ll_recorder **sec_rodata = NULL;
+uintptr_t *sec_text = NULL;
+uintptr_t *sec_data = NULL;
+uintptr_t *sec_bss = NULL;
+uintptr_t *sec_rodata = NULL;
+
+uintptr_t *sec_ptr = NULL;
+
+
+long int sec_text_blocks = 0;
+long int sec_data_blocks = 0;
+long int sec_bss_blocks = 0;
+long int sec_rodata_blocks = 0;
+
+long int *sec_block_count = NULL;

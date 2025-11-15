@@ -24,7 +24,7 @@
 
 bool handle_patt_fsm_state(
 	signed short int *state,
-	Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *subcateg_ptr, Ll_node *type_ptr,
+	Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, Ll_node *type_ptr,
 	char *mode
 );		// Decides what to do with final state of FSM.
 

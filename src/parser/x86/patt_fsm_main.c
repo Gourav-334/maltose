@@ -19,13 +19,13 @@
 
 /* Central Finite State Machine handler. */
 
-bool patt_fsm_main(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *subcateg_ptr, Ll_node *type_ptr, unsigned short int start, char *mode)
+bool patt_fsm_main(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, Ll_node *type_ptr, unsigned short int start, char *mode)
 {
 	/* Variable declarations/definitions. */
 
 	Ll_node *token_ptr = token -> head;
 	Ll_node *categ_ptr = categ -> head;
-	Ll_node *subcateg_ptr = subcateg -> head;
+	Ll_node *sub_categ_ptr = sub_categ -> head;
 	Ll_node *type_ptr = type -> head;
 
 
@@ -80,7 +80,7 @@ bool patt_fsm_main(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *subcateg_ptr
 
 		switch(state/10)
 		{
-			case 0: patt_fsm0(token_ptr, categ_ptr, subcateg_ptr, type_ptr, i_token_fsm, &state); break;
+			case 0: patt_fsm0(token_ptr, categ_ptr, sub_categ_ptr, type_ptr, i_token_fsm, &state); break;
 		}
 
 
@@ -91,7 +91,7 @@ bool patt_fsm_main(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *subcateg_ptr
 
 		token_ptr = token_ptr -> next;
 		categ_ptr = categ_ptr -> next;
-		subcateg_ptr = subcateg_ptr -> next;
+		sub_categ_ptr = sub_categ_ptr -> next;
 		type_ptr = type_ptr -> next;
 	}
 
@@ -115,5 +115,5 @@ bool patt_fsm_main(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *subcateg_ptr
 
 	/* Calling state handler to provide feedback. */
 
-	return handle_patt_fsm_state(&state, token_ptr, categ_ptr, subcateg_ptr, type_ptr, "user");
+	return handle_patt_fsm_state(&state, token_ptr, categ_ptr, sub_categ_ptr, type_ptr, "user");
 }
