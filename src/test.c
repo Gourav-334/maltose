@@ -15,10 +15,8 @@ int main(int argc, char **argv)
 {
 	if (load_file("../test.asm", "dev")==true)
 	{
-		cleanse_code(fstream, "debug");
-		display_nodes(&token);
 		cleanse_code(fstream, "dev");
-		patt_fsm_main(token, categ, sub_categ, type, 0, "debug");
+		patt_fsm_main(token.head, categ.head, sub_categ.head, type.head, 0, "user");
 	}
 
 

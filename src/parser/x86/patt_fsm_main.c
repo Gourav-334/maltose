@@ -7,6 +7,7 @@
 #include "../../../include/lexer/x86/token_store.h"
 
 #include <stdio.h>			// Required for providing feedback to mode.
+#include <string.h>			// Required for measuring length of string.
 
 
 
@@ -22,12 +23,6 @@
 bool patt_fsm_main(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, Ll_node *type_ptr, unsigned short int start, char *mode)
 {
 	/* Variable declarations/definitions. */
-
-	Ll_node *token_ptr = token -> head;
-	Ll_node *categ_ptr = categ -> head;
-	Ll_node *sub_categ_ptr = sub_categ -> head;
-	Ll_node *type_ptr = type -> head;
-
 
 	signed short int state = 0;
 
@@ -60,7 +55,7 @@ bool patt_fsm_main(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_pt
 
 	/* Primary state transition loop. */
 
-	for (int i=start; i<token->total; i++)
+	for (int i=start; token_ptr!=NULL; i++)
 	{
 		/* Giving feedback as per chosen mode. */
 
@@ -68,8 +63,8 @@ bool patt_fsm_main(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_pt
 		else if (M==USER) {}
 		else if (M==DEBUG)
 		{
-			printf("STAT :: start=%d : token->total=%d : i_token_fsm=%hu : state=%hd : symbol=%c\n",
-				start, token->total, i_token_fsm, state, *(str+i_token_fsm));
+			printf("STAT :: start=%d : token_ptr=%p : state=%hd : symbol=%s\n",
+				start, token_ptr, state, token_ptr->data);
 		}
 
 
@@ -80,7 +75,7 @@ bool patt_fsm_main(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_pt
 
 		switch(state/10)
 		{
-			case 0: patt_fsm0(token_ptr, categ_ptr, sub_categ_ptr, type_ptr, i_token_fsm, &state); break;
+			case 0: patt_fsm0(token_ptr, categ_ptr, sub_categ_ptr, type_ptr, start, &state); break;
 		}
 
 
@@ -105,8 +100,8 @@ bool patt_fsm_main(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_pt
 	else if (M==USER) {}
 	else if (M==DEBUG)
 	{
-		printf("STAT :: Final state :: start=%d : token->total=%d : state=%hd\n",
-			start, token->total, state);
+		printf("STAT :: Final state :: start=%d : token=%p : state=%hd\n",
+			start, token_ptr, state);
 	}
 
 
@@ -115,5 +110,5 @@ bool patt_fsm_main(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_pt
 
 	/* Calling state handler to provide feedback. */
 
-	return handle_patt_fsm_state(&state, token_ptr, categ_ptr, sub_categ_ptr, type_ptr, "user");
+	return handle_patt_fsm_state(&state, token_ptr, categ_ptr, sub_categ_ptr, type_ptr, "dev");
 }

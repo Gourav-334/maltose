@@ -9,6 +9,8 @@
 
 /* Including required headers. */
 
+#include "../../../include/data_structs/linked_list/ll_struct.h"
+
 #include <stdbool.h>		// For returning boolean value as per execution.
 
 

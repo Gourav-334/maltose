@@ -29,6 +29,7 @@ extern uintptr_t *sec_data;
 extern uintptr_t *sec_bss;
 extern uintptr_t *sec_rodata;
 
+
 extern uintptr_t *sec_ptr;
 
 
@@ -36,16 +37,7 @@ extern long int sec_text_blocks;
 extern long int sec_data_blocks;
 extern long int sec_bss_blocks;
 extern long int sec_rodata_blocks;
-
 extern long int *sec_block_count;
-
-
-
-
-
-/* Non-linear structures. */
-
-extern enum Section{SEC_TEXT, SEC_DATA, SEC_BSS, SEC_RODATA} SEC;
 
 
 

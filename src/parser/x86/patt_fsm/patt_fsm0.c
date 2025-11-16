@@ -3,7 +3,9 @@
 #include "../../../../include/common_store.h"
 #include "../../../../include/parser/x86/patt_fsm/patt_fsm0.h"
 #include "../../../../include/parser/x86/section_store.h"
+#include "../../../../include/lexer/x86/token_store.h"
 
+#include <stdio.h>			// For displaying feedbacks & errors on terminal.
 #include <string.h>			// For comparing strings with each other.
 #include <stdlib.h>			// For storing section addresses contagiously.
 
@@ -20,15 +22,25 @@
 
 void patt_fsm0(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, Ll_node *type_ptr, unsigned short int start, signed short int *state)
 {
+	/* Enumeration for knowing current section. */
+
+	enum Section{SEC_TEXT, SEC_DATA, SEC_BSS, SEC_RODATA} Sec;
+
+
+
+
+
+	/* Transition to next state. */
+
 	switch(*state)
 	{
 		case 0:
-			if (!strcmp(token->data,"\n") || !strcmp(token->data,"\t"))
+			if (!strcmp(token_ptr->data,"\n") || !strcmp(token_ptr->data,"\t") || !strcmp(token_ptr->data," "))
 			{
-				if (!strcmp(token->data,"\n")) {newlines++;}
+				if (!strcmp(token_ptr->data,"\n")) {newlines++;}
 				*state = 0;
 			}
-			else if (!strcmp(token->data,"section")) {*state = 1;}
+			else if (!strcmp(token_ptr->data,"section")) {*state = 1;}
 			else {*state = -7;}
 
 			break;
@@ -38,8 +50,8 @@ void patt_fsm0(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, L
 
 
 		case 1:
-			if (!strcmp(token->data,"\t")) {*state = 1;}
-			else if (!strcmp(token->data,"(")) {*state = 2;}
+			if (!strcmp(token_ptr->data,"\t") || !strcmp(token_ptr->data," ")) {*state = 1;}
+			else if (!strcmp(token_ptr->data,"(")) {*state = 2;}
 			else {*state = -1;}
 
 			break;
@@ -49,15 +61,15 @@ void patt_fsm0(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, L
 
 
 		case 2:
-			if (!strcmp(token->data,"\t")) {*state = 2;}
-			else if (!strcmp(sub_categ->data,"section"))
+			if (!strcmp(token_ptr->data,"\t") || !strcmp(token_ptr->data," ")) {*state = 2;}
+			else if (!strcmp(sub_categ_ptr->data,"section"))
 			{
 				/* Checking which section was requested. */
 
-				if (!strcmp(token->data,".text")) {SEC = SEC_TEXT;}
-				else if (!strcmp(token->data,".data")) {SEC = SEC_DATA;}
-				else if (!strcmp(token->data,".bss")) {SEC = SEC_BSS;}
-				else if (!strcmp(token->data,".rodata")) {SEC = SEC_RODATA;}
+				if (!strcmp(token_ptr->data,".text")) {Sec = SEC_TEXT;}
+				else if (!strcmp(token_ptr->data,".data")) {Sec = SEC_DATA;}
+				else if (!strcmp(token_ptr->data,".bss")) {Sec = SEC_BSS;}
+				else if (!strcmp(token_ptr->data,".rodata")) {Sec = SEC_RODATA;}
 
 				*state = 3;
 			}
@@ -70,8 +82,8 @@ void patt_fsm0(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, L
 
 
 		case 3:
-			if (!strcmp(token->data,"\t")) {*state = 3;}
-			else if (!strcmp(token->data,")")) {*state = 4;}
+			if (!strcmp(token_ptr->data,"\t") || !strcmp(token_ptr->data," ")) {*state = 3;}
+			else if (!strcmp(token_ptr->data,")")) {*state = 4;}
 			else {*state = -3;}
 
 			break;
@@ -81,16 +93,16 @@ void patt_fsm0(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, L
 
 
 		case 4:
-			if (!strcmp(token->data,"\n") || !strcmp(token->data,"\t"))
+			if (!strcmp(token_ptr->data,"\n") || !strcmp(token_ptr->data,"\t") || !strcmp(token_ptr->data," "))
 			{
-				if (!strcmp(token->data,"\n")) {newlines++;}
+				if (!strcmp(token_ptr->data,"\n")) {newlines++;}
 				*state = 4;
 			}
-			else if (!strcmp(token->data,"{"))
+			else if (!strcmp(token_ptr->data,"{"))
 			{
 				/* Focusing on required pointer & counter. */
 
-				switch (SEC)
+				switch (Sec)
 				{
 					case SEC_TEXT: sec_ptr = sec_text; sec_block_count = &sec_text_blocks; break;
 					case SEC_DATA: sec_ptr = sec_data; sec_block_count = &sec_data_blocks; break;
@@ -110,7 +122,7 @@ void patt_fsm0(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, L
 				else
 				{
 					*sec_block_count += 2;
-					*(sec_ptr + sec_block_count - 2) = token_ptr;
+					*(sec_ptr + (*sec_block_count) - 2) = token_ptr;
 
 					*state = 5;
 				}
@@ -124,8 +136,8 @@ void patt_fsm0(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, L
 
 
 		case 5:
-			if (!strcmp(token->data,"\t")) {*state = 5;}
-			else if (!strcmp(token->data,"\n")) {newlines++; *state = 6;}
+			if (!strcmp(token_ptr->data,"\t") || !strcmp(token_ptr->data," ")) {*state = 5;}
+			else if (!strcmp(token_ptr->data,"\n")) {newlines++; *state = 6;}
 			else {*state = -5;}
 
 			break;
@@ -135,9 +147,9 @@ void patt_fsm0(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, L
 
 
 		case 6:
-			if (!strcmp(token->data,"}"))
+			if (!strcmp(token_ptr->data,"}"))
 			{
-				*(sec_ptr + sec_block_count - 1) = token_ptr;
+				*(sec_ptr + (*sec_block_count) - 1) = token_ptr;
 				*state = 7;
 			}
 			else {*state = 6;}
@@ -149,8 +161,8 @@ void patt_fsm0(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, L
 
 
 		case 7:
-			if (!strcmp(token->data,"\t")) {*state = 7;}
-			else if (!strcmp(token->data,"\n")) {newlines++; *state = 8;}
+			if (!strcmp(token_ptr->data,"\t") || !strcmp(token_ptr->data," ")) {*state = 7;}
+			else if (!strcmp(token_ptr->data,"\n")) {newlines++; *state = 8;}
 			else {*state = -7;}
 
 			break;
@@ -160,12 +172,12 @@ void patt_fsm0(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, L
 
 
 		case 8:
-			if (!strcmp(token->data,"\t") || !strcmp(token->data,"\n"))
+			if (!strcmp(token_ptr->data,"\t") || !strcmp(token_ptr->data,"\n") || !strcmp(token_ptr->data," "))
 			{
-				if (!strcmp(token->data,"\n")) {newlines++;}
+				if (!strcmp(token_ptr->data,"\n")) {newlines++;}
 				*state = 8;
 			}
-			else if (!strcmp(token->data,"section")) {*state = 1;}
+			else if (!strcmp(token_ptr->data,"section")) {*state = 1;}
 			else {*state = -7;}
 
 			break;

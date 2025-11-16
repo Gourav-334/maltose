@@ -1,8 +1,8 @@
 /* Including required headers. */
 
 #include "../../../include/common_store.h"
-#include "../../../include/parser/patt_state_handler.h"
-#include "../../../include/data_structs/linked_list/ll_struct.h"
+#include "../../../include/parser/x86/patt_state_handler.h"
+#include "../../../include/file_loader.h"
 
 #include <stdio.h>		// For printing feedbacks to terminal.
 #include <string.h>		// For detecting chosen feedback mode.
@@ -18,7 +18,7 @@
 
 /* Command interpreter's FSM state handler. */
 
-bool handle_patt_fsm_state(signed short int *state, Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, Ll_node *type_ptr, char *mode);
+bool handle_patt_fsm_state(signed short int *state, Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, Ll_node *type_ptr, char *mode)
 {
 	/* Variables declarations/definitions. */
 
@@ -60,7 +60,7 @@ bool handle_patt_fsm_state(signed short int *state, Ll_node *token_ptr, Ll_node 
 
 	if (M==DEV) {}
 	else if (M==USER) {}
-	else if (M==DEBUG) {printf("STAT :: state=%hd :: token=\"%s\"\n", *state, str);}
+	else if (M==DEBUG) {printf("STAT :: state=%hd :: token=\"%s\"\n", *state, token_ptr->data);}
 
 
 
@@ -72,7 +72,7 @@ bool handle_patt_fsm_state(signed short int *state, Ll_node *token_ptr, Ll_node 
 	{
 		if (*state==0)
 		{
-			printf("ERROR (Semantic) :: Line=%ld :: No section found in whole code!\n\n", newlines);
+			printf("%s\nERROR (Semantic) :: Line=%ld :: No section found in whole code!\n\n", src_filename, newlines);
 
 			func_ret = false;
 		}
@@ -81,7 +81,7 @@ bool handle_patt_fsm_state(signed short int *state, Ll_node *token_ptr, Ll_node 
 
 		else if (*state==1)
 		{
-			printf("ERROR (Semantic) :: Line=%ld :: Expected \'(\' after \'section\' but missing!\n\n", newlines);
+			printf("%s\nERROR (Semantic) :: Line=%ld :: Expected \'(\' after \'section\' but missing!\n\n", src_filename, newlines);
 
 			func_ret = false;
 		}
@@ -90,7 +90,7 @@ bool handle_patt_fsm_state(signed short int *state, Ll_node *token_ptr, Ll_node 
 
 		else if (*state==2)
 		{
-			printf("ERROR (Semantic) :: Line=%ld :: Expected section name after \'(\' but missing!\n\n", newlines);
+			printf("%s\nERROR (Semantic) :: Line=%ld :: Expected section name after \'(\' but missing!\n\n", src_filename, newlines);
 
 			func_ret = false;
 		}
@@ -99,7 +99,7 @@ bool handle_patt_fsm_state(signed short int *state, Ll_node *token_ptr, Ll_node 
 
 		else if (*state==3)
 		{
-			printf("ERROR (Semantic) :: Line=%ld :: Expected \')\' name after section name but missing!\n\n", newlines);
+			printf("%s\nERROR (Semantic) :: Line=%ld :: Expected \')\' name after section name but missing!\n\n", src_filename, newlines);
 
 			func_ret = false;
 		}
@@ -108,7 +108,7 @@ bool handle_patt_fsm_state(signed short int *state, Ll_node *token_ptr, Ll_node 
 
 		else if (*state==4)
 		{
-			printf("ERROR (Semantic) :: Line=%ld :: Expected \'{\' after \')\' but missing!\n\n", newlines);
+			printf("%s\nERROR (Semantic) :: Line=%ld :: Expected \'{\' after \')\' but missing!\n\n", src_filename, newlines);
 
 			func_ret = false;
 		}
@@ -116,7 +116,7 @@ bool handle_patt_fsm_state(signed short int *state, Ll_node *token_ptr, Ll_node 
 
 		else if (*state==5)
 		{
-			printf("ERROR (Semantic) :: Line=%ld :: Expected change of line after \'{\' but missing!\n\n", newlines);
+			printf("%s\nERROR (Semantic) :: Line=%ld :: Expected change of line after \'{\' but missing!\n\n", src_filename, newlines);
 
 			func_ret = false;
 		}
@@ -125,7 +125,7 @@ bool handle_patt_fsm_state(signed short int *state, Ll_node *token_ptr, Ll_node 
 
 		else if (*state==6)
 		{
-			printf("ERROR (Semantic) :: Line=%ld :: Expected \'}\' after section code but missing!\n\n", newlines);
+			printf("%s\nERROR (Semantic) :: Line=%ld :: Expected \'}\' after section code but missing!\n\n", src_filename, newlines);
 
 			func_ret = false;
 		}
@@ -157,14 +157,14 @@ bool handle_patt_fsm_state(signed short int *state, Ll_node *token_ptr, Ll_node 
 
 		switch(*state)
 		{
-			case -1: printf("ERROR (Semantic) :: Line=%ld :: Expected \'(\' after \'section\' but something else written!\n\n", newlines); break;
-			case -2: printf("ERROR (Semantic) :: Line=%ld :: Expected section name after \'(\' but something else written!\n\n", newlines); break;
-			case -3: printf("ERROR (Semantic) :: Line=%ld :: Expected \')\' name after section name but something else written!\n\n", newlines); break;
-			case -4: printf("ERROR (Semantic) :: Line=%ld :: Expected \'{\' after \')\' but something else written!\n\n", newlines); break;
-			case -5: printf("ERROR (Semantic) :: Line=%ld :: Expected change of line after \'{\' but something else written!\n\n", newlines); break;
-			case -6: printf("ERROR (Semantic) :: Line=%ld :: Couldn't expand memory for section addresses!\n\n", newlines); break;
-			case -7: printf("ERROR (Semantic) :: Line=%ld :: Expected \'}\' after section code but something else written!\n\n", newlines); break;
-			case -8: printf("ERROR (Semantic) :: Line=%ld :: Code written outside sections!\n\n", newlines); break;
+			case -1: printf("%s\nERROR (Semantic) :: Line=%ld :: Expected \'(\' after \'section\' but something else written!\n\n", src_filename, newlines); break;
+			case -2: printf("%s\nERROR (Semantic) :: Line=%ld :: Expected section name after \'(\' but something else written!\n\n", src_filename, newlines); break;
+			case -3: printf("%s\nERROR (Semantic) :: Line=%ld :: Expected \')\' name after section name but something else written!\n\n", src_filename, newlines); break;
+			case -4: printf("%s\nERROR (Semantic) :: Line=%ld :: Expected \'{\' after \')\' but something else written!\n\n", src_filename, newlines); break;
+			case -5: printf("%s\nERROR (Semantic) :: Line=%ld :: Expected change of line after \'{\' but something else written!\n\n", src_filename, newlines); break;
+			case -6: printf("%s\nERROR (Semantic) :: Line=%ld :: Couldn't expand memory for section addresses!\n\n", src_filename, newlines); break;
+			case -7: printf("%s\nERROR (Semantic) :: Line=%ld :: Expected \'}\' after section code but something else written!\n\n", src_filename, newlines); break;
+			case -8: printf("%s\nERROR (Semantic) :: Line=%ld :: Code written outside sections!\n\n", src_filename, newlines); break;
 		}
 	}
 
