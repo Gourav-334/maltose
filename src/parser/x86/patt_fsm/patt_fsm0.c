@@ -52,7 +52,11 @@ void patt_fsm0(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, L
 		case 1:
 			if (!strcmp(token_ptr->data,"\t") || !strcmp(token_ptr->data," ")) {*state = 1;}
 			else if (!strcmp(token_ptr->data,"(")) {*state = 2;}
-			else {*state = -1;}
+			else
+			{
+				if (!strcmp(token_ptr->data,"\n")) {newlines++;}
+				*state = -1;
+			}
 
 			break;
 
@@ -73,7 +77,11 @@ void patt_fsm0(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, L
 
 				*state = 3;
 			}
-			else {*state = -2;}
+			else
+			{
+				if (!strcmp(token_ptr->data,"\n")) {newlines++;}
+				*state = -2;
+			}
 
 			break;
 
@@ -84,7 +92,11 @@ void patt_fsm0(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, L
 		case 3:
 			if (!strcmp(token_ptr->data,"\t") || !strcmp(token_ptr->data," ")) {*state = 3;}
 			else if (!strcmp(token_ptr->data,")")) {*state = 4;}
-			else {*state = -3;}
+			else
+			{
+				if (!strcmp(token_ptr->data,"\n")) {newlines++;}
+				*state = -3;
+			}
 
 			break;
 
@@ -100,6 +112,12 @@ void patt_fsm0(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, L
 			}
 			else if (!strcmp(token_ptr->data,"{"))
 			{
+				/* Increasing count of total opened curly braces. */
+
+				active_braces++;
+
+
+
 				/* Focusing on required pointer & counter. */
 
 				switch (Sec)
@@ -122,7 +140,7 @@ void patt_fsm0(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, L
 				else
 				{
 					*sec_block_count += 2;
-					*(sec_ptr + (*sec_block_count) - 2) = token_ptr;
+					*(sec_ptr + (*sec_block_count) - 2) = (uintptr_t)token_ptr;
 
 					*state = 5;
 				}
@@ -149,10 +167,29 @@ void patt_fsm0(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, L
 		case 6:
 			if (!strcmp(token_ptr->data,"}"))
 			{
-				*(sec_ptr + (*sec_block_count) - 1) = token_ptr;
-				*state = 7;
+				/* Judging whether closed braces is for section or sub-routine. */
+
+				switch (active_braces)
+				{
+					case 1:
+						*(sec_ptr + (*sec_block_count) - 1) = (uintptr_t)token_ptr;
+						*state = 7;
+
+						break;
+				}
+
+
+
+				/* Deacreasing count of total opened curly braces. */
+
+				active_braces--;
 			}
-			else {*state = 6;}
+			else
+			{
+				if (!strcmp(token_ptr->data,"\n")) {newlines++;}
+				else if (!strcmp(token_ptr->data,"{")) {active_braces++;}
+				*state = 6;
+			}
 
 			break;
 

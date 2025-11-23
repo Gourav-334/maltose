@@ -60,7 +60,7 @@ bool handle_patt_fsm_state(signed short int *state, Ll_node *token_ptr, Ll_node 
 
 	if (M==DEV) {}
 	else if (M==USER) {}
-	else if (M==DEBUG) {printf("STAT :: state=%hd :: token=\"%s\"\n", *state, token_ptr->data);}
+	else if (M==DEBUG) {printf("STAT :: state=%hd :: &token=%p\n", *state, token_ptr);}
 
 
 
@@ -163,7 +163,7 @@ bool handle_patt_fsm_state(signed short int *state, Ll_node *token_ptr, Ll_node 
 			case -4: printf("%s\nERROR (Semantic) :: Line=%ld :: Expected \'{\' after \')\' but something else written!\n\n", src_filename, newlines); break;
 			case -5: printf("%s\nERROR (Semantic) :: Line=%ld :: Expected change of line after \'{\' but something else written!\n\n", src_filename, newlines); break;
 			case -6: printf("%s\nERROR (Semantic) :: Line=%ld :: Couldn't expand memory for section addresses!\n\n", src_filename, newlines); break;
-			case -7: printf("%s\nERROR (Semantic) :: Line=%ld :: Expected \'}\' after section code but something else written!\n\n", src_filename, newlines); break;
+			case -7: printf("%s\nERROR (Semantic) :: Line=%ld :: Code written outside sections!\n\n", src_filename, newlines); break;
 			case -8: printf("%s\nERROR (Semantic) :: Line=%ld :: Code written outside sections!\n\n", src_filename, newlines); break;
 		}
 	}

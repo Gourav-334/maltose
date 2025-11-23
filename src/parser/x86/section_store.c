@@ -29,3 +29,6 @@ long int sec_data_blocks = 0;
 long int sec_bss_blocks = 0;
 long int sec_rodata_blocks = 0;
 long int *sec_block_count = NULL;
+
+
+long int active_braces = 0;

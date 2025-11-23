@@ -40,6 +40,9 @@ extern long int sec_rodata_blocks;
 extern long int *sec_block_count;
 
 
+extern long int active_braces;
+
+
 
 
 
