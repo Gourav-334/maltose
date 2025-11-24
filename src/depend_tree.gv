@@ -65,11 +65,11 @@ digraph Assembler
 
 	// Parser
 
-	patt_fsm0 [fontsize=32, width=1.5, height=1.0, label="Pattern FSM", shape=box, fillcolor=brown2, style=filled];
-	patt_fsm_main [fontsize=32, width=1.5, height=1.0, label="Pattern FSM Main", shape=box, fillcolor=brown2, style=filled];
-	patt_fsm_handler [fontsize=32, width=1.5, height=1.0, label="Pattern FSM Main", shape=box, fillcolor=brown2, style=filled];
-	register_store [fontsize=32, width=1.5, height=1.0, label="Register Storehouse", shape=box, fillcolor=brown2, style=filled];
-	section_store [fontsize=32, width=1.5, height=1.0, label="Section Storehouse", shape=box, fillcolor=brown2, style=filled];
+	patt_fsm0 [fontsize=32, width=1.5, height=1.0, label="Pattern FSM", shape=box, fillcolor=red1, style=filled];
+	patt_fsm_main [fontsize=32, width=1.5, height=1.0, label="Pattern FSM Main", shape=box, fillcolor=red1, style=filled];
+	patt_fsm_handler [fontsize=32, width=1.5, height=1.0, label="Pattern FSM Main", shape=box, fillcolor=red1, style=filled];
+	register_store [fontsize=32, width=1.5, height=1.0, label="Register Storehouse", shape=box, fillcolor=red1, style=filled];
+	section_store [fontsize=32, width=1.5, height=1.0, label="Section Storehouse", shape=box, fillcolor=red1, style=filled];
 
 
 

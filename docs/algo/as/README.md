@@ -15,6 +15,7 @@ This directory contains all the algorithms particular to **AS**.
 - `parser/` - Set of implementation details for parser's components.
 - `utils/` - Set of utility programs to aid faster programming & prototyping.
 - `common_store.md` - Common storage for all units, for dependency-free usage of global variables.
+- `depend_tree.pdf` - Hierarchical diagram for interaction among each component of **DEC AS-1**.
 - `file_loader.md` - Implementation of file loader, which loads a file from disk to RAM.
 
 ---

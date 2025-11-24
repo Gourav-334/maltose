@@ -14,7 +14,7 @@
 
 /* Declaring functions. */
 
-void pop_dealloc(char **str, char *mode);
+void pop_dealloc(char **str, char *mode);			// Dynamically pops one character from end of the target string.
 
 
 

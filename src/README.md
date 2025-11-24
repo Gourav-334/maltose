@@ -15,6 +15,7 @@ This directory contains all the source code files.
 - `parser/` - Contains all the source code for each parser component.
 - `utils/` - Contains all the source code for **utility programs**.
 - `common_store.c` - Header implementation of common storage for all units, for dependency-free usage of global variables.
+- `depend_tree.gv` - Source code for showing hierarchical relation among different components of **DEC AS-1**.
 - `file_loader.c` - Source code of file loader, which loads a file from disk to RAM.
 - `main.c` - Main engine code, used to assemble & integration test.
 - `test.c` - Test code, used for unit testing each sub-component.

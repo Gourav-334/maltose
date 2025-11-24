@@ -24,8 +24,8 @@
 
 struct Flag
 {
-	char *subtype;
-	bool status;
+	char *subtype;		// Stores category of the flag.
+	bool status;		// Tells whether the flag is set or not.
 };
 
 

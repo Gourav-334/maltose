@@ -13,6 +13,7 @@ All directories on this repositary have their own `README.md` file. This primari
 
 ## 2. Features
 
+- Smart register-set recognizer
 - Intuitive syntax grammar
 - Focused on portability
 - Compatible with GCC & LLVM
@@ -30,12 +31,14 @@ All directories on this repositary have their own `README.md` file. This primari
 
 - `assets/` - Contains images, media & readable materials embedded to root directory's MD documents.
 - `docs/` - Contains all the documentation.
+- `exec/` - Contains directories composing executables & their supporting files.
 - `include/` Contains all header files for their corresponding source files in `src/`.
 - `misc/` - Contains miscellaneous files which aren't very important.
 - `src/` - Contains all source code.
+- `scripts/` - Contains basic Bash-based shortcut scripts for repeatitive activities.
 - `test/` - Contains each pilot run & unit test directory.
-- `linux_push` - Quick push from **Linux** to `main` branch without descriptive comment.
-- `win_push` - Quick push from **Windows** to `main` branch without descriptive comment.
+- `ETHICS.md` - Important note regarding author's intention for initiating the project.
+- `LICENSE` - Terms & conditions of the particular license used for this project (**Apache 2.0**).
 
 
 ## 5. Installation

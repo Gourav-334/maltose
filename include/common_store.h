@@ -29,14 +29,15 @@
 
 /* For lexical components. */
 
-extern int point;
-extern int row;
-extern int column;
+extern int point;			// Point of trigger in the string.
+extern int row;				// Row of point of trigger.
+extern int column;			// Column of point of trigger.
 
-extern long int str_len;
-extern long int newlines;
-extern unsigned short int i_token_fsm;
-extern unsigned short int point_shift;
+extern long int str_len;			// Length of the passed string.
+extern long int newlines;			// Counts number of newlines encountered.
+
+extern unsigned short int i_token_fsm;			// Globally accessible variable for loop counts.
+extern unsigned short int point_shift;			// Bytes to shift by from point of trigger.
 
 
 

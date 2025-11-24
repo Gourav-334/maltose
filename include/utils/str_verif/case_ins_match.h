@@ -27,7 +27,7 @@
 
 /* Declaring functions. */
 
-int match_ins_case(char *str1, char *str2, bool full_match, char *mode);
+int match_ins_case(char *str1, char *str2, bool full_match, char *mode);		// Matches two strings by ignoring the differences in their cases.
 
 
 

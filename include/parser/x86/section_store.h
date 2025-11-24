@@ -24,23 +24,23 @@
 
 /* Declaring variables. */
 
-extern uintptr_t *sec_text;
-extern uintptr_t *sec_data;
-extern uintptr_t *sec_bss;
-extern uintptr_t *sec_rodata;
+extern uintptr_t *sec_text;				// Array of elements pointing to token address of start/end of .TEXT section.
+extern uintptr_t *sec_data;				// Array of elements pointing to token address of start/end of .DATA section.
+extern uintptr_t *sec_bss;				// Array of elements pointing to token address of start/end of .BSS section.
+extern uintptr_t *sec_rodata;			// Array of elements pointing to token address of start/end of .RODATA section.
+
+extern uintptr_t *sec_ptr;				// Pointer to one of the array containing entry/exit to its corresponding section.
 
 
-extern uintptr_t *sec_ptr;
+extern long int sec_text_blocks;		// Counts number of .TEXT block appearances.
+extern long int sec_data_blocks;		// Counts number of .DATA block appearances.
+extern long int sec_bss_blocks;			// Counts number of .BSS block appearances.
+extern long int sec_rodata_blocks;		// Counts number of .RODATA block appearances.
+
+extern long int *sec_block_count;		// Pointer to one of the section counter.
 
 
-extern long int sec_text_blocks;
-extern long int sec_data_blocks;
-extern long int sec_bss_blocks;
-extern long int sec_rodata_blocks;
-extern long int *sec_block_count;
-
-
-extern long int active_braces;
+extern long int active_braces;			// Counts the number of curly braces opened.
 
 
 

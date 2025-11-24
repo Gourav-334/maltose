@@ -22,10 +22,10 @@
 
 /* Structure instances. */
 
-extern Ll_recorder token;
-extern Ll_recorder categ;
-extern Ll_recorder sub_categ;
-extern Ll_recorder type;
+extern Ll_recorder token;			// Linked list recorder for exact token values.
+extern Ll_recorder categ;			// Linked list recorder for category of token.
+extern Ll_recorder sub_categ;		// Linked list recorder for sub-category of token.
+extern Ll_recorder type;			// Linked list recorder for type of token.
 
 
 

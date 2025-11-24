@@ -16,8 +16,8 @@
 
 typedef struct Ll_node			// Represents a single/unit node in linked list.
 {
-	char *data;
-	struct Ll_node *next;
+	char *data;					// Value stored in the node.
+	struct Ll_node *next;		// Address of the next node in series.
 } Ll_node;
 
 
@@ -26,10 +26,10 @@ typedef struct Ll_node			// Represents a single/unit node in linked list.
 
 typedef struct Ll_recorder		// Records all the information about the linked list.
 {
-	int total;
+	int total;					// Total number of nodes in the linked list.
 
-	Ll_node *head;
-	Ll_node *tail;
+	Ll_node *head;				// Address of the head node.
+	Ll_node *tail;				// Address of the tail node.
 } Ll_recorder;
 
 
