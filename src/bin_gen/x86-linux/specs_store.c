@@ -1,6 +1,6 @@
 /* Including required headers. */
 
-#include "../../../include/bin_gen/x86/specs_store.h"
+#include "../../../include/bin_gen/x86-linux/specs_store.h"
 
 #include <stddef.h>			// To use NULL for certain structure members.
 
