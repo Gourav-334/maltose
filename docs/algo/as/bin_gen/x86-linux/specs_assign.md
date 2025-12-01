@@ -13,7 +13,7 @@ This file documents the implementation of the **specification assigner**, which 
 
 
 ```c
-bool assign_specs();
+bool assign_specs(void);
 ```
 
 
@@ -39,19 +39,7 @@ bool assign_specs();
 - Section header string index
 
 
-### 3.2 <u>Program Header</u>:
-
-- Segment type
-- Access flags
-- Offset of segment
-- Virtual address
-- Physical address
-- Size in file
-- Size is memory
-- Alignment requirement
-
-
-### 3.3 <u>Segment Header</u>:
+### 3.4 <u>Segment Header</u>:
 
 - Offset of section name in `.shstrtab`
 - Section type
@@ -63,5 +51,16 @@ bool assign_specs();
 - Extra info
 - Alignment constraints
 - Size of each entry if section is table
+
+
+
+## 4. Responsibilities For Other Components
+
+
+- Initializing section headers
+- Writing symbol table
+- Handling string symbol table
+- Writing section header string index
+- Counting bytes in each section
 
 ---

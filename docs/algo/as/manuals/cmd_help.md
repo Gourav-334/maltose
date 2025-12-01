@@ -30,7 +30,7 @@ This file records implementation of command-line help manual.
 ### 4.1 <u>Representation</u>:
 
 ```c
-void cmd_help_repr();
+void cmd_help_repr(void);
 ```
 
 - Pseudo representation of the command.
@@ -40,7 +40,7 @@ void cmd_help_repr();
 ### 4.2 <u>Rules</u>:
 
 ```c
-void cmd_help_rules();
+void cmd_help_rules(void);
 ```
 
 - Minimum & maximum number of arguments.
@@ -51,7 +51,7 @@ void cmd_help_rules();
 ### 4.3 <u>Flags</u>:
 
 ```c
-void cmd_help_flags();
+void cmd_help_flags(void);
 ```
 
 - Mentions about each flag.

@@ -13,9 +13,8 @@ This file documents the implementation of **specification storehouse** which sto
 
 
 ```c
-Elf64_Ehdr elf_header;			// Stores ELF header information.
-Elf64_Phdr prog_header;			// Stores program header information.
-Elf64_Shdr sec_header;			// Stores section header information.
+Elf64_Ehdr elf_header;						// Stores ELF header information.
+Elf64_Shdr sec_header[TOTAL_SEC];			// Stores section header information.
 ```
 
 ---

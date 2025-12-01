@@ -36,30 +36,4 @@ Elf64_Ehdr elf_header = {			// Stores ELF header information.
 
 
 
-Elf64_Phdr prog_header = {			// Stores program header information.
-	.p_type = 0x0,
-	.p_flags = 0x0,
-	.p_offset = 0x0,
-	.p_vaddr = 0x0,
-	.p_paddr = 0x0,
-	.p_filesz = 0x0,
-	.p_memsz = 0x0,
-	.p_align = 0x0
-};
-
-
-
-
-
-Elf64_Shdr sec_header = {			// Stores section header information.
-	.sh_name = 0x0,
-	.sh_type = 0x0,
-	.sh_flags = 0x0,
-	.sh_addr = 0x0,
-	.sh_offset = 0x0,
-	.sh_size = 0x0,
-	.sh_link = 0x0,
-	.sh_info = 0x0,
-	.sh_addralign = 0x0,
-	.sh_entsize = 0x0
-};
+Elf64_Shdr sec_header[TOTAL_SEC] = {0};			// Array of section headers.

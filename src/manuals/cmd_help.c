@@ -16,7 +16,7 @@
 
 /* Pseudo representation of command usage. */
 
-void cmd_help_repr()
+void cmd_help_repr(void)
 {
 	printf("\n");
 	printf("PSEUDO REPRESENTATION\n");
@@ -45,7 +45,7 @@ void cmd_help_repr()
 
 /* Rules when passing arguments. */
 
-void cmd_help_rules()
+void cmd_help_rules(void)
 {
 	printf("COMMAND USAGE RULES\n");
 	for (long int i=0; i<strlen("COMMAND USAGE RULES\n")-1; i++)
@@ -70,7 +70,7 @@ void cmd_help_rules()
 
 /* Flags definition & uses. */
 
-void cmd_help_flags()
+void cmd_help_flags(void)
 {
 	printf("FLAGS DEFINITION\n");
 	for (long int i=0; i<strlen("FLAGS DEFINITION\n")-1; i++)
