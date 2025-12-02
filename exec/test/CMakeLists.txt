@@ -32,6 +32,7 @@ add_executable(test
 	../../src/parser/x86/patt_fsm/patt_fsm0.c
 	../../src/parser/x86/patt_fsm_main.c
 	../../src/parser/x86/patt_state_handler.c
+	../../src/parser/x86/label_store.c
 	../../src/parser/x86/register_store.c
 	../../src/parser/x86/section_store.c
 	../../src/utils/str_verif/case_ins_match.c
