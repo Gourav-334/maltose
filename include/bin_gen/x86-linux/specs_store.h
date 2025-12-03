@@ -40,6 +40,14 @@
 
 extern Elf64_Ehdr elf_header;					// Stores ELF header information.
 extern Elf64_Shdr sec_header[TOTAL_SEC];		// Stores section header information.
+extern Elf64_Sym *symtab;						// Stores contagious symbol tables.
+extern Elf64_Rel rel_data[TOTAL_SEC];			// Stores contagious relocation data.
+
+
+
+/* Variables/constants */
+
+extern int sym_count;
 
 
 
