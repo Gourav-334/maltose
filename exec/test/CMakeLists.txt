@@ -10,6 +10,7 @@ set(CMAKE_C_FLAGS_DEBUG "-g")
 add_executable(test
 	../../src/test.c
 	../../src/common_store.c
+	../../src/bin_gen/x86-linux/bin_sec_store.c
 	../../src/bin_gen/x86-linux/specs_assign.c
 	../../src/bin_gen/x86-linux/specs_store.c
 	../../src/data_structs/hash_table/ht_inserter.c

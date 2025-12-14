@@ -37,5 +37,5 @@ Elf64_Ehdr elf_header = {			// Stores ELF header information.
 
 
 Elf64_Shdr sec_header[TOTAL_SEC] = {0};			// Array of section headers.
-Elf_Sym *symtab = NULL;							// Contagious collection of symbols.
-Elf_Rel rel_data[TOTAL_SEC] = {0};				// Relocation data for each section.
+Elf64_Sym *symtab = NULL;						// Contagious collection of symbols.
+Elf64_Rel rel_data[TOTAL_SEC] = {0};			// Relocation data for each section.
