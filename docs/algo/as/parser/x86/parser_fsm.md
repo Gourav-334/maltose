@@ -12,11 +12,27 @@ This file records the implementation of **parser finite state machine** which pa
 ## 2. Algorithm
 
 
-### 2.1 <u>Steps</u>:
+### 2.1 <u>Functions</u>:
 
-1. Start parsing from the beginning of the linked list(s).
-2. Reach a conclusion as per the transitions that occur.
-3. For an instruction, store write binary or store error only when endline occurs / nodes end.
+#### 2.1.1 FSM PARTS:-
+```c
+void parser_fsmN(uintptr_t *sec_ptr, long int sec_block_count, unsigned int start, signed int *state);
+```
+
+- `sec_ptr` - Passed pointer to section's start in linked list.
+- `sec_block_count` - Total number of blocks that the section contains.
+- `start` - Particular state to continue from.
+- `state` - Shared variable for state transition.
+
+#### 2.1.2 MAIN FSM:-
+```c
+bool parser_fsm_main(uintptr_t *sec_ptr, long int sec_block_count, unsigned int start, char *mode);
+```
+
+- `sec_ptr` - Passed pointer to section's start in linked list.
+- `sec_block_count` - Total number of blocks that the section contains.
+- `start` - Particular state to continue from.
+- `mode` - Mode chosen for providing feedback.
 
 
 

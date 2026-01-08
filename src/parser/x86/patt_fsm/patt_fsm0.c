@@ -133,14 +133,17 @@ void patt_fsm0(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, L
 				/* Reallocating & storing pointers to sections. */
 
 				if (sec_ptr==NULL) {sec_ptr = calloc(2, sizeof(uintptr_t));}
-				else {sec_ptr = realloc(sec_ptr, (((size_t)(*sec_block_count))+2)*sizeof(uintptr_t));}
+				else {sec_ptr = realloc(sec_ptr, ((size_t)(*sec_block_count*TOTAL_OFFSETS))*sizeof(uintptr_t));}
 
 
 				if (sec_ptr==NULL) {printf("ERROR: Couldn't expand memory for section addresses.\n"); *state = -6;}
 				else
 				{
-					*sec_block_count += 2;
-					*(sec_ptr + (*sec_block_count) - 2) = (uintptr_t)token_ptr;
+					*(sec_ptr + (*sec_block_count*TOTAL_OFFSETS) + TOKEN_BEGIN_OFFSET) = (uintptr_t)token_ptr;
+					*(sec_ptr + (*sec_block_count*TOTAL_OFFSETS) + CATEG_OFFSET) = (uintptr_t)categ_ptr;
+					*(sec_ptr + (*sec_block_count*TOTAL_OFFSETS) + SUB_CATEG_OFFSET) = (uintptr_t)sub_categ_ptr;
+					*(sec_ptr + (*sec_block_count*TOTAL_OFFSETS) + TYPE_OFFSET) = (uintptr_t)token_ptr;
+					*sec_block_count += 1;
 
 					*state = 5;
 				}
@@ -172,7 +175,7 @@ void patt_fsm0(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, L
 				switch (active_braces)
 				{
 					case 1:
-						*(sec_ptr + (*sec_block_count) - 1) = (uintptr_t)token_ptr;
+						*(sec_ptr + (*sec_block_count*TOTAL_OFFSETS) + TOKEN_END_OFFSET) = (uintptr_t)token_ptr;
 						*state = 7;
 
 						break;

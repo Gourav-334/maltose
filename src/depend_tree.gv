@@ -21,6 +21,7 @@ digraph Assembler
 
 	specs_assign [fontsize=32, width=1.5, height=1.0, label="Specs Assigner", shape=box, fillcolor=maroon1, style=filled];
 	specs_store [fontsize=32, width=1.5, height=1.0, label="Specs Storehouse", shape=box, fillcolor=maroon1, style=filled];
+	bin_sec_store [fontsize=32, width=1.5, height=1.0, label="Specs Storehouse", shape=box, fillcolor=maroon1, style=filled];
 
 
 
@@ -78,6 +79,9 @@ digraph Assembler
 	register_store [fontsize=32, width=1.5, height=1.0, label="Register Storehouse", shape=box, fillcolor=red1, style=filled];
 	section_store [fontsize=32, width=1.5, height=1.0, label="Section Storehouse", shape=box, fillcolor=red1, style=filled];
 	label_store [fontsize=32, width=1.5, height=1.0, label="Label Storehouse", shape=box, fillcolor=red1, style=filled];
+	parser_fsm0 [fontsize=32, width=1.5, height=1.0, label="Parser FSM", shape=box, fillcolor=red1, style=filled];
+	parser_fsm_main [fontsize=32, width=1.5, height=1.0, label="Parser FSM Main", shape=box, fillcolor=red1, style=filled];
+	parser_state_handler [fontsize=32, width=1.5, height=1.0, label="Parser FSM Main", shape=box, fillcolor=red1, style=filled];
 
 
 
@@ -199,6 +203,11 @@ digraph Assembler
 	common_store -> patt_fsm_handler [fontsize=32, width=1.5, height=1.0, label="Storing addresses to sections", color=black, style=solid, fontcolor=black, arrowhead=normal];
 	token_store -> patt_fsm0 [fontsize=32, width=1.5, height=1.0, label="Storing addresses to sections", color=black, style=solid, fontcolor=black, arrowhead=normal];
 	file_loader -> patt_fsm_handler [fontsize=32, width=1.5, height=1.0, label="Storing addresses to sections", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	ll_struct -> parser_fsm_main [fontsize=32, width=1.5, height=1.0, label="Recognizing linked list rules", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	parser_fsm0 -> parser_fsm_main [fontsize=32, width=1.5, height=1.0, label="Assembling 1st parser part", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	parser_state_handler -> parser_fsm_main [fontsize=32, width=1.5, height=1.0, label="Assembling parser state handler", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	token_store -> parser_fsm_main [fontsize=32, width=1.5, height=1.0, label="Accessing token lists for analysis", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	section_store -> parser_fsm_main [fontsize=32, width=1.5, height=1.0, label="Accessing pointer shortcuts", color=black, style=solid, fontcolor=black, arrowhead=normal];
 
 
 
@@ -223,6 +232,14 @@ digraph Assembler
 
 
 	/* CLustering of similar components. */
+
+	subgraph bin_gen {
+		label="Binary Generator";
+		style=dashed;
+		specs_assign; specs_store; bin_sec_store;
+	};
+
+
 
 	subgraph cmd_interp {
 		label="Command Interpreter";

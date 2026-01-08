@@ -3,6 +3,13 @@
 #ifndef SECTION_STORE_H
 	#define SECTION_STORE_H
 
+#define TOTAL_OFFSETS 5
+#define TOKEN_BEGIN_OFFSET 0
+#define TOKEN_END_OFFSET 1
+#define CATEG_OFFSET 2
+#define SUB_CATEG_OFFSET 3
+#define TYPE_OFFSET 4
+
 
 
 

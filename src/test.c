@@ -1,6 +1,6 @@
 /* Adding header(s) for unit testing. */
 
-#include "../include/bin_gen/x86-linux/bin_sec_store.h"
+#include "../include/bin_gen/x86-linux/patt_fsm_main.h"
 
 #include <stdio.h>
 
