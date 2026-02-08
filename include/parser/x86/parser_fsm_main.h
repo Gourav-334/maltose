@@ -22,7 +22,10 @@
 
 /* Declaring functions. */
 
-bool parser_fsm_main(uintptr_t *sec_ptr, long int sec_block_count, unsigned int start, char *mode);		// Assembly point of parser FSM parts & state handler.
+bool parser_fsm_main(
+	Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, Ll_node *type_ptr,
+	uintptr_t *sec_ptr, long int sec_block_count, unsigned int start, char *mode);
+	// Assembly point of parser FSM parts & state handler.
 
 
 

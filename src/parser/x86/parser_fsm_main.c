@@ -21,12 +21,13 @@
 
 /* Central Finite State Machine handler. */
 
-bool parser_fsm_main(uintptr_t *sec_ptr, long int sec_block_count, unsigned int start, char *mode)
+bool parser_fsm_main(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_ptr, Ll_node *type_ptr, uintptr_t *sec_ptr, long int sec_block_count, unsigned int start, char *mode)
 {
 	/* Variable declarations/definitions. */
 
 	signed int state = 0;
 	uintptr_t *sec_ptr_end = *(sec_ptr + TOKEN_END_OFFSET);
+	long int count = 1;
 
 
 
