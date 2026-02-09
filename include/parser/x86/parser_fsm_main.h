@@ -11,6 +11,8 @@
 
 #include <stdbool.h>		// For returning boolean values.
 
+#include "section_store.h"		// To import macros telling pointer locations.
+
 
 
 

@@ -67,7 +67,7 @@ bool parser_fsm_main(Ll_node *token_ptr, Ll_node *categ_ptr, Ll_node *sub_categ_
 		else if (M==DEBUG)
 		{
 			printf("STAT :: start=%d : sec_ptr=%p : state=%hd : symbol=%s\n",
-				start, sec_ptr, state, sec_ptr->data);
+				start, sec_ptr, state, token_ptr->data);
 		}
 
 

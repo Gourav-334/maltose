@@ -3,12 +3,12 @@
 #ifndef SECTION_STORE_H
 	#define SECTION_STORE_H
 
-#define TOTAL_OFFSETS 5
-#define TOKEN_BEGIN_OFFSET 0
-#define TOKEN_END_OFFSET 1
-#define CATEG_OFFSET 2
-#define SUB_CATEG_OFFSET 3
-#define TYPE_OFFSET 4
+#define TOTAL_OFFSETS 5				// Total 5 node addresses are stored in pointer array.
+#define TOKEN_BEGIN_OFFSET 0		// 1st address = Token's beginning
+#define TOKEN_END_OFFSET 1			// 2nd address = Token's ending
+#define CATEG_OFFSET 2				// 3rd address = Category's beginning
+#define SUB_CATEG_OFFSET 3			// 4th address = Sub-category's offset
+#define TYPE_OFFSET 4				// 5th address = Sub-category type's offset
 
 
 
