@@ -19,9 +19,9 @@ bool assign_specs(void)
 	/* Filling ELF header information. */
 
 	elf_header.e_ident[EI_MAG0] = 0x7f;				// ELF magic numbers
-	elf_header.e_ident[EI_MAG1] = 'E';
-	elf_header.e_ident[EI_MAG2] = 'L';
-	elf_header.e_ident[EI_MAG3] = 'F';
+	elf_header.e_ident[EI_MAG1] = 'E';				// Magic 'E'
+	elf_header.e_ident[EI_MAG2] = 'L';				// Magic 'L'
+	elf_header.e_ident[EI_MAG3] = 'F';				// Magic 'F'
 	elf_header.e_ident[EI_CLASS] = ELFCLASS64;		// 64-bit ELF class
 	elf_header.e_ident[EI_DATA] = ENDIANNESS;		// Detected in header file
 	elf_header.e_ident[EI_VERSION] = EV_CURRENT;	// Current version
