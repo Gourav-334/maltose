@@ -21,7 +21,7 @@ digraph Assembler
 
 	specs_assign [fontsize=32, width=1.5, height=1.0, label="Specs Assigner", shape=box, fillcolor=maroon1, style=filled];
 	specs_store [fontsize=32, width=1.5, height=1.0, label="Specs Storehouse", shape=box, fillcolor=maroon1, style=filled];
-	bin_sec_store [fontsize=32, width=1.5, height=1.0, label="Specs Storehouse", shape=box, fillcolor=maroon1, style=filled];
+	bin_sec_store [fontsize=32, width=1.5, height=1.0, label="Binary Section Storehouse", shape=box, fillcolor=maroon1, style=filled];
 
 
 
@@ -221,6 +221,7 @@ digraph Assembler
 	// Central files
 
 	cmd_valid -> main [fontsize=32, width=1.5, height=1.0, label="Assembling command interpreter", color=black, style=solid, fontcolor=black, arrowhead=normal];
+	code_cleanser -> main [fontsize=32, width=1.5, height=1.0, label="Assembling lexer container", color=black, style=solid, fontcolor=black, arrowhead=normal];
 
 
 
