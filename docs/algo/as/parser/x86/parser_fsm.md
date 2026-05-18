@@ -70,4 +70,10 @@ bool parser_fsm_main(uintptr_t *sec_ptr, long int sec_block_count, unsigned int 
 3. **Position**
 4. **Legality**
 
+
+
+## 4. Finite State Machine
+
+
+
 ---
