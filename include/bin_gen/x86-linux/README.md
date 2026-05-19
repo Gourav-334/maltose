@@ -8,6 +8,7 @@ This directory contains all the header codes for x86-based binary generator.
 
 ## 2. Directory Structure
 
+- `instr_writer/` - Contains headers for all set of procedures to follow for detected instruction.
 - `bin_sec_store.h` - Stores headers for all the binary sections using respective pointers.
 - `specs_assign.h` - Assigns binary specifications as per environment in use.
 - `specs_store.h` - Stores binary specifications after being assigned.

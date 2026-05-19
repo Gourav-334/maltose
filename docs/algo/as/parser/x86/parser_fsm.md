@@ -75,5 +75,12 @@ bool parser_fsm_main(uintptr_t *sec_ptr, long int sec_block_count, unsigned int 
 ## 4. Finite State Machine
 
 
+### 4.1 <u>ASCII Type</u>:
+
+```asm
+<ascii_type> <label> = "value"    ; ASCII label
+```
+
+![ASCII Type](./assets/0to6.png)
 
 ---
