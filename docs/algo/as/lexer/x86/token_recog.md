@@ -14,208 +14,172 @@ This file documents implementation for recognizer of tokenizer, which categorize
 
 ### 2.1 <u>Unit Tokens</u>:
 
-|Token|Category|Sub-Category|Type|Areas|
-|:-:|:-:|:-:|:-:|:-|
-|`section`|Directive|Block|Section|Outside|
-|`(`|Bracket|Round|Opening|Outside|
-|`.`|Operator|Numeric|Period|Outside|
-|`)`|Bracket|Round|Closing|Outside|
-|`{`|Bracket|Curly|Opening|Anywhere|
-|`}`|Bracket|Curly|Closing|Anywhere|
-|`\n`|Terminator|Escape|Endline|Anywhere|
-|`\t`|Skipper|Escape|Tabspace|Anywhere|
-|`ascii`|Data|ASCII|Unterminated|Data, Rodata|
-|`string`|Data|ASCII|Terminated|Data, Rodata|
-|`byte`|Data|Integer|Byte|Data, Rodata|
-|`word`|Data|Integer|Word|Data, Rodata|
-|`long`|Data|Integer|Long|Data, Rodata|
-|`quad`|Data|Integer|Quad|Data, Rodata|
-|`float`|Data|Fraction|Float|Data, Rodata|
-|`double`|Data|Fraction|Double|Data, Rodata|
-|`longdouble`|Data|Fraction|Longdouble|Data, Rodata|
-|`=`|Operator|Arithmetic|Assignation|Data, Bss, Rodata, Teon|
-|`,`|Operator|Separator|Comma|Data, Rodata|
-|`reserve`|Directive|Memory|Reserve|Bss|
-|`[`|Bracket|Square|Opening|Bss, Text|
-|`]`|Bracket|Square|Closing|Bss, Text|
-|`global`|Property|Scope|Global|Data, Rodata, Rodata|
-|`extern`|Property|Scope|Extern|Data, Rodata, Rodata|
-|`local`|Property|Scope|Local|Data, Rodata, Rodata|
-|`weak`|Property|Scope|Weak|Data, Rodata, Rodata|
-|`hidden`|Property|Scope|Hidden|Data, Rodata, Rodata|
-|`protected`|Property|Scope|Protected|Data, Rodata|
-|`rigid`|Property|Flexibility|Rigid|Data|
-|`flexible`|Property|Flexibility|Flexible|Data|
-|`align`|Property|Memory|Alignment|Rodata|
-|`+=`|Operator|Arithmetic|Addition|Text|
-|`-=`|Operator|Arithmetic|Subtraction|Text|
-|`*=`|Operator|Arithmetic|Multiplication|Text|
-|`/=`|Operator|Arithmetic|Division|Text|
-|`&=`|Operator|Logical|AND|Text|
-|`\|=`|Operator|Logical|OR|Text|
-|`~=`|Operator|Logical|NOT|Text|
-|`^=`|Operator|Logical|XOR|Text|
-|`<<`|Operator|Bitwise|Left shift|Text|
-|`>>`|Operator|Bitwise|Right shift|Text|
-|`@`|Referral|Address|Pointer|Text|
-|`++`|Operator|Special|Increment|Text|
-|`--`|Operator|Special|Decrement|Text|
-|`~`|Operator|Special|Negation|Text|
-|`?=`|Operator|Special|Comparison|Text|
-|`<->`|Operator|Special|Swap|Text|
-|`none`|Operator|Special|Nothing|Text|
-|`\|`|Operator|Special|Absolution|Text|
-|`call`|Command|Function|Call|Text|
-|`return`|Command|Function|Return|Text|
-|`==`|Operator|Comparison|Equal|Text|
-|`!=`|Operator|Comparison|Inequal|Text|
-|`!`|Operator|Comparison|Not|Text|
-|`<`|Operator|Comparison|Less than|Text|
-|`!<`|Operator|Comparison|Not less than|Text|
-|`<=`|Operator|Comparison|Less than or equal|Text|
-|`!<=`|Operator|Comparison|Not less than or equal|Text|
-|`>`|Operator|Comparison|Greater than|Text|
-|`!>`|Operator|Comparison|Not greater than|Text|
-|`>=`|Operator|Comparison|Greater than or equal|Text|
-|`!>=`|Operator|Comparison|Not greater than or equal|Text|
-|`push`|Command|Stack|Push|Text|
-|`pop`|Command|Stack|Pop|Text|
-|`store`|Command|Stack|Retrieve|Text|
-|`enable`|Command|Hardware|Enable|Text|
-|`disable`|Command|Hardware|Disable|Text|
-|`input`|Command|Hardware|Input|Text|
-|`output`|Command|Hardware|Output|Text|
-|`mode`|Command|Switch|Mode|Text|
-|`halt`|Command|Hardware|Halt|Text|
-|`interrupt`|Command|Hardware|Interrupt|Text|
-|`syscall`|Command|Hardware|Syscall|Text|
-|`st`|Referrence|Stack|x87|Text|
+|  Token       |  Category    |  Sub-Category    |  Type            |
+| ------------ | ------------ | ---------------- | ---------------- |
+| `section`    | `directive`  | `block`          | `section`        |
+| ` `          | `delimiter`  | `separator`      | `whitespace`     |
+| `(`          | `bracket`    | `round`          | `opening`        |
+| `.`          | `operator`   | `numeric`        | `period`         |
+| `)`          | `bracket`    | `round`          | `closing`        |
+| `{`          | `bracket`    | `curly`          | `opening`        |
+| `}`          | `bracket`    | `curly`          | `closing`        |
+| `\n`         | `delimiter`  | `terminator`     | `endline`        |
+| `\t`         | `delimiter`  | `skipper`        | `tabspace`       |
+| `'`          | `stringizer` | `inverted_comma` | `single`         |
+| `"`          | `stringizer` | `inverted_comma` | `double`         |
+| `ascii`      | `data`       | `ascii`          | `unterminated`   |
+| `string`     | `data`       | `ascii`          | `terminated`     |
+| `byte`       | `data`       | `integer`        | `byte`           |
+| `word`       | `data`       | `integer`        | `word`           |
+| `long`       | `data`       | `integer`        | `long`           |
+| `quad`       | `data`       | `integer`        | `quad`           |
+| `float`      | `data`       | `fraction`       | `float`          |
+| `double`     | `data`       | `fraction`       | `double`         |
+| `longdouble` | `data`       | `fraction`       | `longdouble`     |
+| `=`          | `operator`   | `arithmetic`     | `assigning`      |
+| `,`          | `operator`   | `separator`      | `comma`          |
+| `[`          | `bracket`    | `square`         | `opening`        |
+| `]`          | `bracket`    | `square`         | `closing`        |
+| `global`     | `property`   | `scope`          | `global`         |
+| `extern`     | `property`   | `scope`          | `extern`         |
+| `local`      | `property`   | `scope`          | `local`          |
+| `weak`       | `property`   | `scope`          | `weak`           |
+| `hidden`     | `property`   | `scope`          | `hidden`         |
+| `protected`  | `property`   | `scope`          | `protected`      |
+| `rigid`      | `property`   | `flexibility`    | `rigid`          |
+| `flexible`   | `property`   | `flexibility`    | `flexible`       |
+| `+=`         | `operator`   | `arithmetic`     | `addition`       |
+| `-=`         | `operator`   | `arithmetic`     | `subtraction`    |
+| `*=`         | `operator`   | `arithmetic`     | `multiplication` |
+| `/=`         | `operator`   | `arithmetic`     | `division`       |
+| `&=`         | `operator`   | `logical`        | `and`            |
+| `\|=`        | `operator`   | `logical`        | `or`             |
+| `~=`         | `operator`   | `logical`        | `not`            |
+| `^=`         | `operator`   | `logical`        | `xor`            |
+| `<<`         | `operator`   | `bitwise`        | `left`           |
+| `>>`         | `operator`   | `bitwise`        | `right`          |
+| `@`          | `referral`   | `address`        | `pointer`        |
+| `++`         | `operator`   | `special`        | `increment`      |
+| `--`         | `operator`   | `special`        | `decrement`      |
+| `~`          | `operator`   | `special`        | `negation`       |
+| `?=`         | `operator`   | `special`        | `comparison`     |
+| `<->`        | `operator`   | `special`        | `swap`           |
+| `none`       | `operator`   | `special`        | `nothing`        |
+| `\|`         | `operator`   | `special`        | `absolution`     |
+| `call`       | `command`    | `function`       | `call`           |
+| `return`     | `command`    | `function`       | `return`         |
+| `==`         | `operator`   | `comparison`     | `equal`          |
+| `!=`         | `operator`   | `comparison`     | `inequal`        |
+| `!`          | `operator`   | `comparison`     | `not`            |
+| `<`          | `operator`   | `comparison`     | `lt`             |
+| `!<`         | `operator`   | `comparison`     | `nlt`            |
+| `<=`         | `operator`   | `comparison`     | `le`             |
+| `!<=`        | `operator`   | `comparison`     | `nle`            |
+| `>`          | `operator`   | `comparison`     | `gt`             |
+| `!>`         | `operator`   | `comparison`     | `ngt`            |
+| `>=`         | `operator`   | `comparison`     | `gt`             |
+| `!>=`        | `operator`   | `comparison`     | `nge`            |
+| `push`       | `command`    | `stack`          | `push`           |
+| `pop`        | `command`    | `stack`          | `pop`            |
+| `store`      | `command`    | `stack`          | `retrieve`       |
+| `enable`     | `command`    | `hardware`       | `enable`         |
+| `disable`    | `command`    | `hardware`       | `disable`        |
+| `input`      | `command`    | `hardware`       | `input`          |
+| `output`     | `command`    | `hardware`       | `output`         |
+| `mode`       | `command`    | `switch`         | `mode`           |
+| `halt`       | `command`    | `hardware`       | `halt`           |
+| `interrupt`  | `command`    | `hardware`       | `interrupt`      |
+| `syscall`    | `command`    | `hardware`       | `syscall`        |
+| `st`         | `referrence` | `stack`          | `x87`            |
 
-$$ \text{Total = 72} $$
+$$ \text{Total = 75} $$
 
 
 ### 2.2 <u>Hardware Units</u>:
 
-|Token|Category|Sub-Category|Type|Areas|
-|:-:|:-:|:-:|:-:|:-|
-|`ah`|GPR|8-bit (high)|Accumulator|Text|
-|`al`|GPR|8-bit|Accumulator|Text|
-|`ax`|GPR|16-bit|Accumulator|Text|
-|`bh`|GPR|8-bit (high)|Base|Text|
-|`bl`|GPR|8-bit|Base|Text|
-|`bp`|GPR|16-bit|Base pointer|Text|
-|`bpl`|GPR|8-bit|Base pointer|Text|
-|`bx`|GPR|16-bit|Base|Text|
-|`ch`|GPR|8-bit (high)|Counter|Text|
-|`cl`|GPR|8-bit|Counter|Text|
-|`cx`|GPR|16-bit|Counter|Text|
-|`dh`|GPR|8-bit (high)|Data I/O|Text|
-|`di`|GPR|16-bit|Destination index|Text|
-|`dil`|GPR|8-bit|Destination index|Text|
-|`dl`|GPR|8-bit|Data I/O|Text|
-|`dx`|GPR|16-bit|Data I/O|Text|
-|`eax`|GPR|32-bit|Accumulator|Text|
-|`ebp`|GPR|32-bit|Base pointer|Text|
-|`ebx`|GPR|32-bit|Base|Text|
-|`ecx`|GPR|32-bit|Counter|Text|
-|`edi`|GPR|32-bit|Destination index|Text|
-|`edx`|GPR|32-bit|Data I/O|Text|
-|`eflag`|Flag|32-bit|Flag|Text|
-|`esi`|GPR|32-bit|Source index|Text|
-|`esp`|GPR|32-bit|Stack pointer|Text|
-|`fpflag`|Flag|16-bit|FP flag|Text|
-|`gdt`|Special register|Limiter|Global descriptor table|Text|
-|`idt`|Special register|Limiter|Interrupt descriptor table|Text|
-|`r10`|GPR|64-bit|R10|Text|
-|`r10b`|GPR|8-bit|R10|Text|
-|`r10w`|GPR|16-bit|R10|Text|
-|`r11`|GPR|64-bit|R11|Text|
-|`r11b`|GPR|8-bit|R11|Text|
-|`r11w`|GPR|16-bit|R11|Text|
-|`r12`|GPR|64-bit|R12|Text|
-|`r12b`|GPR|8-bit|R12|Text|
-|`r12w`|GPR|16-bit|R12|Text|
-|`r13`|GPR|64-bit|R13|Text|
-|`r13b`|GPR|8-bit|R13|Text|
-|`r13w`|GPR|16-bit|R13|Text|
-|`r14`|GPR|64-bit|R14|Text|
-|`r14b`|GPR|8-bit|R14|Text|
-|`r14w`|GPR|16-bit|R14|Text|
-|`r15`|GPR|64-bit|R15|Text|
-|`r15b`|GPR|8-bit|R15|Text|
-|`r15w`|GPR|16-bit|R15|Text|
-|`r8`|GPR|64-bit|R8|Text|
-|`r8b`|GPR|8-bit|R8|Text|
-|`r8w`|GPR|16-bit|R8|Text|
-|`r9`|GPR|64-bit|R9|Text|
-|`r9b`|GPR|8-bit|R9|Text|
-|`r9w`|GPR|16-bit|R9|Text|
-|`rax`|GPR|64-bit|Accumulator|Text|
-|`rbp`|GPR|64-bit|Base pointer|Text|
-|`rbx`|GPR|64-bit|Base|Text|
-|`rcx`|GPR|64-bit|Counter|Text|
-|`rdi`|GPR|64-bit|Destination index|Text|
-|`rdx`|GPR|64-bit|Data I/O|Text|
-|`rflag`|Flag|64-bit|Flag|Text|
-|`rsi`|GPR|64-bit|Source index|Text|
-|`rsp`|GPR|64-bit|Stack pointer|Text|
-|`si`|GPR|16-bit|Source index|Text|
-|`sil`|GPR|8-bit|Source index|Text|
-|`sp`|GPR|16-bit|Stack pointer|Text|
+|  Token   |  Category  |  Sub-Category  |  Type         |
+| -------- | ---------- | -------------- | ------------- |
+| `ah`     | `gpr`      | `8h-bit`       | `accumulator` |
+| `al`     | `gpr`      | `8l-bit`       | `accumulator` |
+| `ax`     | `gpr`      | `16-bit`       | `accumulator` |
+| `bh`     | `gpr`      | `8h-bit`       | `base`        |
+| `bl`     | `gpr`      | `8l-bit`       | `base`        |
+| `bp`     | `gpr`      | `16-bit`       | `base_ptr`    |
+| `bpl`    | `gpr`      | `8l-bit`       | `base_ptr`    |
+| `bx`     | `gpr`      | `16-bit`       | `base`        |
+| `ch`     | `gpr`      | `8h-bit`       | `counter`     |
+| `cl`     | `gpr`      | `8l-bit`       | `counter`     |
+| `cx`     | `gpr`      | `16-bit`       | `counter`     |
+| `dh`     | `gpr`      | `8h-bit`       | `data_io`     |
+| `di`     | `gpr`      | `16-bit`       | `destination` |
+| `dil`    | `gpr`      | `8l-bit`       | `destination` |
+| `dl`     | `gpr`      | `8l-bit`       | `data_io`     |
+| `dx`     | `gpr`      | `16-bit`       | `data_io`     |
+| `eax`    | `gpr`      | `32-bit`       | `accumulator` |
+| `ebp`    | `gpr`      | `32-bit`       | `base_ptr`    |
+| `ebx`    | `gpr`      | `32-bit`       | `base`        |
+| `ecx`    | `gpr`      | `32-bit`       | `counter`     |
+| `edi`    | `gpr`      | `32-bit`       | `destination` |
+| `edx`    | `gpr`      | `32-bit`       | `data_io`     |
+| `eflag`  | `flag`     | `32-bit`       | `flag`        |
+| `esi`    | `gpr`      | `32-bit`       | `source`      |
+| `esp`    | `gpr`      | `32-bit`       | `stack_ptr`   |
+| `fpflag` | `flag`     | `16-bit`       | `fpflag`      |
+| `gdt`    | `special`  | `limiter`      | `gdt`         |
+| `idt`    | `special`  | `limiter`      | `idt`         |
+| `r10`    | `gpr`      | `64-bit`       | `r10`         |
+| `r10b`   | `gpr`      | `8-bit`        | `r10`         |
+| `r10w`   | `gpr`      | `16-bit`       | `r10`         |
+| `r11`    | `gpr`      | `64-bit`       | `r11`         |
+| `r11b`   | `gpr`      | `8-bit`        | `r11`         |
+| `r11w`   | `gpr`      | `16-bit`       | `r11`         |
+| `r12`    | `gpr`      | `64-bit`       | `r12`         |
+| `r12b`   | `gpr`      | `8-bit`        | `r12`         |
+| `r12w`   | `gpr`      | `16-bit`       | `r12`         |
+| `r13`    | `gpr`      | `64-bit`       | `r13`         |
+| `r13b`   | `gpr`      | `8-bit`        | `r13`         |
+| `r13w`   | `gpr`      | `16-bit`       | `r13`         |
+| `r14`    | `gpr`      | `64-bit`       | `r14`         |
+| `r14b`   | `gpr`      | `8-bit`        | `r14`         |
+| `r14w`   | `gpr`      | `16-bit`       | `r14`         |
+| `r15`    | `gpr`      | `64-bit`       | `r15`         |
+| `r15b`   | `gpr`      | `8-bit`        | `r15`         |
+| `r15w`   | `gpr`      | `16-bit`       | `r15`         |
+| `r8`     | `gpr`      | `64-bit`       | `r8`          |
+| `r8b`    | `gpr`      | `8-bit`        | `r8`          |
+| `r8w`    | `gpr`      | `16-bit`       | `r8`          |
+| `r9`     | `gpr`      | `64-bit`       | `r9`          |
+| `r9b`    | `gpr`      | `8-bit`        | `r9`          |
+| `r9w`    | `gpr`      | `16-bit`       | `r9`          |
+| `rax`    | `gpr`      | `64-bit`       | `accumulator` |
+| `rbp`    | `gpr`      | `64-bit`       | `base_ptr`    |
+| `rbx`    | `gpr`      | `64-bit`       | `base`        |
+| `rcx`    | `gpr`      | `64-bit`       | `counter`     |
+| `rdi`    | `gpr`      | `64-bit`       | `destination` |
+| `rdx`    | `gpr`      | `64-bit`       | `data_io`     |
+| `rflag`  | `flag`     | `64-bit`       | `flag`        |
+| `rsi`    | `gpr`      | `64-bit`       | `source`      |
+| `rsp`    | `gpr`      | `64-bit`       | `stack_ptr`   |
+| `si`     | `gpr`      | `16-bit`       | `source`      |
+| `sil`    | `gpr`      | `8l-bit`       | `source`      |
+| `sp`     | `gpr`      | `16-bit`       | `stack_ptr`   |
 
 $$ \text{Total = 64} $$
 
 
 ### 2.3 <u>Period Tokens</u>:
 
-|Token|Category|Sub-Category|Type|Areas|
-|:-:|:-:|:-:|:-:|:-|
-|`.bss`|Host|Section|Bss|Outside|
-|`.data`|Host|Section|Data|Outside|
-|`.n`|Both|Copy|Non-waiting|Outside|
-|`.rodata`|Host|Section|Read only|Outside|
-|`.text`|Host|Section|Text|Outside|
-|`.stack`|Host|Section|Stack|Outside|
-|`.w`|Both|Copy|Waiting|Outside|
+|  Token    |  Category  |  Sub-Category  |  Type         |
+| --------- | ---------- | -------------- | ------------- |
+| `.bss`    | `host`     | `section`      | `bss`         |
+| `.data`   | `host`     | `section`      | `data`        |
+| `.n`      | `both`     | `copy`         | `non-waiting` |
+| `.rodata` | `host`     | `section`      | `r`           |
+| `.text`   | `host`     | `section`      | `text`        |
+| `.sack`   | `host`     | `section`      | `stack`       |
+| `.w`      | `host`     | `copy`         | `waiting`     |
 
 $$ \text{Total = 7} $$
-
-
-### 2.4 <u>Delimiters</u>:
-
-|Delimeter|Type|
-|:-:|:-|
-|` `|Excluding|
-|`(`|Including|
-|`)`|Including|
-|`{`|Including|
-|`}`|Including|
-|`=`|Including|
-|`"`|Including|
-|`,`|Including|
-|`[`|Including|
-|`]`|Including|
-|`+`|Including|
-|`-`|Including|
-|`*`|Including|
-|`/`|Including|
-|`<`|Including|
-|`>`|Including|
-|`@`|Including|
-|`~`|Including|
-|`?`|Including|
-|`\|`|Including|
-|`!`|Including|
-
-$$ \text{Total = 21} $$
-
-
-### 2.5 <u>Skippers</u>:
-
-|Skipper|
-|:-:|
-|`\n`|
-|`\t`|
 
 
 
